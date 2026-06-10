@@ -9,7 +9,7 @@ PPO update runs entirely on CUDA.
 USAGE (on GB10):
     DISPLAY=:10 MUJOCO_GL=egl \
     /home/simllm/simrobotics-storage/research/flywire/virtual-fly/venv/bin/python3 \
-    rl_training/train_rl_torque_gpu.py --iterations 100 --neurons 2000
+    rl_training/train_rl_torque_gpu.py --iterations 20 --bfs-hops 3
 """
 from __future__ import annotations
 import argparse, json, os, sys, time, traceback
@@ -212,6 +212,9 @@ def main():
     parser = argparse.ArgumentParser(description="GPU-Accelerated RL Torque Decoder Training")
     parser.add_argument('--iterations', type=int, default=100, help='PPO iterations')
     parser.add_argument('--neurons', type=int, default=0, help='Connectome neurons (0=all)')
+    parser.add_argument('--bfs-hops', type=int, default=3, help='BFS hops upstream from DNs (0=use max_neurons fallback)')
+    parser.add_argument('--syn-threshold', type=int, default=5, help='Minimum synapse count to include connection (default: 5)')
+    parser.add_argument('--brain-steps', type=int, default=2, help='Brain substeps per physics step (default: 2)')
     parser.add_argument('--joints', type=int, default=36, help='Active leg joints')
     parser.add_argument('--rollout', type=int, default=1024, help='Rollout steps per iteration')
     parser.add_argument('--max-ep-steps', type=int, default=200, help='Max episode steps')
@@ -245,7 +248,7 @@ def main():
     print(f"\n{'='*60}", flush=True)
     print(f"GPU-ACCELERATED RL TORQUE DECODER — TRAINING", flush=True)
     print(f"{'='*60}", flush=True)
-    print(f"  Config: {args.joints} joints, {args.neurons} neurons", flush=True)
+    print(f"  Config: {args.joints} joints, {args.neurons} neurons, bfs_hops={args.bfs_hops}, syn_threshold={args.syn_threshold}, brain_steps={args.brain_steps}", flush=True)
     print(f"  Network: MLP {config.obs_dim}→{args.hidden}→{args.hidden}→{2*args.joints}", flush=True)
     print(f"  Algorithm: PPO (PyTorch GPU, CUDA)", flush=True)
     print(f"  Iterations: {args.iterations} × {args.rollout} rollout steps", flush=True)
@@ -256,7 +259,7 @@ def main():
     # ── Initialize Pipeline ───────────────────────────────────────────
     print("[1/4] Initializing connectome pipeline...", flush=True)
     t0 = time.perf_counter()
-    pipeline = SimFlyRLPipeline(config, max_neurons=args.neurons, food_pos=food_pos)
+    pipeline = SimFlyRLPipeline(config, max_neurons=args.neurons, bfs_hops=args.bfs_hops, syn_threshold=args.syn_threshold, brain_steps=args.brain_steps, food_pos=food_pos)
     pipeline.initialize(verbose=True)
     print(f"  Pipeline init: {time.perf_counter() - t0:.1f}s\n", flush=True)
 
@@ -284,7 +287,7 @@ def main():
         report_path = os.path.join(output_dir, "comparison_report.json")
         comparison = {
             'config': {
-                'n_joints': args.joints, 'n_neurons': args.neurons,
+                'n_joints': args.joints, 'n_neurons': args.neurons, 'bfs_hops': args.bfs_hops,
                 'algorithm': 'PPO (PyTorch GPU)', 'hidden': args.hidden,
                 'lr': args.lr, 'iterations': 0,
             },
@@ -337,7 +340,7 @@ def main():
     comparison = {
         'config': {
             'n_joints': args.joints,
-            'n_neurons': args.neurons,
+            'n_neurons': args.neurons, 'bfs_hops': args.bfs_hops,
             'algorithm': 'PPO (PyTorch GPU, CUDA)',
             'hidden': args.hidden,
             'lr': args.lr,
