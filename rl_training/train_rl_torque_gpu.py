@@ -215,6 +215,7 @@ def main():
     parser.add_argument('--bfs-hops', type=int, default=3, help='BFS hops upstream from DNs (0=use max_neurons fallback)')
     parser.add_argument('--syn-threshold', type=int, default=5, help='Minimum synapse count to include connection (default: 5)')
     parser.add_argument('--brain-steps', type=int, default=2, help='Brain substeps per physics step (default: 2)')
+    parser.add_argument("--synaptic-scale", type=float, default=0.015, help="Global synaptic weight scale (default: 0.015)")
     parser.add_argument('--joints', type=int, default=36, help='Active leg joints')
     parser.add_argument('--rollout', type=int, default=1024, help='Rollout steps per iteration')
     parser.add_argument('--max-ep-steps', type=int, default=200, help='Max episode steps')
@@ -259,7 +260,7 @@ def main():
     # ── Initialize Pipeline ───────────────────────────────────────────
     print("[1/4] Initializing connectome pipeline...", flush=True)
     t0 = time.perf_counter()
-    pipeline = SimFlyRLPipeline(config, max_neurons=args.neurons, bfs_hops=args.bfs_hops, syn_threshold=args.syn_threshold, brain_steps=args.brain_steps, food_pos=food_pos)
+    pipeline = SimFlyRLPipeline(config, max_neurons=args.neurons, bfs_hops=args.bfs_hops, syn_threshold=args.syn_threshold, brain_steps=args.brain_steps, synaptic_scale=args.synaptic_scale, food_pos=food_pos)
     pipeline.initialize(verbose=True)
     print(f"  Pipeline init: {time.perf_counter() - t0:.1f}s\n", flush=True)
 

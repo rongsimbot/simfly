@@ -146,6 +146,7 @@ class SimFlyRLPipeline:
                  bfs_hops: int = 3,           # 0 = use max_neurons fallback; N>0 = BFS upstream from DNs
                  syn_threshold: int = 5,       # minimum synapse count to include a connection (filters noise)
                  brain_steps: int = 2,        # brain substeps per physics step (was 5, reduced for speed)
+                 synaptic_scale: float = 0.015,   # global weight scale to prevent torque saturation
                  food_pos: Tuple[float, float, float] = (8.0, 0.0, 0.0),
                  init_pos: Tuple[float, float, float] = (0.0, 0.0, 0.06)):
         self.cfg = config
@@ -154,6 +155,7 @@ class SimFlyRLPipeline:
         self.bfs_hops = bfs_hops
         self.syn_threshold = syn_threshold
         self.brain_steps = brain_steps
+        self.synaptic_scale = synaptic_scale
         self.food_pos = food_pos
         self.init_pos_base = init_pos
 
@@ -317,6 +319,7 @@ class SimFlyRLPipeline:
             base_weight = NT_WEIGHT_MAP.get(nt_type, 0.0)
             weight = base_weight * syn_count
             weight = weight / math.log(1 + max_syn)
+            weight = weight * self.synaptic_scale
             weight = max(-10.0, min(10.0, weight))
             pre_idx = flywire_to_idx[pre_id]
             post_idx = flywire_to_idx[post_id]
@@ -324,7 +327,7 @@ class SimFlyRLPipeline:
 
         n_syn = self.cpp_eng.synapse_count()
         if verbose:
-            print(f"  [RL-PIPELINE] C++ Engine: {actual_neurons_count} neurons, {n_syn:,} synapses")
+            print(f"  [RL-PIPELINE] C++ Engine: {actual_neurons_count} neurons, {n_syn:,} synapses, scale={self.synaptic_scale}")
 
         # ── 4. Identify Sensory Neurons ───────────────────────────
         sensory_map = self._identify_sensory(included_ids, verbose=verbose)
