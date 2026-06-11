@@ -215,7 +215,7 @@ def main():
     parser.add_argument('--bfs-hops', type=int, default=3, help='BFS hops upstream from DNs (0=use max_neurons fallback)')
     parser.add_argument('--syn-threshold', type=int, default=5, help='Minimum synapse count to include connection (default: 5)')
     parser.add_argument('--brain-steps', type=int, default=2, help='Brain substeps per physics step (default: 2)')
-    parser.add_argument("--synaptic-scale", type=float, default=0.015, help="Global synaptic weight scale (default: 0.015)")
+    parser.add_argument("--synaptic-scale", type=float, default=0.005, help="Global synaptic weight scale (default: 0.005)")
     parser.add_argument('--joints', type=int, default=36, help='Active leg joints')
     parser.add_argument('--rollout', type=int, default=1024, help='Rollout steps per iteration')
     parser.add_argument('--max-ep-steps', type=int, default=200, help='Max episode steps')
@@ -225,8 +225,8 @@ def main():
     parser.add_argument('--output', type=str, default=None, help='Output directory')
     parser.add_argument('--eval-only', type=str, help='Evaluate saved policy (path to .npz)')
     parser.add_argument('--compare-only', action='store_true', help='Only run comparison')
-    parser.add_argument('--food-x', type=float, default=8.0, help='Food x position')
-    parser.add_argument('--food-y', type=float, default=3.0, help='Food y position')
+    parser.add_argument('--food-x', type=float, default=2.0, help='Food x position')
+    parser.add_argument('--food-y', type=float, default=0.0, help='Food y position')
     args = parser.parse_args()
 
     # ── Output Setup ──────────────────────────────────────────────────

@@ -263,8 +263,8 @@ def main():
     parser.add_argument('--skip-init', action='store_true', help='Skip pipeline init (load from cache)')
     parser.add_argument('--eval-only', type=str, help='Evaluate saved policy (path to .npz)')
     parser.add_argument('--compare-only', action='store_true', help='Only run comparison, no training')
-    parser.add_argument('--food-x', type=float, default=8.0, help='Food source x position')
-    parser.add_argument('--food-y', type=float, default=3.0, help='Food source y position')
+    parser.add_argument('--food-x', type=float, default=2.0, help  # FIX: Closer food='Food source x position')
+    parser.add_argument('--food-y', type=float, default=0.0, help  # FIX: Centered food='Food source y position')
     args = parser.parse_args()
 
     # ── Output Setup ──────────────────────────────────────────────────

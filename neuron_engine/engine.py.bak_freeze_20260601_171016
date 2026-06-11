@@ -1,0 +1,492 @@
+"""Three-phase spiking neuron engine with bit-packed fire lists.
+
+Implements the core simulation loop ported from C++ NeuronArrayBase:
+
+    Fire():
+      1. ProcessNeurons1 (parallel)  — Evaluate firing
+      2. ProcessNeurons2 (parallel)  — Propagate spikes
+      3. ProcessNeurons3 (serial)    — Learning / plasticity
+
+Uses bit-packed uint64 arrays for fire lists — same approach as the C++ engine.
+Each bit in fire_list_1 / fire_list_2 represents one neuron.
+
+Performance target: thousands of neurons in real-time on consumer hardware.
+"""
+
+import math
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List, Optional, Tuple
+
+from .neurons import NeuronBase, NeuronModel
+from .synapses import Synapse, SynapseModel
+
+# ── Constants ───────────────────────────────────────────────────────────────
+
+BITS_PER_WORD = 64
+"""Number of bits in a fire-list word (uint64)."""
+
+
+# ── NeuronArrayBase ──────────────────────────────────────────────────────────
+
+class NeuronArrayBase:
+    """Core simulation engine — manages neuron array and runs the firing loop.
+
+    Port of C++ NeuronEngine::NeuronArrayBase.
+
+    Attributes:
+        neurons: Flat list of all NeuronBase instances.
+        fire_list_1: Bit-packed array of neurons needing Fire1 evaluation.
+        fire_list_2: Bit-packed array of neurons that actually fired.
+        cycle: Current simulation tick counter.
+        fired_count: Number of neurons that fired in the current cycle.
+        refractory_delay: Global refractory period (cycles).
+        thread_count: Number of worker threads for parallel phases.
+        remote_queue: Cross-server synapse transfer queue.
+    """
+
+    def __init__(
+        self,
+        neurons: Optional[List[NeuronBase]] = None,
+        thread_count: int = 4,
+        refractory_delay: int = 0,
+    ) -> None:
+        """Initialize the neuron array engine.
+
+        Args:
+            neurons: Pre-built list of neurons, or None for empty array.
+            thread_count: Number of worker threads for parallel processing.
+            refractory_delay: Global refractory delay in cycles.
+        """
+        self.neurons: List[NeuronBase] = neurons if neurons is not None else []
+        self.thread_count: int = max(1, thread_count)
+        self.refractory_delay: int = refractory_delay
+        self.cycle: int = 0
+        self.fired_count: int = 0
+
+        # Bit-packed fire lists (list of uint64 words)
+        self._fire_list_1: List[int] = []
+        self._fire_list_2: List[int] = []
+        self._rebuild_fire_lists()
+
+        # Remote synapse queue for cross-server transfer
+        self.remote_queue: List[Synapse] = []
+
+        # Locks
+        self._fire_list_lock: threading.Lock = threading.Lock()
+
+        # Timing stats
+        self.total_fire1_us: int = 0
+        self.total_fire2_us: int = 0
+        self.total_fire3_us: int = 0
+        self.total_cycles: int = 0
+
+    # ── Fire List Management ─────────────────────────────────────────────────
+
+    def _rebuild_fire_lists(self) -> None:
+        """Rebuild bit-packed fire lists to match current neuron count."""
+        num_words = (len(self.neurons) + BITS_PER_WORD - 1) // BITS_PER_WORD
+        num_words = max(1, num_words)
+        self._fire_list_1 = [0] * num_words
+        self._fire_list_2 = [0] * num_words
+
+    def _word_index(self, neuron_id: int) -> int:
+        """Get the uint64 word index for a neuron ID."""
+        return neuron_id // BITS_PER_WORD
+
+    def _bit_mask(self, neuron_id: int) -> int:
+        """Get the bit mask for a neuron ID within its uint64 word."""
+        return 1 << (neuron_id % BITS_PER_WORD)
+
+    def add_neuron_to_fire_list1(self, neuron_id: int) -> None:
+        """Mark a neuron for Fire1 evaluation.
+
+        Sets the corresponding bit in fire_list_1.
+
+        Args:
+            neuron_id: The neuron's index in the array.
+        """
+        if neuron_id < 0 or neuron_id >= len(self.neurons):
+            return
+        word_idx = self._word_index(neuron_id)
+        bit = self._bit_mask(neuron_id)
+        with self._fire_list_lock:
+            self._fire_list_1[word_idx] |= bit
+
+    def is_in_fire_list1(self, neuron_id: int) -> bool:
+        """Check if a neuron is marked in fire_list_1.
+
+        Args:
+            neuron_id: The neuron's index.
+
+        Returns:
+            True if the bit is set.
+        """
+        if neuron_id < 0 or neuron_id >= len(self.neurons):
+            return False
+        word_idx = self._word_index(neuron_id)
+        bit = self._bit_mask(neuron_id)
+        return (self._fire_list_1[word_idx] & bit) != 0
+
+    def is_in_fire_list2(self, neuron_id: int) -> bool:
+        """Check if a neuron is marked in fire_list_2 (fired).
+
+        Args:
+            neuron_id: The neuron's index.
+
+        Returns:
+            True if the bit is set.
+        """
+        if neuron_id < 0 or neuron_id >= len(self.neurons):
+            return False
+        word_idx = self._word_index(neuron_id)
+        bit = self._bit_mask(neuron_id)
+        return (self._fire_list_2[word_idx] & bit) != 0
+
+    # ── Neuron Array Management ──────────────────────────────────────────────
+
+    def add_neuron(self, neuron: NeuronBase) -> None:
+        """Add a neuron to the array and rebuild fire lists.
+
+        Args:
+            neuron: NeuronBase instance to add.
+        """
+        neuron.id = len(self.neurons)
+        self.neurons.append(neuron)
+        self._rebuild_fire_lists()
+
+    def add_neurons(self, neurons: List[NeuronBase]) -> None:
+        """Add multiple neurons to the array.
+
+        Args:
+            neurons: List of NeuronBase instances.
+        """
+        for i, neuron in enumerate(neurons):
+            neuron.id = len(self.neurons) + i
+        self.neurons.extend(neurons)
+        self._rebuild_fire_lists()
+
+    def get_neuron(self, neuron_id: int) -> Optional[NeuronBase]:
+        """Get a neuron by its ID.
+
+        Args:
+            neuron_id: The neuron's index.
+
+        Returns:
+            NeuronBase or None if out of range.
+        """
+        if 0 <= neuron_id < len(self.neurons):
+            return self.neurons[neuron_id]
+        return None
+
+    @property
+    def array_size(self) -> int:
+        """Total number of neurons in the array."""
+        return len(self.neurons)
+
+    # ── Main Fire Loop ───────────────────────────────────────────────────────
+
+    def fire(self) -> Tuple[int, int]:
+        """Execute one full simulation cycle: Fire1 → Fire2 → Fire3.
+
+        Returns:
+            Tuple of (fired_count, cycle_number).
+        """
+        self.cycle += 1
+        self.fired_count = 0
+
+        # Phase 1: Evaluate (parallel)
+        t1 = time.perf_counter_ns()
+        self._process_neurons_1()
+        t2 = time.perf_counter_ns()
+
+        # Phase 2: Propagate (parallel)
+        self._process_neurons_2()
+        t3 = time.perf_counter_ns()
+
+        # Phase 3: Learn (serial)
+        self._process_neurons_3()
+        t4 = time.perf_counter_ns()
+
+        # Track timing
+        self.total_fire1_us += (t2 - t1) // 1000
+        self.total_fire2_us += (t3 - t2) // 1000
+        self.total_fire3_us += (t4 - t3) // 1000
+        self.total_cycles += 1
+
+        import os as _os
+        if _os.environ.get("ENGINE_DEBUG"):
+            _a=sum(bin(w).count("1") for w in self._fire_list_1)
+            print(f"[ENGINE] cyc={self.cycle} fired={self.fired_count} fl1_pending={_a} f1={(t2-t1)//1000}us f2={(t3-t2)//1000}us f3={(t4-t3)//1000}us", flush=True)
+
+        return self.fired_count, self.cycle
+
+    def fire_n(self, n: int) -> List[int]:
+        """Run N simulation cycles.
+
+        Args:
+            n: Number of cycles to run.
+
+        Returns:
+            List of fired counts per cycle.
+        """
+        counts = []
+        for _ in range(n):
+            count, _ = self.fire()
+            counts.append(count)
+        return counts
+
+    # ── Phase 1: Evaluate ────────────────────────────────────────────────────
+
+    def _process_neurons_1(self) -> None:
+        """Phase 1 — Evaluate all marked neurons for firing.
+
+        Only processes neurons whose bits are set in fire_list_1.
+        Clears fire_list_2 first, then sets bits for neurons that fire.
+        Runs in parallel using ThreadPoolExecutor.
+        """
+        # Copy fire_list_1 and clear fire_list_2
+        with self._fire_list_lock:
+            fl1_copy = self._fire_list_1.copy()
+            self._fire_list_2 = [0] * len(self._fire_list_1)
+
+        # Find non-zero words (chunks with activity)
+        active_chunks = [
+            (word_idx, word_val)
+            for word_idx, word_val in enumerate(fl1_copy)
+            if word_val != 0
+        ]
+
+        if not active_chunks:
+            return
+
+        # Process chunks in parallel
+        neurons_list = self.neurons
+        cycle = self.cycle
+        fired_counts = {}
+
+        if self.thread_count > 1 and len(active_chunks) > 1:
+            with ThreadPoolExecutor(max_workers=self.thread_count) as executor:
+                futures = {
+                    executor.submit(
+                        self._fire1_chunk, word_idx, word_val,
+                        neurons_list, cycle, fl1_copy,
+                    ): word_idx
+                    for word_idx, word_val in active_chunks
+                }
+                for future in as_completed(futures):
+                    word_idx, fl2_val, count = future.result()
+                    self._fire_list_2[word_idx] = fl2_val
+                    fired_counts[word_idx] = count
+        else:
+            for word_idx, word_val in active_chunks:
+                _, fl2_val, count = self._fire1_chunk(
+                    word_idx, word_val, neurons_list, cycle, fl1_copy
+                )
+                self._fire_list_2[word_idx] = fl2_val
+                fired_counts[word_idx] = count
+
+        self.fired_count = sum(fired_counts.values())
+
+    @staticmethod
+    def _fire1_chunk(
+        word_idx: int,
+        word_val: int,
+        neurons: List[NeuronBase],
+        cycle: int,
+        fl1: List[int],
+    ) -> Tuple[int, int, int]:
+        """Process one 64-neuron chunk for Fire1.
+
+        Args:
+            word_idx: Index into the fire list words.
+            word_val: The uint64 word value.
+            neurons: The full neuron array.
+            cycle: Current cycle number.
+            fl1: Fire list 1 (for clearing bits).
+
+        Returns:
+            Tuple of (word_idx, fire_list_2_value, fire_count).
+        """
+        fl2_val = 0
+        fire_count = 0
+        base_id = word_idx * BITS_PER_WORD
+
+        # Walk set bits
+        remaining = word_val
+        while remaining:
+            # Find lowest set bit
+            bit_pos = (remaining & -remaining).bit_length() - 1
+            neuron_id = base_id + bit_pos
+
+            if neuron_id < len(neurons):
+                neuron = neurons[neuron_id]
+                if neuron.fire1(cycle):
+                    fl2_val |= (1 << bit_pos)
+                    fire_count += 1
+                # Clear the bit from fl1 (already processed)
+                fl1[word_idx] &= ~(1 << bit_pos)
+
+            remaining &= remaining - 1  # Clear lowest set bit
+
+        return word_idx, fl2_val, fire_count
+
+    # ── Phase 2: Propagate ───────────────────────────────────────────────────
+
+    def _process_neurons_2(self) -> None:
+        """Phase 2 — Propagate spikes from firing neurons to their targets.
+
+        Only processes neurons with bits set in fire_list_2.
+        Runs in parallel using ThreadPoolExecutor.
+        Returns charged target IDs which are enqueued for next Fire1.
+        """
+        # Find active chunks
+        active_chunks = [
+            (word_idx, word_val)
+            for word_idx, word_val in enumerate(self._fire_list_2)
+            if word_val != 0
+        ]
+
+        if not active_chunks:
+            return
+
+        neurons_list = self.neurons
+        cycle = self.cycle
+        all_charged: List[int] = []
+
+        if self.thread_count > 1 and len(active_chunks) > 1:
+            with ThreadPoolExecutor(max_workers=self.thread_count) as executor:
+                futures = [
+                    executor.submit(
+                        self._fire2_chunk, word_idx, word_val, neurons_list, cycle
+                    )
+                    for word_idx, word_val in active_chunks
+                ]
+                for future in as_completed(futures):
+                    charged = future.result()
+                    if charged:
+                        all_charged.extend(charged)
+        else:
+            for word_idx, word_val in active_chunks:
+                charged = self._fire2_chunk(word_idx, word_val, neurons_list, cycle)
+                if charged:
+                    all_charged.extend(charged)
+
+        # CASCADE FIX: Enqueue charged targets for next Fire1 evaluation
+        for target_id in all_charged:
+            self.add_neuron_to_fire_list1(target_id)
+
+    @staticmethod
+    def _fire2_chunk(
+        word_idx: int,
+        word_val: int,
+        neurons: List[NeuronBase],
+        cycle: int,
+    ) -> List[int]:
+        """Process one 64-neuron chunk for Fire2 (propagation).
+
+        Returns list of target neuron IDs that received charge.
+
+        Args:
+            word_idx: Index into the fire list words.
+            word_val: The uint64 word value.
+            neurons: The full neuron array.
+            cycle: Current cycle number.
+        """
+        base_id = word_idx * BITS_PER_WORD
+        remaining = word_val
+        charged: List[int] = []
+
+        while remaining:
+            bit_pos = (remaining & -remaining).bit_length() - 1
+            neuron_id = base_id + bit_pos
+
+            if neuron_id < len(neurons):
+                targets = neurons[neuron_id].fire2(cycle)
+                if targets:
+                    charged.extend(targets)
+
+            remaining &= remaining - 1
+        return charged
+
+    # ── Phase 3: Learn ───────────────────────────────────────────────────────
+
+    def _process_neurons_3(self) -> None:
+        """Phase 3 — Synaptic plasticity and learning.
+
+        Runs serially on ALL neurons (not just fired ones).
+        Skips neurons with no plastic synapses for performance.
+        """
+        cycle = self.cycle
+        for neuron in self.neurons:
+            if neuron._has_plastic:
+                neuron.fire3(cycle)
+
+    # ── Network Transfer (Cross-Server) ──────────────────────────────────────
+
+    def transfer(self) -> List[Synapse]:
+        """Drain the remote synapse queue for cross-server delivery.
+
+        Returns:
+            List of synapses that need to be sent to remote servers.
+        """
+        queue = self.remote_queue.copy()
+        self.remote_queue.clear()
+        return queue
+
+    def queue_remote_synapse(self, synapse: Synapse) -> None:
+        """Queue a synapse for cross-server transfer.
+
+        Args:
+            synapse: The synapse to transfer.
+        """
+        self.remote_queue.append(synapse)
+
+    # ── Statistics ────────────────────────────────────────────────────────────
+
+    def get_stats(self) -> dict:
+        """Get engine timing statistics.
+
+        Returns:
+            Dict with timing breakdowns.
+        """
+        if self.total_cycles == 0:
+            return {
+                'cycles': 0,
+                'total_fired': 0,
+                'avg_fire1_us': 0,
+                'avg_fire2_us': 0,
+                'avg_fire3_us': 0,
+                'avg_total_us': 0,
+            }
+
+        avg_f1 = self.total_fire1_us / self.total_cycles
+        avg_f2 = self.total_fire2_us / self.total_cycles
+        avg_f3 = self.total_fire3_us / self.total_cycles
+
+        return {
+            'cycles': self.total_cycles,
+            'total_fired': self.fired_count,
+            'avg_fire1_us': avg_f1,
+            'avg_fire2_us': avg_f2,
+            'avg_fire3_us': avg_f3,
+            'avg_total_us': avg_f1 + avg_f2 + avg_f3,
+            'total_fire1_ms': self.total_fire1_us / 1000,
+            'total_fire2_ms': self.total_fire2_us / 1000,
+            'total_fire3_ms': self.total_fire3_us / 1000,
+        }
+
+    def reset_stats(self) -> None:
+        """Reset timing accumulators."""
+        self.total_fire1_us = 0
+        self.total_fire2_us = 0
+        self.total_fire3_us = 0
+        self.total_cycles = 0
+
+    def __repr__(self) -> str:
+        return (
+            f"NeuronArrayBase(neurons={len(self.neurons)}, "
+            f"cycle={self.cycle}, fired={self.fired_count}, "
+            f"threads={self.thread_count})"
+        )

@@ -146,8 +146,8 @@ class SimFlyRLPipeline:
                  bfs_hops: int = 3,           # 0 = use max_neurons fallback; N>0 = BFS upstream from DNs
                  syn_threshold: int = 5,       # minimum synapse count to include a connection (filters noise)
                  brain_steps: int = 2,        # brain substeps per physics step (was 5, reduced for speed)
-                 synaptic_scale: float = 0.015,   # global weight scale to prevent torque saturation
-                 food_pos: Tuple[float, float, float] = (8.0, 0.0, 0.0),
+                 synaptic_scale: float = 0.005,   # global weight scale to prevent torque saturation
+                 food_pos: Tuple[float, float, float] = (2.0, 0.0, 0.0),  # FIX: Moved closer
                  init_pos: Tuple[float, float, float] = (0.0, 0.0, 0.06)):
         self.cfg = config
         self.joint_names = list(ACTIVE_LEG_JOINTS[:config.n_joints])
@@ -365,9 +365,9 @@ class SimFlyRLPipeline:
             self.actuator_map[name or f"act_{i}"] = i
 
         # ── 7. Initialize Sensory Systems + Burst Injector ────────
-        self.vision = FlyVision(self.model, self.data, num_rays=20)
+        self.vision = FlyVision(self.model, self.data, num_rays=20, arena_bounds={'x_min': -10.0, 'x_max': 5.0, 'y_min': -5.0, 'y_max': 5.0, 'z_min': -1.0, 'z_max': 5.0}, food_position=self.food_pos)  # FIX
         self.chemo = ChemoSensorySystem(
-            sugar_source_pos=self.food_pos, sugar_sigma=2.0)
+            sugar_source_pos=self.food_pos, sugar_sigma=4.0)  # FIX: Widened
         self.mechano = MechanoSensorySystem(self.model, self.data)
         self.burst_injector = BurstInjector(
             cpp_eng=self.cpp_eng, spikes_per_burst=5, isi_ms=1.0,
