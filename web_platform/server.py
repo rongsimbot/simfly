@@ -69,7 +69,7 @@ NT_WEIGHT_MAP: Dict[str, float] = {
 DEFAULT_NEURONS = 500
 RENDER_WIDTH, RENDER_HEIGHT = 640, 480
 SYNAPTIC_SCALE = 0.005  # FIX: Lowered for joint differentiation
-FOOD_POS = (2.0, 0.0, 0.0)  # FIX: Moved closer
+FOOD_POS = (2.0, 0.5, 0.0)  # FIX: Moved closer
 SUGAR_SIGMA = 4.0  # FIX: Widened gradient
 ARENA_BOUNDS = {'x_min': -10.0, 'x_max': 5.0, 'y_min': -5.0, 'y_max': 5.0, 'z_min': -1.0, 'z_max': 5.0}
 
