@@ -325,19 +325,27 @@ class SimFlyRLEnv(_Base):
         return obs, reward, terminated, truncated, info
 
     def _reward(self, st: Dict[str, float]) -> Tuple[float, bool]:
-        fwd = float(np.clip(st.get("x_velocity", 0.0), -1.0, 2.0))
+        # REFOCUSED (2026-06-11): Connectome body control only.
+        # NO food approach, NO forward velocity, NO wall avoidance.
+        # Pure body stability: upright posture + consistent stance.
+        z_height = float(st.get("z_height", 0.0))
         upright = float(st.get("upright", 0.0))
-        alive = 0.1
-        food = st.get("food_distance")
-        food_approach = 0.0
-        if food is not None and self._prev_food is not None:
-            food_approach = -(food - self._prev_food) * 2.0
-        self._prev_food = food
-        wall = st.get("wall_min_distance", 1.0)
-        wall_penalty = -max(0.0, 0.05 - wall) * 5.0
         fell = bool(st.get("fell", False))
-        fall_penalty = -5.0 if fell else 0.0
-        total = fwd + 0.5 * upright + alive + food_approach + wall_penalty + fall_penalty
+
+        # Upright posture: primary reward (0 = fallen, 1 = normal, 2 = tall)
+        upright_reward = 3.0 * max(0.0, upright - 0.3)
+
+        # Stability: penalize deviation from nominal stance height (~0.15m)
+        z_error = abs(z_height - 0.15)
+        stability_penalty = -z_error * 15.0
+
+        # Alive bonus per step
+        alive = 0.2
+
+        # Fall = end of episode
+        fall_penalty = -20.0 if fell else 0.0
+
+        total = upright_reward + stability_penalty + alive + fall_penalty
         return float(total), fell
 
 

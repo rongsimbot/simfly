@@ -79,7 +79,7 @@ class VNCMotorDecoder:
         vnc_actuator_map: Dict[str, Dict[str, Any]],
         mn_type_gain: Optional[Dict[str, float]] = None,
         tau_decay: float = 50.0,
-        global_gain: float = 0.1,
+        global_gain: float = 0.01,  # FIX: lowered from 0.1
         dt_brain_ms: float = 1.0,
         dt_physics_ms: float = 5.0,
     ):
@@ -209,52 +209,58 @@ class VNCMotorDecoder:
     def decode(self) -> Dict[str, float]:
         """Convert accumulated spikes to joint commands.
 
-        Uses MN-type-aware gain and sign for biologically realistic
-        torque profiles.
+        Uses per-joint spike-count normalization to ensure DIFFERENTIATION
+        across joints. Each joint's torque is computed independently based on
+        its own agonist/antagonist spike ratio and MN pool size.
 
         Returns:
             Dict joint_name → ctrl_value, clamped to [-1, 1].
         """
-        dt_seconds = self._sub_step * self.dt_brain_ms / 1000.0
-        decay = math.exp(-self._sub_step * self.dt_brain_ms / self.tau_decay)
         commands: Dict[str, float] = {}
 
         for joint_name in self.vnc_actuator_map:
-            ag_spikes = self._agonist_spikes[joint_name]
-            ant_spikes = self._antagonist_spikes[joint_name]
+            ag_spikes = self._agonist_spikes.get(joint_name, 0.0)
+            ant_spikes = self._antagonist_spikes.get(joint_name, 0.0)
             config = self.vnc_actuator_map[joint_name]
-            info = config.get("info", {})
 
             n_ago = max(1, len(config.get("agonists", [])))
             n_ant = max(1, len(config.get("antagonists", [])))
+            joint_mn_pool = n_ago + n_ant
 
-            # Update rates with exponential decay
-            ago_add = ag_spikes / (n_ago * dt_seconds) if dt_seconds > 0 else 0.0
-            ant_add = ant_spikes / (n_ant * dt_seconds) if dt_seconds > 0 else 0.0
+            # ── Per-joint spike normalization ──────────────────────────
+            # Ratio of spikes to available MNs for THIS joint
+            ago_ratio = ag_spikes / float(n_ago)
+            ant_ratio = ant_spikes / float(n_ant)
 
-            self._agonist_rates[joint_name] = (
-                self._agonist_rates[joint_name] * decay + ago_add
-            )
-            self._antagonist_rates[joint_name] = (
-                self._antagonist_rates[joint_name] * decay + ant_add
-            )
-
-            # Compute type-weighted net activation
+            # Apply MN-type weighting to the ratios
             ago_weighted = self._type_weighted_activation(
-                config.get("agonists", []), self._agonist_rates[joint_name]
+                config.get("agonists", []), ago_ratio
             )
             ant_weighted = self._type_weighted_activation(
-                config.get("antagonists", []), self._antagonist_rates[joint_name]
+                config.get("antagonists", []), ant_ratio
             )
-            net_rate = ago_weighted - ant_weighted
+            net_ratio = ago_weighted - ant_weighted
 
-            # Default torque range
-            torque = net_rate * self.global_gain * 1.0  # default max_torque=1.0
+            # ── Temporal smoothing with exponential decay ──────────────
+            decay = math.exp(-self._sub_step * self.dt_brain_ms / self.tau_decay)
+            old_net = self._agonist_rates.get(joint_name, 0.0) - self._antagonist_rates.get(joint_name, 0.0)
+            smoothed = old_net * decay + net_ratio * (1.0 - decay)
+
+            # Store rates for next iteration
+            self._agonist_rates[joint_name] = ago_weighted
+            self._antagonist_rates[joint_name] = ant_weighted
+
+            # ── Convert to torque ─────────────────────────────────────
+            # Per-joint normalization: more MNs in pool → more diffuse signal
+            # Lower gain for joints with many MNs (pooled inhibition)
+            pool_factor = math.sqrt(max(1.0, joint_mn_pool / 5.0))
+            scale = self.global_gain * 10000.0
+            torque = smoothed * scale / pool_factor
 
             # Clamp to [-1, 1]
             commands[joint_name] = max(-1.0, min(1.0, torque))
 
-            # Reset accumulators
+            # ── Reset accumulators ────────────────────────────────────
             self._agonist_spikes[joint_name] = 0.0
             self._antagonist_spikes[joint_name] = 0.0
 

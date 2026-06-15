@@ -355,7 +355,7 @@ class SimFlyRLPipeline:
         self.decoder = VNCMotorDecoder.load_from_vnc(
             vnc_actuator_map_path=os.path.join(VNC_DIR, "vnc_actuator_map.json"),
             pathways_path=DN_MN_PATHWAYS_JSON,
-            tau_decay=50.0, global_gain=0.5, dt_brain_ms=1.0, dt_physics_ms=5.0)
+            tau_decay=50.0, global_gain=0.01, dt_brain_ms=1.0, dt_physics_ms=5.0)
 
         # ── 6. Load MuJoCo ───────────────────────────────────────
         self.model = mujoco.MjModel.from_xml_path(SIMFLY_XML)
