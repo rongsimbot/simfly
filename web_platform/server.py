@@ -821,6 +821,7 @@ def main():
         sim_server.start()
         print("  Auto-started simulation", flush=True)
 
+    socketio.start_background_task(metrics_emitter)
     socketio.run(app, host=args.host, port=args.port, debug=False, allow_unsafe_werkzeug=True)
 
 
