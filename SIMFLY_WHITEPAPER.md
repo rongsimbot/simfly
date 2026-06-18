@@ -364,6 +364,28 @@ Phase E achieved the first whole-connectome closed-loop walking — the first ti
 
 **Full report:** NIRON-WP-008 white paper (SharePoint: Documents/brian2_closed_loop_walking.md)
 
+### 3.9 Phase F: Real Sensory Neuron Routing (June 18, 2026)
+
+Phase F replaced Phase E's artificial PoissonGroup DN injection with real connectome-driven sensory→interneuron→DN routing — the first time the fly walks from genuine sensory processing through the connectome.
+
+| Metric | Phase E (PoissonGroup) | Phase F (Real Sensory) |
+|:-------|:----------------------:|:----------------------:|
+| DN stimulation | Fixed 150 Hz Poisson | Connectome propagation |
+| Sensory neurons active | 0 (bypassed) | 18,702 real FlyWire afferents |
+| Interneurons routing | None | 38,506 |
+| Avg DNs active | 30.9 | 69.3 (+124%) |
+| Speed | 4.8 mm/s | 5.8 mm/s (+21%) |
+| Real-time ratio | 0.006× | 0.013× (2× faster) |
+| Total pathways discovered | N/A | 5,577,954 |
+| Direct sensory→DN | N/A | 4,637 |
+| 2-hop via interneuron | N/A | 18,162 |
+
+**Key biological finding:** Photoreceptors (R1-R8, 10,616 neurons) show ZERO direct DN connections — all route through lamina/medulla/lobula interneurons. Olfactory ORNs similarly show only 8 direct DN connections out of 2,278. This confirms the connectome's architecture is biologically accurate: sensory signals must propagate through dedicated processing circuits before reaching motor output.
+
+**Architecture:** MuJoCo body state → sensory encoding (joint angles→bristle, contact→touch, tilt→Johnston's organ, visual motion→photoreceptors) → g-conductance injection on 18,702 sensory neurons → Brian2 connectome simulation (15M synapses) → 38,506 interneurons → 953 DNs → VNC bridge → 36 joint torques.
+
+**Full report:** NIRON-WP-009 (GitHub: whitepapers/phaseF_sensory_routing.md)
+
 ---
 
 ## 4. Key Architectural Decisions
@@ -433,7 +455,7 @@ The web platform supports component-level module reloading: changing sensory mod
 | Whole-connectome walking | ✅ Verified | Phase E: 47.9 mm, 30.9 DN avg, 10s run |
 | Sensory neuron catalogue | ✅ Complete | Phase E: 18,702 real afferents, 9 modalities |
 | Proprioceptive feedback | 🔲 Planned | M4 milestone |
-| Sensory→DN routing | 🔲 In Progress | Phase F: real sensory through interneurons |
+| Sensory→DN routing | ✅ Verified | Phase F: 5.58M pathways, 18,702→38,506→953 DN |
 | Biological body mass | 🔲 Planned | P3: 882.7 mg → 1.0 mg target |
 | Physical arena walls | 🔲 Planned | Requires contact tuning |
 
@@ -461,7 +483,7 @@ The web platform supports component-level module reloading: changing sensory mod
 
 | Milestone | Description | Status |
 |:----------|:------------|:-------|
-| **Phase F** | Real sensory neuron routing — map 18,702 sensory afferents through FlyWire interneurons to 953 DNs, replace PoissonGroup injection with connectome-driven sensory processing | **In Progress** |
+| **Phase F** | Real sensory neuron routing — 18,702 sensory afferents through 38,506 interneurons to 953 DNs | ✅ Complete |
 | **M4** | Proprioceptive feedback loop — joint position and ground contact force sensors → sensory neuron encoding → DN modulation → gait self-correction and stumble recovery | After Phase F |
 | **Cython Speedup** | Install python3-dev, enable Brian2 Cython codegen for 50–100× speedup (from 0.006× to ~0.3–0.6× real-time) | After Phase F |
 | **M5** | Multi-environment testing — food, obstacles, odor gradients with real sensory routing | After M4 |
