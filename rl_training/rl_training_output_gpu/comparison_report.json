@@ -1,0 +1,76 @@
+{
+  "config": {
+    "n_joints": 36,
+    "n_neurons": 0,
+    "bfs_hops": 3,
+    "algorithm": "PPO (PyTorch GPU, CUDA)",
+    "hidden": 128,
+    "lr": 0.0003,
+    "iterations": 50,
+    "rollout_steps": 1024,
+    "max_ep_steps": 200
+  },
+  "baseline_fixed_gain": {
+    "method": "fixed_gain",
+    "steps_run": 400,
+    "total_reward": 347.02893085996686,
+    "mean_x_velocity": -0.034418576934569595,
+    "max_x_velocity": 0.14845665008735576,
+    "final_food_distance": 2.0816762256581285,
+    "min_food_distance": 2.0009002569860437,
+    "initial_food_distance": 2.0009002569860437,
+    "food_distance_reduction": -0.08077596867208481,
+    "reached_food": false,
+    "final_x": -0.06883715386913919,
+    "mean_active_joints": 33.57,
+    "mean_upright": 1.6039818081689727
+  },
+  "rl_policy": {
+    "method": "rl_policy",
+    "steps_run": 400,
+    "total_reward": 343.8682938595272,
+    "mean_x_velocity": -0.024204258720908617,
+    "max_x_velocity": 0.16250374565608267,
+    "final_food_distance": 2.060097741692647,
+    "min_food_distance": 2.0008937482723232,
+    "initial_food_distance": 2.0008991796717885,
+    "food_distance_reduction": -0.0591985620208586,
+    "reached_food": false,
+    "final_x": -0.048408517441817234,
+    "mean_active_joints": 35.9925,
+    "mean_upright": 1.6481631610428922,
+    "mean_gain": 1.458077073097229,
+    "mean_bias": 0.008176062256097794,
+    "gain_std": 0.07512945681810379,
+    "bias_std": 0.048023514449596405
+  },
+  "improvement": {
+    "total_reward": {
+      "fixed_gain": 347.02893085996686,
+      "rl_policy": 343.8682938595272,
+      "delta": -3.1606370004396354,
+      "pct_change": -0.9107704630032527
+    },
+    "mean_x_velocity": {
+      "fixed_gain": -0.034418576934569595,
+      "rl_policy": -0.024204258720908617,
+      "delta": 0.010214318213660978,
+      "pct_change": 29.676750626278164
+    },
+    "food_distance_reduction": {
+      "fixed_gain": -0.08077596867208481,
+      "rl_policy": -0.0591985620208586,
+      "delta": 0.021577406651226205,
+      "pct_change": 26.712652704365308
+    },
+    "final_food_distance": {
+      "fixed_gain": 2.0816762256581285,
+      "rl_policy": 2.060097741692647,
+      "delta": -0.021578483965481343,
+      "pct_change": -1.036591742551129
+    }
+  },
+  "training_duration_s": 601.6889757100143,
+  "training_iterations": 50,
+  "timestamp": "2026-06-11T18:31:29.794337"
+}
