@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-05-25T21:23:18.035655",
+  "phase": 9,
+  "phase_name": "DN\u2192MN Bridge \u2014 Connectome-Driven Movement",
+  "connectome": {
+    "neurons": 1263,
+    "synapses": 28394,
+    "dns_loaded": 1263,
+    "nt_distribution": {
+      "ACH": 712,
+      "GABA": 276,
+      "GLUT": 225,
+      "OCT": 5,
+      "SER": 39,
+      "DA": 6
+    }
+  },
+  "bridge": {
+    "dn_matches_loaded": 953,
+    "valid_int_mappings": 953,
+    "unique_mns_loaded": 737,
+    "build_time_s": 43.80098831420764,
+    "dns_with_pathways": 953,
+    "total_dn_fires": 0,
+    "total_mn_activations": 0,
+    "any_dn_ever_fired": false,
+    "any_torque_applied": false,
+    "actuator_joints": 0,
+    "num_actuators": 0
+  },
+  "vnc": {
+    "total_joints": 36,
+    "mns_with_types": 737,
+    "tau_decay_ms": 50.0,
+    "global_gain": 0.1,
+    "dt_brain_ms": 1.0,
+    "dt_physics_ms": 5.0
+  },
+  "simfly": {
+    "bodies": 68,
+    "actuators": 108,
+    "joints": 103
+  },
+  "simulation": {
+    "total_steps": 50,
+    "simulated_time_ms": 250.0,
+    "simulated_time_s": 0.25,
+    "avg_fired_per_step": 0.0,
+    "avg_sensory_spikes": 91.64,
+    "avg_active_joints": 0.0,
+    "avg_step_duration_ms": 5.4042655462399125,
+    "brain_rate_hz": 1000,
+    "physics_rate_hz": 200,
+    "neurons": 1263,
+    "w_syn": 1.0,
+    "sensory_feedback": true,
+    "avg_dn_matches_per_step": 0.0,
+    "avg_mns_activated_per_step": 0.0,
+    "any_dn_fired": false,
+    "any_torque_applied": false
+  },
+  "engine": {
+    "cycles": 250,
+    "total_fired": 0,
+    "avg_fire1_us": 689.86,
+    "avg_fire2_us": 0.712,
+    "avg_fire3_us": 10.284,
+    "avg_total_us": 700.856,
+    "total_fire1_ms": 172.465,
+    "total_fire2_ms": 0.178,
+    "total_fire3_ms": 2.571
+  },
+  "wall_time_s": 2.113109197933227,
+  "video": null,
+  "scientific_result": "NO_DN_ACTIVATION"
+}

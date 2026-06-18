@@ -1,0 +1,20 @@
+Obstacle Avoidance Demo — Frame 1000
+==================================================
+Time: 5.00s  |  Step: 1000
+Fly position:  (0.0786, 0.2564, 0.0200)
+Wall plane:    y = 0.2000
+Wall distance: 5.64 cm
+Min distance:  0.00 cm
+Avoid threshold: 5.0 cm
+
+Vision:
+  Obstacle dist:  19.62 cm
+  Looming:        0.000
+  Loom angle:     0.0 deg
+  Edge count:     10
+  LC4 rate:       0.0 Hz
+  LC10 rate:      0.0 Hz
+
+Status:
+  Collision:      YES
+  Navigated:      YES

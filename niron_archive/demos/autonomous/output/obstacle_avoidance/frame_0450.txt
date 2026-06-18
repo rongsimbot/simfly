@@ -1,0 +1,20 @@
+Obstacle Avoidance Demo — Frame 450
+==================================================
+Time: 2.25s  |  Step: 450
+Fly position:  (0.0687, 0.1482, 0.0200)
+Wall plane:    y = 0.2000
+Wall distance: 5.18 cm
+Min distance:  5.18 cm
+Avoid threshold: 5.0 cm
+
+Vision:
+  Obstacle dist:  5.41 cm
+  Looming:        0.311
+  Loom angle:     -90.0 deg
+  Edge count:     25
+  LC4 rate:       15.5 Hz
+  LC10 rate:      500.0 Hz
+
+Status:
+  Collision:      no
+  Navigated:      no

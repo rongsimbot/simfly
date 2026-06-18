@@ -1,0 +1,15 @@
+ChemoTaxis Demo — Frame 50
+==================================================
+Time: 0.25s  |  Step: 50
+Fly position:  (0.0000, 0.0152, 0.0200)
+Sugar source:  (0.0000, 0.0000, 0.0200)
+Distance:      1.52 cm
+Initial dist:  10.00 cm
+Closest:       1.52 cm
+Success (<1.0cm): no
+
+Chemo:
+  Proboscis conc: 273.5200
+  Gradient dx:    140.6840
+  Left antenna:   133.1Hz
+  Right antenna:  138.8Hz

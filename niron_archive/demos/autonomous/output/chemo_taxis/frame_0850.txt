@@ -1,0 +1,15 @@
+ChemoTaxis Demo — Frame 850
+==================================================
+Time: 4.25s  |  Step: 850
+Fly position:  (0.0000, -0.0000, 0.0200)
+Sugar source:  (0.0000, 0.0000, 0.0200)
+Distance:      0.00 cm
+Initial dist:  10.00 cm
+Closest:       0.00 cm
+Success (<1.0cm): YES!
+
+Chemo:
+  Proboscis conc: 291.9708
+  Gradient dx:    -5.9841
+  Left antenna:   138.5Hz
+  Right antenna:  138.3Hz
