@@ -1,0 +1,96 @@
+{
+  "phase": "18",
+  "timestamp": "2026-06-24T13:50:00Z",
+  "status": "IN_PROGRESS",
+  "reward_function": {
+    "version": "v3_Phase16_compatible",
+    "file": "/tmp/simfly_web/phase17/reward.py",
+    "approach": "Phase16 generic reward (displacement_weight * displacement + center_bonus - limit_penalty) with joint-type-specific limits and weights",
+    "working_for": ["coxa_T", "coxa_abduct"],
+    "joint_params": {
+      "coxa_T": {"limit": 0.8, "disp_w": 10.0},
+      "coxa_abduct": {"limit": 0.7, "disp_w": 6.0},
+      "coxa_twist": {"limit": 0.6, "disp_w": 4.0},
+      "femur_T": {"limit": 1.2, "disp_w": 10.0},
+      "femur_twist": {"limit": 0.7, "disp_w": 5.0},
+      "tibia_T": {"limit": 1.0, "disp_w": 8.0}
+    }
+  },
+  "completed_training": [
+    {
+      "joint": "coxa_T1_left",
+      "reward_type": "Phase16_generic",
+      "best_reward": 10.20,
+      "final_avg10": 2.10,
+      "converged_ep": 30,
+      "status": "SUCCESS",
+      "model": "/tmp/simfly_web/phase16/models/coxa_T1_left.pt"
+    },
+    {
+      "joint": "coxa_T1_right",
+      "reward_type": "Phase16_generic",
+      "best_reward": 11.31,
+      "final_avg10": 3.46,
+      "converged_ep": 60,
+      "status": "SUCCESS",
+      "model": "/tmp/simfly_web/phase16/models/coxa_T1_right.pt"
+    },
+    {
+      "joint": "coxa_abduct_T1_left",
+      "reward_type": "Phase16_generic_with_adjusted_params",
+      "best_reward_ep0": 13.15,
+      "params": {"limit": 0.7, "disp_w": 6.0},
+      "status": "PARTIAL — Ep0 positive but training incomplete due to infra issues"
+    }
+  ],
+  "lessons_learned": [
+    {
+      "id": 1,
+      "lesson": "Phase16 generic reward (displacement * weight + center_bonus - limit_penalty) works across joint types when params are tuned per joint",
+      "evidence": "coxa_T1 (R=10.20), coxa_T1_right (R=11.31), coxa_abduct Ep0 (R=13.15 with limit=0.7, disp_w=6.0)",
+      "impact": "No need for complex multi-component reward — simple displacement + limit penalty suffices"
+    },
+    {
+      "id": 2,
+      "lesson": "Narrow-ROM joints (abduct, twist) need LOWER displacement_weight to avoid limit-hitting oscillations",
+      "evidence": "coxa_abduct with disp_w=10.0 oscillates ±100pts; with disp_w=6.0 achieved stable R=+13.15 on Ep0",
+      "impact": "Use disp_w=4-6 for abduct/twist, 8-10 for coxa/femur/tibia"
+    },
+    {
+      "id": 3,
+      "lesson": "Joint angle limit should match the wider end of the MuJoCo range plus margin",
+      "evidence": "coxa_abduct range [-1.0, 0.7], limit=0.7 works; limit=0.6 was too aggressive (R=-53)",
+      "impact": "Set limit = max(|lo|, |hi|) rounded up slightly"
+    },
+    {
+      "id": 4,
+      "lesson": "Custom reward functions (v1, v2) with survival bonuses, Gaussian centering, and normalized displacement performed WORSE than the simple Phase16 formula",
+      "evidence": "v1/v2 rewards produced -23 to -338; Phase16 formula gave +7 to +20",
+      "impact": "KISS principle — simple displacement reward beats complex engineered rewards"
+    },
+    {
+      "id": 5,
+      "lesson": "Training infrastructure needs improvement — output buffering, process management, and SSH reliability are bottlenecks",
+      "evidence": "Multiple training runs died silently; log files captured only Ep0; duplicate processes",
+      "impact": "Need: tmux/screen session, proper logging, or direct local execution"
+    },
+    {
+      "id": 6,
+      "lesson": "The quick_train.py approach (Phase16 PerActuatorRL + joint-specific params) is the correct architecture",
+      "evidence": "Small, focused script that reuses proven PerActuatorRL with per-joint tuning",
+      "impact": "Use quick_train.py pattern for all 34 remaining actuators"
+    }
+  ],
+  "next_steps": [
+    "Fix training infrastructure (run directly on GB10 with tmux)",
+    "Complete coxa_abduct_T1_left (100 episodes)",
+    "Train coxa_twist_T1_left (limit=0.6, disp_w=4.0)",
+    "Train femur_T1_left (limit=1.2, disp_w=10.0)",
+    "Continue through sequence: T1 left → T1 right → T2 → T3"
+  ],
+  "files_created": [
+    "/tmp/simfly_web/phase17/reward.py — joint-type reward profiles with MuJoCo ranges",
+    "/tmp/simfly_web/phase17/train_joint.py — JointSpecificAgent with custom reward (legacy)",
+    "/tmp/simfly_web/phase17/quick_train.py — simple Phase16 wrapper with joint-specific params (RECOMMENDED)"
+  ]
+}

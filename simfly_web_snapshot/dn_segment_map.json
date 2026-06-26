@@ -1,0 +1,6694 @@
+{
+  "summary": {
+    "prothoracic": 267,
+    "metathoracic": 86,
+    "mesothoracic": 594,
+    "unknown": 6
+  },
+  "total_matched_dns": 953,
+  "seg_nt_breakdown": {
+    "prothoracic/ACH": 218,
+    "metathoracic/ACH": 72,
+    "mesothoracic/ACH": 388,
+    "mesothoracic/GABA": 112,
+    "mesothoracic/GLUT": 94,
+    "prothoracic/GABA": 11,
+    "unknown/GLUT": 1,
+    "prothoracic/GLUT": 38,
+    "metathoracic/GLUT": 14,
+    "unknown/ACH": 5
+  },
+  "dns": {
+    "720575940603580960": {
+      "type": "DNpe054",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940603591014": {
+      "type": "DNae004",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 10093,
+      "manc_type": "DNxl058"
+    },
+    "720575940603874784": {
+      "type": "DNpe055",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10111,
+      "manc_type": "DNxl053"
+    },
+    "720575940604470956": {
+      "type": "DNg63",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10061,
+      "manc_type": "DNxl053"
+    },
+    "720575940604727264": {
+      "type": "DNge020",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10291,
+      "manc_type": "DNxl134"
+    },
+    "720575940604729312": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10623,
+      "manc_type": "DNxl134"
+    },
+    "720575940604737708": {
+      "type": "DNa02",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 10012,
+      "manc_type": "DNp18"
+    },
+    "720575940604783136": {
+      "type": "DNg56",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940604930481": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10021,
+      "manc_type": "DNp18"
+    },
+    "720575940604954289": {
+      "type": "DNp04",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11120,
+      "manc_type": "DNxl049"
+    },
+    "720575940605009097": {
+      "type": "DNpe004",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10101,
+      "manc_type": "DNg15"
+    },
+    "720575940605041330": {
+      "type": "DNp16",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11306,
+      "manc_type": "DNxl130"
+    },
+    "720575940605162924": {
+      "type": "DNpe030",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10941,
+      "manc_type": "DNxl130"
+    },
+    "720575940605282406": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940605450342": {
+      "type": "DNge087",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11959,
+      "manc_type": "DNxn096"
+    },
+    "720575940605513649": {
+      "type": "DNg90",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10107,
+      "manc_type": "DNxl041"
+    },
+    "720575940605702944": {
+      "type": "DNpe040",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11286,
+      "manc_type": "DNxn124"
+    },
+    "720575940605714878": {
+      "type": "DNge136",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10103,
+      "manc_type": "DNxl041"
+    },
+    "720575940605725873": {
+      "type": "DNp44",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10279,
+      "manc_type": "DNxl049"
+    },
+    "720575940605950496": {
+      "type": "DNg76",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10121,
+      "manc_type": "DNg15"
+    },
+    "720575940606179686": {
+      "type": "DNpe021",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10118,
+      "manc_type": "DNa02"
+    },
+    "720575940606222014": {
+      "type": "DNge033",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11497,
+      "manc_type": "DNxn124"
+    },
+    "720575940606342089": {
+      "type": "DNg78",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10126,
+      "manc_type": "DNa02"
+    },
+    "720575940606425033": {
+      "type": "DNge136",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10532,
+      "manc_type": "DNxl040"
+    },
+    "720575940606607234": {
+      "type": "DNge040",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940606633248": {
+      "type": "DNge058",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11150,
+      "manc_type": "DNp07"
+    },
+    "720575940606702601": {
+      "type": "DNge112",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10122,
+      "manc_type": "DNp11"
+    },
+    "720575940606704562": {
+      "type": "DNpe041",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 10095,
+      "manc_type": "DNxl055"
+    },
+    "720575940606753884": {
+      "type": "DNxl114",
+      "segment": "unknown",
+      "nt": "GLUT",
+      "manc_id": 10410,
+      "manc_type": "DNd03"
+    },
+    "720575940606866377": {
+      "type": "DNg103",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10868,
+      "manc_type": "DNxl132"
+    },
+    "720575940607378633": {
+      "type": "DNpe039",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10656,
+      "manc_type": "DNxl054"
+    },
+    "720575940607451081": {
+      "type": "DNge101",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10086,
+      "manc_type": "DNxl055"
+    },
+    "720575940607632579": {
+      "type": "DNpe047",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10648,
+      "manc_type": "DNxl133"
+    },
+    "720575940607761244": {
+      "type": "DNg29",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11270,
+      "manc_type": "DNxl129"
+    },
+    "720575940607854793": {
+      "type": "DNpe011",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10751,
+      "manc_type": "DNa01"
+    },
+    "720575940607971337": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10113,
+      "manc_type": "DNp11"
+    },
+    "720575940608076739": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940608145026": {
+      "type": "DNpe027",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10760,
+      "manc_type": "DNa01"
+    },
+    "720575940608161116": {
+      "type": "DN1pC",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940608188427": {
+      "type": "DNge037",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11228,
+      "manc_type": "DNp07"
+    },
+    "720575940608332674": {
+      "type": "DNpe011",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10307,
+      "manc_type": "DNb05"
+    },
+    "720575940608402524": {
+      "type": "DNbe006",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11298,
+      "manc_type": "DNxn168"
+    },
+    "720575940608409355": {
+      "type": "DNpe035",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11413,
+      "manc_type": "DNp12"
+    },
+    "720575940608716809": {
+      "type": "DNge133",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11136,
+      "manc_type": "DNxn076"
+    },
+    "720575940609097429": {
+      "type": "DNae005",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11437,
+      "manc_type": "DNp12"
+    },
+    "720575940609316050": {
+      "type": "DNpe008",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10315,
+      "manc_type": "DNb05"
+    },
+    "720575940609366648": {
+      "type": "DNg11",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10466,
+      "manc_type": "DNxl040"
+    },
+    "720575940609376707": {
+      "type": "DNge048",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11019,
+      "manc_type": "DNxl129"
+    },
+    "720575940609407939": {
+      "type": "DNge080",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10465,
+      "manc_type": "DNg35"
+    },
+    "720575940609417995": {
+      "type": "DNge147",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11772,
+      "manc_type": "DNxl122"
+    },
+    "720575940609488942": {
+      "type": "DNa15",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 10896,
+      "manc_type": "DNxl133"
+    },
+    "720575940609589443": {
+      "type": "DNg05_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940609733582": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10194,
+      "manc_type": "DNd02"
+    },
+    "720575940609844117": {
+      "type": "DNg18_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940609948514": {
+      "type": "DNg32",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11070,
+      "manc_type": "DNxl054"
+    },
+    "720575940610001220": {
+      "type": "DNge173",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10962,
+      "manc_type": "DNp13"
+    },
+    "720575940610091955": {
+      "type": "DNge113",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10819,
+      "manc_type": "DNp13"
+    },
+    "720575940610173048": {
+      "type": "DNg28",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11202,
+      "manc_type": "DNxn168"
+    },
+    "720575940610199781": {
+      "type": "DNp102",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11541,
+      "manc_type": "DNxl122"
+    },
+    "720575940610231509": {
+      "type": "DNg90",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10117,
+      "manc_type": "DNxl080"
+    },
+    "720575940610341582": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10732,
+      "manc_type": "DNp10"
+    },
+    "720575940610472146": {
+      "type": "DNp23",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11310,
+      "manc_type": "DNxn076"
+    },
+    "720575940610505006": {
+      "type": "DNp103",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10721,
+      "manc_type": "DNxn142"
+    },
+    "720575940610604078": {
+      "type": "DNge136",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10210,
+      "manc_type": "DNg34"
+    },
+    "720575940610605614": {
+      "type": "DNge119",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10526,
+      "manc_type": "DNd02"
+    },
+    "720575940610610841": {
+      "type": "DNg26",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15839,
+      "manc_type": "DNxn165"
+    },
+    "720575940610677828": {
+      "type": "DNge051",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10058,
+      "manc_type": "DNxl048"
+    },
+    "720575940610715346": {
+      "type": "DNpe035",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10255,
+      "manc_type": "DNg16"
+    },
+    "720575940610863310": {
+      "type": "DNg02_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940610872014": {
+      "type": "DNge011",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10476,
+      "manc_type": "DNg35"
+    },
+    "720575940611016910": {
+      "type": "DNb03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 10639,
+      "manc_type": "DNxn142"
+    },
+    "720575940611087786": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10138,
+      "manc_type": "DNg16"
+    },
+    "720575940611237594": {
+      "type": "DNpe028",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10835,
+      "manc_type": "DNp10"
+    },
+    "720575940611308181": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11164,
+      "manc_type": "DNxl024"
+    },
+    "720575940611462885": {
+      "type": "DNg92_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940611498419": {
+      "type": "DNge111",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11048,
+      "manc_type": "DNg13"
+    },
+    "720575940611531986": {
+      "type": "DNge002",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10967,
+      "manc_type": "DNxl024"
+    },
+    "720575940611552370": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11145,
+      "manc_type": "DNxl023"
+    },
+    "720575940611585459": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940611610670": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11579,
+      "manc_type": "DNxn094"
+    },
+    "720575940611622826": {
+      "type": "DNpe025",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10634,
+      "manc_type": "DNp06"
+    },
+    "720575940611644529": {
+      "type": "DNp06",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10535,
+      "manc_type": "DNg38"
+    },
+    "720575940611654570": {
+      "type": "DNge030",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11616,
+      "manc_type": "DNxl124"
+    },
+    "720575940611700520": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940611735514": {
+      "type": "DNa11",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11221,
+      "manc_type": "DNp06"
+    },
+    "720575940611765201": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10562,
+      "manc_type": "DNg38"
+    },
+    "720575940611772083": {
+      "type": "DNg43",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11743,
+      "manc_type": "DNxn094"
+    },
+    "720575940611782874": {
+      "type": "DNp25",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 11697,
+      "manc_type": "DNxn162"
+    },
+    "720575940611813842": {
+      "type": "DNge050",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10717,
+      "manc_type": "DNxn099"
+    },
+    "720575940611939290": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940611956197": {
+      "type": "DNg78",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11440,
+      "manc_type": "DNxl124"
+    },
+    "720575940611976618": {
+      "type": "DNge111",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12025,
+      "manc_type": "DNxl119"
+    },
+    "720575940611981029": {
+      "type": "DNg111",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12902,
+      "manc_type": "DNxn165"
+    },
+    "720575940612019825": {
+      "type": "DNg12_c",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940612036837": {
+      "type": "DNg96",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 11268,
+      "manc_type": "DNxn082"
+    },
+    "720575940612058543": {
+      "type": "DNge145",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10909,
+      "manc_type": "DNg13"
+    },
+    "720575940612153842": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940612203482": {
+      "type": "DNp05",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13257,
+      "manc_type": "DNxl103"
+    },
+    "720575940612206810": {
+      "type": "DNge034",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18265,
+      "manc_type": "DNxl128"
+    },
+    "720575940612288947": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10663,
+      "manc_type": "DNxn099"
+    },
+    "720575940612311987": {
+      "type": "DNpe003",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11856,
+      "manc_type": "DNxl119"
+    },
+    "720575940612366322": {
+      "type": "DNge045",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10987,
+      "manc_type": "DNut055"
+    },
+    "720575940612373423": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10428,
+      "manc_type": "DNp31"
+    },
+    "720575940612376805": {
+      "type": "DNg21",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13387,
+      "manc_type": "DNxl103"
+    },
+    "720575940612391464": {
+      "type": "DN1pE",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940612427414": {
+      "type": "DNge020",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10436,
+      "manc_type": "DNp31"
+    },
+    "720575940612427670": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940612429714": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13553,
+      "manc_type": "DNxn061"
+    },
+    "720575940612488341": {
+      "type": "DNpe045",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11427,
+      "manc_type": "DNxn163"
+    },
+    "720575940612557994": {
+      "type": "DNp39",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11311,
+      "manc_type": "DNxl023"
+    },
+    "720575940612603289": {
+      "type": "DNg75",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15249,
+      "manc_type": "DNg17"
+    },
+    "720575940612648106": {
+      "type": "DNg67",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11354,
+      "manc_type": "DNxl042"
+    },
+    "720575940612682467": {
+      "type": "DNp51",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12719,
+      "manc_type": "DNxn161"
+    },
+    "720575940612692889": {
+      "type": "DNg63",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13704,
+      "manc_type": "DNxn061"
+    },
+    "720575940612734515": {
+      "type": "DN1pE",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940612804606": {
+      "type": "DNg02_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940613007729": {
+      "type": "DNg36_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940613019541": {
+      "type": "DNg93",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12594,
+      "manc_type": "DNxl132"
+    },
+    "720575940613170498": {
+      "type": "DNp37",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12791,
+      "manc_type": "DNxl110"
+    },
+    "720575940613262259": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940613307033": {
+      "type": "DNde006",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12707,
+      "manc_type": "DNp08"
+    },
+    "720575940613339875": {
+      "type": "DNge129",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10097,
+      "manc_type": "DNxl080"
+    },
+    "720575940613347299": {
+      "type": "DNge042",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11647,
+      "manc_type": "DNxn163"
+    },
+    "720575940613403890": {
+      "type": "DNp48",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12820,
+      "manc_type": "DNxl110"
+    },
+    "720575940613408552": {
+      "type": "DNa13",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11187,
+      "manc_type": "DNut055"
+    },
+    "720575940613558509": {
+      "type": "DNpe055",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10269,
+      "manc_type": "DNut040"
+    },
+    "720575940613589167": {
+      "type": "DNge058",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12969,
+      "manc_type": "DNxl108"
+    },
+    "720575940613590579": {
+      "type": "DNge097",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13113,
+      "manc_type": "DNxn162"
+    },
+    "720575940613632153": {
+      "type": "DNpe009",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12257,
+      "manc_type": "DNxn086"
+    },
+    "720575940613636325": {
+      "type": "DNpe005",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11264,
+      "manc_type": "DNxl042"
+    },
+    "720575940613717138": {
+      "type": "DNb04",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 11160,
+      "manc_type": "DNxn082"
+    },
+    "720575940613748689": {
+      "type": "DNp16",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10284,
+      "manc_type": "DNut040"
+    },
+    "720575940613838289": {
+      "type": "DNge132",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14903,
+      "manc_type": "DNg17"
+    },
+    "720575940613915823": {
+      "type": "DNpe005",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12915,
+      "manc_type": "DNxl108"
+    },
+    "720575940614014895": {
+      "type": "DNge077",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12898,
+      "manc_type": "DNxl026"
+    },
+    "720575940614046395": {
+      "type": "DNge092",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10506,
+      "manc_type": "DNa10"
+    },
+    "720575940614089726": {
+      "type": "DNg101",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12746,
+      "manc_type": "DNxn161"
+    },
+    "720575940614129617": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10621,
+      "manc_type": "DNut038"
+    },
+    "720575940614137907": {
+      "type": "DNp104",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12640,
+      "manc_type": "DNxl113"
+    },
+    "720575940614147701": {
+      "type": "DNpe015",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11930,
+      "manc_type": "DNxl051"
+    },
+    "720575940614165201": {
+      "type": "DNge028",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12455,
+      "manc_type": "DNxl116"
+    },
+    "720575940614181585": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11573,
+      "manc_type": "DNxn176"
+    },
+    "720575940614185366": {
+      "type": "DNpe034",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12141,
+      "manc_type": "DNxn086"
+    },
+    "720575940614186449": {
+      "type": "DNg44",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 11051,
+      "manc_type": "DNxl128"
+    },
+    "720575940614187006": {
+      "type": "DNg43",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14018,
+      "manc_type": "DNxn074"
+    },
+    "720575940614235323": {
+      "type": "DNge029",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10995,
+      "manc_type": "DNxl064"
+    },
+    "720575940614236200": {
+      "type": "DNpe016",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12779,
+      "manc_type": "DNxl113"
+    },
+    "720575940614348438": {
+      "type": "DNae006",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 12926,
+      "manc_type": "DNp09"
+    },
+    "720575940614352278": {
+      "type": "DNge004",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12965,
+      "manc_type": "DNxl112"
+    },
+    "720575940614363619": {
+      "type": "DNpe047",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12214,
+      "manc_type": "DNxl028"
+    },
+    "720575940614384757": {
+      "type": "DNg17",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10240,
+      "manc_type": "DNxl048"
+    },
+    "720575940614403178": {
+      "type": "DNae005",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 12272,
+      "manc_type": "DNxl028"
+    },
+    "720575940614478658": {
+      "type": "DNg36_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940614562207": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11684,
+      "manc_type": "DNp19"
+    },
+    "720575940614581410": {
+      "type": "DNp59",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 10217,
+      "manc_type": "DNg34"
+    },
+    "720575940614587990": {
+      "type": "DNpe009",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10531,
+      "manc_type": "DNa10"
+    },
+    "720575940614588778": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940614642838": {
+      "type": "DNge021",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11216,
+      "manc_type": "DNa05"
+    },
+    "720575940614730914": {
+      "type": "DNg75",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12319,
+      "manc_type": "DNa05"
+    },
+    "720575940614736034": {
+      "type": "DNge140",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10720,
+      "manc_type": "DNut038"
+    },
+    "720575940614759149": {
+      "type": "DNge140",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12955,
+      "manc_type": "DNp09"
+    },
+    "720575940614843275": {
+      "type": "DNg82",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10855,
+      "manc_type": "DNxl064"
+    },
+    "720575940614909506": {
+      "type": "DNge123",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12716,
+      "manc_type": "DNxl112"
+    },
+    "720575940615023535": {
+      "type": "DNge062",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11568,
+      "manc_type": "DNxl121"
+    },
+    "720575940615030568": {
+      "type": "DNg58",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12172,
+      "manc_type": "DNxl116"
+    },
+    "720575940615043222": {
+      "type": "DNae007",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11981,
+      "manc_type": "DNxl051"
+    },
+    "720575940615043368": {
+      "type": "DNp22",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11975,
+      "manc_type": "DNxl117"
+    },
+    "720575940615058216": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14307,
+      "manc_type": "DNxn074"
+    },
+    "720575940615092019": {
+      "type": "DNpe042",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11123,
+      "manc_type": "DNa04"
+    },
+    "720575940615108714": {
+      "type": "DNg46",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12827,
+      "manc_type": "DNp08"
+    },
+    "720575940615219417": {
+      "type": "DNp16",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12012,
+      "manc_type": "DNxn176"
+    },
+    "720575940615251251": {
+      "type": "DNp47",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12221,
+      "manc_type": "DNxl121"
+    },
+    "720575940615292895": {
+      "type": "DNpe049",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11718,
+      "manc_type": "DNp19"
+    },
+    "720575940615330098": {
+      "type": "DN1pE",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940615364564": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10331,
+      "manc_type": "DNp02"
+    },
+    "720575940615378399": {
+      "type": "DNg83",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10399,
+      "manc_type": "DNxl046"
+    },
+    "720575940615378700": {
+      "type": "DNp68",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12275,
+      "manc_type": "DNa04"
+    },
+    "720575940615385798": {
+      "type": "DNge085",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12304,
+      "manc_type": "DNb09"
+    },
+    "720575940615453182": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13592,
+      "manc_type": "DNxl101"
+    },
+    "720575940615505406": {
+      "type": "DNg23",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10420,
+      "manc_type": "DNxl046"
+    },
+    "720575940615559892": {
+      "type": "DNpe034",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13238,
+      "manc_type": "DNxl026"
+    },
+    "720575940615578043": {
+      "type": "DNge068",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12167,
+      "manc_type": "DNb09"
+    },
+    "720575940615666655": {
+      "type": "DNge022",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11894,
+      "manc_type": "DNp34"
+    },
+    "720575940615671106": {
+      "type": "DNge059",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12439,
+      "manc_type": "DNxl117"
+    },
+    "720575940615679282": {
+      "type": "DNg02_h",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940615692690": {
+      "type": "DNp60",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10633,
+      "manc_type": "DNut060"
+    },
+    "720575940615715003": {
+      "type": "DNg96",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 11637,
+      "manc_type": "DNxn095"
+    },
+    "720575940615794077": {
+      "type": "DNpe015",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11931,
+      "manc_type": "DNp34"
+    },
+    "720575940615798470": {
+      "type": "DNpe022",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13291,
+      "manc_type": "DNxn164"
+    },
+    "720575940615958203": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940616076917": {
+      "type": "DNge015",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 11660,
+      "manc_type": "DNxn095"
+    },
+    "720575940616185531": {
+      "type": "DNg62",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13203,
+      "manc_type": "DNxn081"
+    },
+    "720575940616201309": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940616274619": {
+      "type": "DNpe026",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15016,
+      "manc_type": "DNxn177"
+    },
+    "720575940616286175": {
+      "type": "DNa13",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 13848,
+      "manc_type": "DNad004"
+    },
+    "720575940616353675": {
+      "type": "DNge009",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14999,
+      "manc_type": "DNxn177"
+    },
+    "720575940616374667": {
+      "type": "DNge015",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13184,
+      "manc_type": "DNxn164"
+    },
+    "720575940616376287": {
+      "type": "DNg39",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13491,
+      "manc_type": "DNxn081"
+    },
+    "720575940616400470": {
+      "type": "DNge039",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12855,
+      "manc_type": "DNlt007"
+    },
+    "720575940616471052": {
+      "type": "DNg13",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12259,
+      "manc_type": "DNa09"
+    },
+    "720575940616597334": {
+      "type": "DNge063",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11254,
+      "manc_type": "DNxl126"
+    },
+    "720575940616604817": {
+      "type": "DNpe023",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13239,
+      "manc_type": "DNxn102"
+    },
+    "720575940616647483": {
+      "type": "DNp19",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10157,
+      "manc_type": "DNp02"
+    },
+    "720575940616649845": {
+      "type": "DNpe003",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11588,
+      "manc_type": "DNp05"
+    },
+    "720575940616688286": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940616786433": {
+      "type": "DNge085",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12733,
+      "manc_type": "DNxn166"
+    },
+    "720575940616826380": {
+      "type": "DNb09",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 13061,
+      "manc_type": "DNg27"
+    },
+    "720575940616886301": {
+      "type": "DNp52",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13517,
+      "manc_type": "DNxn175"
+    },
+    "720575940616935838": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13108,
+      "manc_type": "DNxl105"
+    },
+    "720575940616936226": {
+      "type": "DNb02",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 12973,
+      "manc_type": "DNb04"
+    },
+    "720575940617030585": {
+      "type": "DNpe010",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 14228,
+      "manc_type": "DNxn186"
+    },
+    "720575940617031385": {
+      "type": "DNg61",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13483,
+      "manc_type": "DNxn102"
+    },
+    "720575940617034565": {
+      "type": "DNp07",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13247,
+      "manc_type": "DNxl105"
+    },
+    "720575940617035153": {
+      "type": "DNg106",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13443,
+      "manc_type": "DNg27"
+    },
+    "720575940617074393": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940617140597": {
+      "type": "DNpe024",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13411,
+      "manc_type": "DNxn175"
+    },
+    "720575940617226641": {
+      "type": "DN1a",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940617245652": {
+      "type": "DNp55",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13053,
+      "manc_type": "DNxn160"
+    },
+    "720575940617280657": {
+      "type": "DNp45",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20464,
+      "manc_type": "DNxl101"
+    },
+    "720575940617295321": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10697,
+      "manc_type": "DNut060"
+    },
+    "720575940617296029": {
+      "type": "DNge139",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13089,
+      "manc_type": "DNlt007"
+    },
+    "720575940617296699": {
+      "type": "DNg36_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940617373268": {
+      "type": "DNge098",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12206,
+      "manc_type": "DNxn166"
+    },
+    "720575940617390641": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940617399257": {
+      "type": "DNge048",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14585,
+      "manc_type": "DNxn093"
+    },
+    "720575940617432065": {
+      "type": "DNge027",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12170,
+      "manc_type": "DNxn123"
+    },
+    "720575940617477022": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12155,
+      "manc_type": "DNxn123"
+    },
+    "720575940617552569": {
+      "type": "DNpe032",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12406,
+      "manc_type": "DNa09"
+    },
+    "720575940617554577": {
+      "type": "DNg12_c",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940617568697": {
+      "type": "DNge001",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15134,
+      "manc_type": "DNxn093"
+    },
+    "720575940617663093": {
+      "type": "DNg51",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15613,
+      "manc_type": "DNxn185"
+    },
+    "720575940617689816": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 14301,
+      "manc_type": "DNxn187"
+    },
+    "720575940617750070": {
+      "type": "DNp39",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13226,
+      "manc_type": "DNxn080"
+    },
+    "720575940617792069": {
+      "type": "DNge044",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13343,
+      "manc_type": "DNxn160"
+    },
+    "720575940617802699": {
+      "type": "DNpe008",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14007,
+      "manc_type": "DNad004"
+    },
+    "720575940617809181": {
+      "type": "DNp69",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11622,
+      "manc_type": "DNg29"
+    },
+    "720575940617864961": {
+      "type": "DN1a",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940617917396": {
+      "type": "DNbe003",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 12939,
+      "manc_type": "DNxl022"
+    },
+    "720575940617918021": {
+      "type": "DNge131",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13168,
+      "manc_type": "DNg39"
+    },
+    "720575940617922439": {
+      "type": "DNg02_g",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940617950877": {
+      "type": "DNge063",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11961,
+      "manc_type": "DNxl126"
+    },
+    "720575940617952034": {
+      "type": "DNp68",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13348,
+      "manc_type": "DNxn151"
+    },
+    "720575940617990228": {
+      "type": "DNge097",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13951,
+      "manc_type": "DNxn187"
+    },
+    "720575940617993607": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940618086535": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14820,
+      "manc_type": "DNg32"
+    },
+    "720575940618147520": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940618156829": {
+      "type": "DNb02",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 13405,
+      "manc_type": "DNb04"
+    },
+    "720575940618167579": {
+      "type": "DNae001",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14931,
+      "manc_type": "DNa06"
+    },
+    "720575940618291520": {
+      "type": "DNge060",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 14282,
+      "manc_type": "DNxl061"
+    },
+    "720575940618314897": {
+      "type": "DNp70",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13466,
+      "manc_type": "DNxl022"
+    },
+    "720575940618382529": {
+      "type": "DNp16",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11974,
+      "manc_type": "DNp05"
+    },
+    "720575940618398533": {
+      "type": "DNp54",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 12882,
+      "manc_type": "DNxl114"
+    },
+    "720575940618405686": {
+      "type": "DNge069",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15291,
+      "manc_type": "DNxn186"
+    },
+    "720575940618427156": {
+      "type": "DNge113",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14623,
+      "manc_type": "DNxl043"
+    },
+    "720575940618514043": {
+      "type": "DNg54",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13764,
+      "manc_type": "DNxn080"
+    },
+    "720575940618519454": {
+      "type": "DNge025",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14638,
+      "manc_type": "DNg32"
+    },
+    "720575940618550699": {
+      "type": "DNpe015",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15841,
+      "manc_type": "DNxl062"
+    },
+    "720575940618574749": {
+      "type": "DNg35",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16197,
+      "manc_type": "DNxn101"
+    },
+    "720575940618594022": {
+      "type": "DNp42",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17155,
+      "manc_type": "DNg39"
+    },
+    "720575940618663838": {
+      "type": "DNge032",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11548,
+      "manc_type": "DNg29"
+    },
+    "720575940618666142": {
+      "type": "DNg33",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13900,
+      "manc_type": "DNxl044"
+    },
+    "720575940618818395": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940618870113": {
+      "type": "DNge095",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11072,
+      "manc_type": "DNx01"
+    },
+    "720575940619024542": {
+      "type": "DNge128",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12466,
+      "manc_type": "DNxl114"
+    },
+    "720575940619038366": {
+      "type": "DNge083",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13428,
+      "manc_type": "DNxl061"
+    },
+    "720575940619038493": {
+      "type": "DNpe042",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13660,
+      "manc_type": "DNg39"
+    },
+    "720575940619077755": {
+      "type": "DNge029",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12020,
+      "manc_type": "DNb01"
+    },
+    "720575940619133878": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13049,
+      "manc_type": "DNxl106"
+    },
+    "720575940619152856": {
+      "type": "DNp40",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15838,
+      "manc_type": "DNxn101"
+    },
+    "720575940619191966": {
+      "type": "DNge119",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12431,
+      "manc_type": "DNb01"
+    },
+    "720575940619341744": {
+      "type": "DNpe008",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14739,
+      "manc_type": "DNxl025"
+    },
+    "720575940619432261": {
+      "type": "DNp26",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 11276,
+      "manc_type": "DNb06"
+    },
+    "720575940619451989": {
+      "type": "DNpe033",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 11693,
+      "manc_type": "DNxn182"
+    },
+    "720575940619486891": {
+      "type": "DNp13",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15327,
+      "manc_type": "DNxn185"
+    },
+    "720575940619524852": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940619530187": {
+      "type": "DNge100",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15513,
+      "manc_type": "DNxn183"
+    },
+    "720575940619548799": {
+      "type": "DNpe014",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18107,
+      "manc_type": "DNg39"
+    },
+    "720575940619582168": {
+      "type": "DNb04",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 13776,
+      "manc_type": "DNxl100"
+    },
+    "720575940619590360": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13473,
+      "manc_type": "DNxl102"
+    },
+    "720575940619654053": {
+      "type": "DNp02",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13088,
+      "manc_type": "DNxl106"
+    },
+    "720575940619676598": {
+      "type": "DNge093",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12743,
+      "manc_type": "DNxl044"
+    },
+    "720575940619751872": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940619757366": {
+      "type": "DNg27",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 12735,
+      "manc_type": "DNxl111"
+    },
+    "720575940619877396": {
+      "type": "DNge059",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13012,
+      "manc_type": "DNp14"
+    },
+    "720575940619905916": {
+      "type": "DNge085",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11839,
+      "manc_type": "DNxn180"
+    },
+    "720575940619945931": {
+      "type": "DNd04",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13066,
+      "manc_type": "DNxl107"
+    },
+    "720575940620017261": {
+      "type": "DNge009",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12623,
+      "manc_type": "DNp14"
+    },
+    "720575940620038779": {
+      "type": "DNp47",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13820,
+      "manc_type": "DNxn151"
+    },
+    "720575940620054694": {
+      "type": "DNp11",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14947,
+      "manc_type": "DNxl057"
+    },
+    "720575940620082512": {
+      "type": "DNge049",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13419,
+      "manc_type": "DNxl106"
+    },
+    "720575940620110215": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17031,
+      "manc_type": "DNxl092"
+    },
+    "720575940620116091": {
+      "type": "DN1pC",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940620135645": {
+      "type": "DNge001",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13837,
+      "manc_type": "DNxn150"
+    },
+    "720575940620149836": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940620153765": {
+      "type": "DNp10",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 176792,
+      "manc_type": "DNad006"
+    },
+    "720575940620231590": {
+      "type": "DNge088",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 14257,
+      "manc_type": "DNp17"
+    },
+    "720575940620287067": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940620297819": {
+      "type": "DNge123",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13790,
+      "manc_type": "DNp17"
+    },
+    "720575940620298772": {
+      "type": "DNge035",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13502,
+      "manc_type": "DNxl102"
+    },
+    "720575940620300308": {
+      "type": "DNg97",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16541,
+      "manc_type": "DNxl092"
+    },
+    "720575940620322497": {
+      "type": "DNae009",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 19287,
+      "manc_type": "DNfl036"
+    },
+    "720575940620354836": {
+      "type": "DNp14",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15708,
+      "manc_type": "DNxl025"
+    },
+    "720575940620369517": {
+      "type": "DNp46",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17467,
+      "manc_type": "DNxn091"
+    },
+    "720575940620380449": {
+      "type": "DNae002",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11349,
+      "manc_type": "DNb06"
+    },
+    "720575940620468718": {
+      "type": "DNp02",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12792,
+      "manc_type": "DNut031"
+    },
+    "720575940620473547": {
+      "type": "DNge098",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11968,
+      "manc_type": "DNxn181"
+    },
+    "720575940620534768": {
+      "type": "DNa05",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 13273,
+      "manc_type": "DNxl106"
+    },
+    "720575940620541099": {
+      "type": "DNge054",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11220,
+      "manc_type": "DNxl127"
+    },
+    "720575940620561840": {
+      "type": "DNpe001",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13556,
+      "manc_type": "DNut031"
+    },
+    "720575940620564673": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 14330,
+      "manc_type": "DNxl100"
+    },
+    "720575940620582260": {
+      "type": "DNp67",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15275,
+      "manc_type": "DNxn183"
+    },
+    "720575940620595883": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15257,
+      "manc_type": "DNb04"
+    },
+    "720575940620622708": {
+      "type": "DNg76",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17113,
+      "manc_type": "DNxn091"
+    },
+    "720575940620625880": {
+      "type": "DNpe038",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14485,
+      "manc_type": "DNxn071"
+    },
+    "720575940620632369": {
+      "type": "DNg18_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940620642940": {
+      "type": "DNpe002",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12696,
+      "manc_type": "DNxn122"
+    },
+    "720575940620711334": {
+      "type": "DNa09",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14836,
+      "manc_type": "DNxl099"
+    },
+    "720575940620714150": {
+      "type": "DNge046",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11613,
+      "manc_type": "DNxl120"
+    },
+    "720575940620749807": {
+      "type": "DNde001",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 14939,
+      "manc_type": "DNb04"
+    },
+    "720575940620757748": {
+      "type": "DNpe041",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 11621,
+      "manc_type": "DNxn182"
+    },
+    "720575940620776880": {
+      "type": "DNb03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 16706,
+      "manc_type": "DNxn065"
+    },
+    "720575940620804566": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11386,
+      "manc_type": "DNx01"
+    },
+    "720575940620823828": {
+      "type": "DNa14",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 19369,
+      "manc_type": "DNfl036"
+    },
+    "720575940620859630": {
+      "type": "DNge052",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11798,
+      "manc_type": "DNxn181"
+    },
+    "720575940620878785": {
+      "type": "DNp65",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 11803,
+      "manc_type": "DNxl120"
+    },
+    "720575940620915224": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14409,
+      "manc_type": "DNp21"
+    },
+    "720575940620918789": {
+      "type": "DNa03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14680,
+      "manc_type": "DNxl027"
+    },
+    "720575940621021278": {
+      "type": "DNg18_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621031006": {
+      "type": "DNp48",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16571,
+      "manc_type": "DNg21"
+    },
+    "720575940621059137": {
+      "type": "DN1-l",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621065301": {
+      "type": "DNg88",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13365,
+      "manc_type": "DNad006"
+    },
+    "720575940621068464": {
+      "type": "DNb08",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14350,
+      "manc_type": "DNxn178"
+    },
+    "720575940621071017": {
+      "type": "DNge093",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 163893,
+      "manc_type": "DNa08"
+    },
+    "720575940621107847": {
+      "type": "DNge131",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16326,
+      "manc_type": "DNxl062"
+    },
+    "720575940621157645": {
+      "type": "DNpe024",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16290,
+      "manc_type": "DNxl099"
+    },
+    "720575940621226484": {
+      "type": "DNb04",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 13845,
+      "manc_type": "DNxl029"
+    },
+    "720575940621246068": {
+      "type": "DNg101",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15424,
+      "manc_type": "oviDN"
+    },
+    "720575940621274845": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621319156": {
+      "type": "DNge027",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12956,
+      "manc_type": "DNxl109"
+    },
+    "720575940621325034": {
+      "type": "DNg04",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15576,
+      "manc_type": "DNxn065"
+    },
+    "720575940621336852": {
+      "type": "DNg42",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15546,
+      "manc_type": "DNxn062"
+    },
+    "720575940621339713": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14966,
+      "manc_type": "DNxl027"
+    },
+    "720575940621392086": {
+      "type": "DNde003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14695,
+      "manc_type": "DNg19"
+    },
+    "720575940621399174": {
+      "type": "DNge127",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13169,
+      "manc_type": "DNxl038"
+    },
+    "720575940621401222": {
+      "type": "DNpe025",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15331,
+      "manc_type": "DNxn071"
+    },
+    "720575940621471157": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621519130": {
+      "type": "DNa16",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14716,
+      "manc_type": "DNg19"
+    },
+    "720575940621530117": {
+      "type": "DNge039",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17268,
+      "manc_type": "DNxl088"
+    },
+    "720575940621534273": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11102,
+      "manc_type": "DNxl127"
+    },
+    "720575940621554112": {
+      "type": "DNpe031",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 16192,
+      "manc_type": "DNxn062"
+    },
+    "720575940621561697": {
+      "type": "DNp28",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15344,
+      "manc_type": "DNa06"
+    },
+    "720575940621572890": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15578,
+      "manc_type": "DNxn065"
+    },
+    "720575940621586473": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12847,
+      "manc_type": "DNxl109"
+    },
+    "720575940621626394": {
+      "type": "DNg102",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11263,
+      "manc_type": "DNg31"
+    },
+    "720575940621628582": {
+      "type": "DNg85",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14786,
+      "manc_type": "DNxn054"
+    },
+    "720575940621638593": {
+      "type": "DN1pB",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621640885": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940621667693": {
+      "type": "DNg28",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13244,
+      "manc_type": "DNxl038"
+    },
+    "720575940621700789": {
+      "type": "DNg36_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940621767306": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940621783628": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15934,
+      "manc_type": "DNxn065"
+    },
+    "720575940621804159": {
+      "type": "DNp12",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13481,
+      "manc_type": "DNg30"
+    },
+    "720575940621817326": {
+      "type": "DNg11",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14035,
+      "manc_type": "DNxn088"
+    },
+    "720575940621861133": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940621923837": {
+      "type": "DNge008",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16264,
+      "manc_type": "DNxn159"
+    },
+    "720575940621947653": {
+      "type": "DNg64",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11887,
+      "manc_type": "DNxl118"
+    },
+    "720575940622010373": {
+      "type": "DNg55",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11257,
+      "manc_type": "DNg31"
+    },
+    "720575940622027222": {
+      "type": "DNge046",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11859,
+      "manc_type": "DNxl118"
+    },
+    "720575940622037926": {
+      "type": "DNg41",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11012,
+      "manc_type": "DNp22"
+    },
+    "720575940622040419": {
+      "type": "DNpe044",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12064,
+      "manc_type": "DNp33"
+    },
+    "720575940622123400": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15772,
+      "manc_type": "DNxl043"
+    },
+    "720575940622147873": {
+      "type": "DNge043",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12451,
+      "manc_type": "DNxl115"
+    },
+    "720575940622160560": {
+      "type": "DNg71",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 16099,
+      "manc_type": "DNxn184"
+    },
+    "720575940622161366": {
+      "type": "DNge054",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11488,
+      "manc_type": "DNxl123"
+    },
+    "720575940622195625": {
+      "type": "DNge003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15499,
+      "manc_type": "DNxn174"
+    },
+    "720575940622204186": {
+      "type": "DNae003",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 13892,
+      "manc_type": "DNxl027"
+    },
+    "720575940622228999": {
+      "type": "DN1pA",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940622237466": {
+      "type": "DNge152",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13040,
+      "manc_type": "DNxl107"
+    },
+    "720575940622248453": {
+      "type": "DNge148",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12770,
+      "manc_type": "DNxn084"
+    },
+    "720575940622263066": {
+      "type": "DNge135",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12783,
+      "manc_type": "DNlt008"
+    },
+    "720575940622321110": {
+      "type": "DNbe002",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 23955,
+      "manc_type": "DNxl088"
+    },
+    "720575940622351996": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14337,
+      "manc_type": "DNxn087"
+    },
+    "720575940622386824": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14194,
+      "manc_type": "DNxn087"
+    },
+    "720575940622478349": {
+      "type": "DNge024",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11938,
+      "manc_type": "DNp26"
+    },
+    "720575940622486644": {
+      "type": "DNg45",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15827,
+      "manc_type": "oviDN"
+    },
+    "720575940622500172": {
+      "type": "DNg74_a",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940622537477": {
+      "type": "DNge067",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12619,
+      "manc_type": "DNxl115"
+    },
+    "720575940622537653": {
+      "type": "DNg79",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12136,
+      "manc_type": "DNp03"
+    },
+    "720575940622550089": {
+      "type": "DNp07",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12231,
+      "manc_type": "DNp03"
+    },
+    "720575940622579967": {
+      "type": "DNg29",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16562,
+      "manc_type": "DNfl015"
+    },
+    "720575940622594186": {
+      "type": "DNg91",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14042,
+      "manc_type": "DNxn054"
+    },
+    "720575940622632084": {
+      "type": "DNge001",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10916,
+      "manc_type": "DNp22"
+    },
+    "720575940622633716": {
+      "type": "DNge041",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14061,
+      "manc_type": "DNxl027"
+    },
+    "720575940622673860": {
+      "type": "DNp06",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17507,
+      "manc_type": "DNxn077"
+    },
+    "720575940622728728": {
+      "type": "DNge145",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15844,
+      "manc_type": "DNxl057"
+    },
+    "720575940622786317": {
+      "type": "DNge085",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13092,
+      "manc_type": "DNxl111"
+    },
+    "720575940622797244": {
+      "type": "DNg12_c",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940622836970": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17643,
+      "manc_type": "DNg21"
+    },
+    "720575940622910188": {
+      "type": "DNg02_f",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940622925972": {
+      "type": "DNg01",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27771,
+      "manc_type": "DNad003"
+    },
+    "720575940622933765": {
+      "type": "DNge137",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13336,
+      "manc_type": "DNxn122"
+    },
+    "720575940622944196": {
+      "type": "DNge108",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16075,
+      "manc_type": "DNxn090"
+    },
+    "720575940622996579": {
+      "type": "DNg40",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 13834,
+      "manc_type": "DNxl029"
+    },
+    "720575940623014695": {
+      "type": "DNpe033",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 12613,
+      "manc_type": "DNxn103"
+    },
+    "720575940623019544": {
+      "type": "DNa11",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 13326,
+      "manc_type": "DNg30"
+    },
+    "720575940623033532": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940623037720": {
+      "type": "DNge104",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11731,
+      "manc_type": "DNxl123"
+    },
+    "720575940623062515": {
+      "type": "DNa05",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 15597,
+      "manc_type": "DNxn174"
+    },
+    "720575940623068841": {
+      "type": "DNde007",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 16582,
+      "manc_type": "DNxn184"
+    },
+    "720575940623110123": {
+      "type": "DNde003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17061,
+      "manc_type": "DNxn178"
+    },
+    "720575940623122125": {
+      "type": "DNp104",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10681,
+      "manc_type": "DNp26"
+    },
+    "720575940623125628": {
+      "type": "DNpe020",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15855,
+      "manc_type": "DNa08"
+    },
+    "720575940623128269": {
+      "type": "DNg37",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13688,
+      "manc_type": "DNp21"
+    },
+    "720575940623132621": {
+      "type": "DNge146",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 21750,
+      "manc_type": "DNxn180"
+    },
+    "720575940623137212": {
+      "type": "DNge044",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16369,
+      "manc_type": "DNfl015"
+    },
+    "720575940623142426": {
+      "type": "DNpe043",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14522,
+      "manc_type": "DNxn090"
+    },
+    "720575940623153788": {
+      "type": "DNpe014",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15718,
+      "manc_type": "DNxn150"
+    },
+    "720575940623164685": {
+      "type": "DNge003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14171,
+      "manc_type": "DNad003"
+    },
+    "720575940623193293": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16722,
+      "manc_type": "DNxn141"
+    },
+    "720575940623274966": {
+      "type": "DNpe037",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17713,
+      "manc_type": "DNxn077"
+    },
+    "720575940623276168": {
+      "type": "DNp35",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 13034,
+      "manc_type": "DNxn084"
+    },
+    "720575940623338281": {
+      "type": "DNg98",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12698,
+      "manc_type": "DNlt008"
+    },
+    "720575940623355114": {
+      "type": "DNg88",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10323,
+      "manc_type": "DNp15"
+    },
+    "720575940623385894": {
+      "type": "DNde005",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17366,
+      "manc_type": "DNxn159"
+    },
+    "720575940623426854": {
+      "type": "DNg73",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15604,
+      "manc_type": "DNxn141"
+    },
+    "720575940623431351": {
+      "type": "DNp15",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15127,
+      "manc_type": "DNxn088"
+    },
+    "720575940623431571": {
+      "type": "DNge008",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15426,
+      "manc_type": "DNxl068"
+    },
+    "720575940623467527": {
+      "type": "DNp40",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17291,
+      "manc_type": "DNxl087"
+    },
+    "720575940623468691": {
+      "type": "DNa10",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 17400,
+      "manc_type": "DNfl040"
+    },
+    "720575940623491987": {
+      "type": "DNg110",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10829,
+      "manc_type": "DNp15"
+    },
+    "720575940623528842": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17547,
+      "manc_type": "DNfl040"
+    },
+    "720575940623537485": {
+      "type": "DNge118",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16605,
+      "manc_type": "DNml001"
+    },
+    "720575940623556755": {
+      "type": "DNpe016",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20538,
+      "manc_type": "DNxl085"
+    },
+    "720575940623582867": {
+      "type": "DNp46",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18252,
+      "manc_type": "DNxl085"
+    },
+    "720575940623637226": {
+      "type": "DNge004",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15297,
+      "manc_type": "DNxl096"
+    },
+    "720575940623781127": {
+      "type": "DNp103",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14847,
+      "manc_type": "DNg33"
+    },
+    "720575940623781611": {
+      "type": "DNge105",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15155,
+      "manc_type": "DNxl068"
+    },
+    "720575940623918121": {
+      "type": "DNge055",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 15895,
+      "manc_type": "DNxn070"
+    },
+    "720575940623925173": {
+      "type": "DNp65",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 13496,
+      "manc_type": "DNut059"
+    },
+    "720575940623934096": {
+      "type": "DNge110",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15117,
+      "manc_type": "DNxl098"
+    },
+    "720575940623938823": {
+      "type": "DNb07",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 18135,
+      "manc_type": "DNxn154"
+    },
+    "720575940623992300": {
+      "type": "DNp17",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17396,
+      "manc_type": "DNxl087"
+    },
+    "720575940624015287": {
+      "type": "DNge075",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12291,
+      "manc_type": "DNp33"
+    },
+    "720575940624082931": {
+      "type": "DNg04",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16648,
+      "manc_type": "DNml001"
+    },
+    "720575940624106388": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16859,
+      "manc_type": "DNxl021"
+    },
+    "720575940624121161": {
+      "type": "DNpe027",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18748,
+      "manc_type": "DNxn126"
+    },
+    "720575940624154604": {
+      "type": "DNge087",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12731,
+      "manc_type": "DNxn179"
+    },
+    "720575940624234242": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17798,
+      "manc_type": "DNxn157"
+    },
+    "720575940624319124": {
+      "type": "DNg62",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18568,
+      "manc_type": "DNxl021"
+    },
+    "720575940624333802": {
+      "type": "DNg37",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15074,
+      "manc_type": "DNxl059"
+    },
+    "720575940624349993": {
+      "type": "DNp70",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15650,
+      "manc_type": "DNxl095"
+    },
+    "720575940624394498": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940624402173": {
+      "type": "DNpe053",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15280,
+      "manc_type": "DNfl005"
+    },
+    "720575940624407944": {
+      "type": "DNp36",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 19682,
+      "manc_type": "DNxn052"
+    },
+    "720575940624426680": {
+      "type": "DNp45",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14187,
+      "manc_type": "DNut035"
+    },
+    "720575940624448956": {
+      "type": "DNg42",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 16814,
+      "manc_type": "DNxn070"
+    },
+    "720575940624459907": {
+      "type": "DNde007",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18431,
+      "manc_type": "DNxn052"
+    },
+    "720575940624484796": {
+      "type": "DNge106",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18596,
+      "manc_type": "DNxn173"
+    },
+    "720575940624537284": {
+      "type": "DNge124",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13085,
+      "manc_type": "DNp28"
+    },
+    "720575940624748419": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940624750480": {
+      "type": "DNg24",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10719,
+      "manc_type": "DNxn125"
+    },
+    "720575940624766700": {
+      "type": "DNpe020",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15099,
+      "manc_type": "DNxl052"
+    },
+    "720575940624801771": {
+      "type": "DNpe040",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14867,
+      "manc_type": "DNfl005"
+    },
+    "720575940624816115": {
+      "type": "DNge033",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12747,
+      "manc_type": "DNxn179"
+    },
+    "720575940624874983": {
+      "type": "DNae008",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 14910,
+      "manc_type": "DNxl098"
+    },
+    "720575940624877360": {
+      "type": "DNg102",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12753,
+      "manc_type": "DNxn179"
+    },
+    "720575940624897516": {
+      "type": "DNg105",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10759,
+      "manc_type": "DNxn125"
+    },
+    "720575940624967463": {
+      "type": "DNg52",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12617,
+      "manc_type": "DNxn179"
+    },
+    "720575940624968013": {
+      "type": "DNg04",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16911,
+      "manc_type": "DNxl056"
+    },
+    "720575940624977847": {
+      "type": "DNpe050",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16842,
+      "manc_type": "DNxn078"
+    },
+    "720575940624982823": {
+      "type": "DNbe006",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 17279,
+      "manc_type": "DNnt020"
+    },
+    "720575940624986300": {
+      "type": "DNge055",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 16822,
+      "manc_type": "DNxn157"
+    },
+    "720575940624986919": {
+      "type": "DNa06",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 15769,
+      "manc_type": "DNxn140"
+    },
+    "720575940625006776": {
+      "type": "DNde006",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17794,
+      "manc_type": "DNg41"
+    },
+    "720575940625065653": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17751,
+      "manc_type": "DNxl056"
+    },
+    "720575940625090314": {
+      "type": "DNa08",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 18189,
+      "manc_type": "DNxl030"
+    },
+    "720575940625094325": {
+      "type": "DNae008",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 16082,
+      "manc_type": "DNxn140"
+    },
+    "720575940625101360": {
+      "type": "DNx01",
+      "segment": "unknown",
+      "nt": "ACH",
+      "manc_id": 16393,
+      "manc_type": "DNfl042"
+    },
+    "720575940625182341": {
+      "type": "DNge083",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18518,
+      "manc_type": "DNg41"
+    },
+    "720575940625184782": {
+      "type": "DNpe026",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18076,
+      "manc_type": "DNxl095"
+    },
+    "720575940625187940": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12974,
+      "manc_type": "DNp28"
+    },
+    "720575940625253649": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940625295339": {
+      "type": "DNp13",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15131,
+      "manc_type": "DNxl059"
+    },
+    "720575940625306603": {
+      "type": "DNge011",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 11824,
+      "manc_type": "DNg14"
+    },
+    "720575940625314058": {
+      "type": "DNg92_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940625345511": {
+      "type": "DNp63",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16926,
+      "manc_type": "DNg14"
+    },
+    "720575940625345584": {
+      "type": "DNg92_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940625353736": {
+      "type": "DNg19",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15226,
+      "manc_type": "DNnt020"
+    },
+    "720575940625376062": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940625396252": {
+      "type": "DNg36_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940625420986": {
+      "type": "DNp101",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18010,
+      "manc_type": "DNxl030"
+    },
+    "720575940625422609": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940625426469": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18997,
+      "manc_type": "DNxn126"
+    },
+    "720575940625502666": {
+      "type": "DNa13",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 16746,
+      "manc_type": "DNxn149"
+    },
+    "720575940625513360": {
+      "type": "DNp52",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15909,
+      "manc_type": "DNg33"
+    },
+    "720575940625539984": {
+      "type": "DNp49",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 17830,
+      "manc_type": "DNfl041"
+    },
+    "720575940625558730": {
+      "type": "DNbe005",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 21685,
+      "manc_type": "DNxn120"
+    },
+    "720575940625573322": {
+      "type": "DNae006",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 11279,
+      "manc_type": "DNxl125"
+    },
+    "720575940625573653": {
+      "type": "DNg11",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12574,
+      "manc_type": "DNad002"
+    },
+    "720575940625596647": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13020,
+      "manc_type": "DNad002"
+    },
+    "720575940625641402": {
+      "type": "DNge018",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14074,
+      "manc_type": "DNxl052"
+    },
+    "720575940625653029": {
+      "type": "DNx02",
+      "segment": "unknown",
+      "nt": "ACH",
+      "manc_id": 18777,
+      "manc_type": "DNxn173"
+    },
+    "720575940625673196": {
+      "type": "DNp71",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 10000,
+      "manc_type": "DNp01"
+    },
+    "720575940625718053": {
+      "type": "DNde003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17575,
+      "manc_type": "DNxn078"
+    },
+    "720575940625747812": {
+      "type": "DNp49",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 18730,
+      "manc_type": "DNxl096"
+    },
+    "720575940625815562": {
+      "type": "DNg77",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15143,
+      "manc_type": "DNxl097"
+    },
+    "720575940625863728": {
+      "type": "DNg109",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15356,
+      "manc_type": "DNxl097"
+    },
+    "720575940625870640": {
+      "type": "DNg15",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17526,
+      "manc_type": "DNxn155"
+    },
+    "720575940625872688": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940625878160": {
+      "type": "DNb01",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 17806,
+      "manc_type": "DNxl034"
+    },
+    "720575940626009852": {
+      "type": "DNp05",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16193,
+      "manc_type": "DNxl125"
+    },
+    "720575940626027752": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20904,
+      "manc_type": "DNfl034"
+    },
+    "720575940626068569": {
+      "type": "DNge087",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11443,
+      "manc_type": "DNxn097"
+    },
+    "720575940626092302": {
+      "type": "DNge082",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16567,
+      "manc_type": "DNxn149"
+    },
+    "720575940626229337": {
+      "type": "DNge015",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14693,
+      "manc_type": "DNut058"
+    },
+    "720575940626238716": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18041,
+      "manc_type": "DNxn155"
+    },
+    "720575940626268761": {
+      "type": "DNge144",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15025,
+      "manc_type": "DNut058"
+    },
+    "720575940626278129": {
+      "type": "DNg02_f",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940626295396": {
+      "type": "DNg85",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19266,
+      "manc_type": "DNfl042"
+    },
+    "720575940626328707": {
+      "type": "DNae001",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 18312,
+      "manc_type": "DNxn131"
+    },
+    "720575940626399588": {
+      "type": "DNg12_d",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940626524702": {
+      "type": "DNg71",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 16817,
+      "manc_type": "DNfl041"
+    },
+    "720575940626527055": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940626557442": {
+      "type": "DNge173",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17244,
+      "manc_type": "DNxn098"
+    },
+    "720575940626562833": {
+      "type": "DNp66",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 12683,
+      "manc_type": "DNut037"
+    },
+    "720575940626580794": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13542,
+      "manc_type": "DNut037"
+    },
+    "720575940626639259": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18636,
+      "manc_type": "DNxl084"
+    },
+    "720575940626663994": {
+      "type": "DNg36_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940626665489": {
+      "type": "DNpe054",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18046,
+      "manc_type": "DNxn131"
+    },
+    "720575940626672058": {
+      "type": "DNge056",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20782,
+      "manc_type": "DNfl034"
+    },
+    "720575940626729295": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16522,
+      "manc_type": "DNxn098"
+    },
+    "720575940626730883": {
+      "type": "DNg97",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13777,
+      "manc_type": "DNut035"
+    },
+    "720575940626732776": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940626745987": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19462,
+      "manc_type": "DNxl083"
+    },
+    "720575940626748702": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20006,
+      "manc_type": "DNb03"
+    },
+    "720575940626755673": {
+      "type": "DN1a",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940626806046": {
+      "type": "DNpe039",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20188,
+      "manc_type": "DNxn130"
+    },
+    "720575940626816062": {
+      "type": "DNg83",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10937,
+      "manc_type": "DNxn097"
+    },
+    "720575940626834698": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940626849546": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17193,
+      "manc_type": "DNnt019"
+    },
+    "720575940626859283": {
+      "type": "DNp60",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 29767,
+      "manc_type": "DNxl066"
+    },
+    "720575940626877639": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10002,
+      "manc_type": "DNp01"
+    },
+    "720575940626889491": {
+      "type": "DNge124",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20799,
+      "manc_type": "DNxn130"
+    },
+    "720575940626901136": {
+      "type": "DNg40",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18099,
+      "manc_type": "DNxl034"
+    },
+    "720575940626936324": {
+      "type": "DNg106",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12934,
+      "manc_type": "DNg38"
+    },
+    "720575940626982181": {
+      "type": "DNge107",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20042,
+      "manc_type": "DNb03"
+    },
+    "720575940626993694": {
+      "type": "DNge007",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19878,
+      "manc_type": "DNut053"
+    },
+    "720575940627015196": {
+      "type": "DNg108",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12332,
+      "manc_type": "DNg38"
+    },
+    "720575940627044885": {
+      "type": "DNge141",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13548,
+      "manc_type": "DNxn103"
+    },
+    "720575940627055303": {
+      "type": "DNp53",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17329,
+      "manc_type": "DNut057"
+    },
+    "720575940627087646": {
+      "type": "DNg74_b",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940627099338": {
+      "type": "DNge062",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21320,
+      "manc_type": "DNfl033"
+    },
+    "720575940627107721": {
+      "type": "DNge036",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20029,
+      "manc_type": "DNxl082"
+    },
+    "720575940627139530": {
+      "type": "DNae002",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 21344,
+      "manc_type": "DNb03"
+    },
+    "720575940627166851": {
+      "type": "DNp41",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 19660,
+      "manc_type": "DNxl083"
+    },
+    "720575940627167516": {
+      "type": "DNge065",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14026,
+      "manc_type": "DNut059"
+    },
+    "720575940627234069": {
+      "type": "DNge069",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 153988,
+      "manc_type": "DNxn154"
+    },
+    "720575940627285267": {
+      "type": "DNge174",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22501,
+      "manc_type": "DNfl011"
+    },
+    "720575940627307625": {
+      "type": "DNge089",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22870,
+      "manc_type": "DNg12"
+    },
+    "720575940627366675": {
+      "type": "DNg72",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 19080,
+      "manc_type": "DNxl084"
+    },
+    "720575940627368723": {
+      "type": "DNde005",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19535,
+      "manc_type": "DNut053"
+    },
+    "720575940627403578": {
+      "type": "DNge057",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 151729,
+      "manc_type": "DNxl063"
+    },
+    "720575940627417619": {
+      "type": "DNg12_c",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940627419676": {
+      "type": "DNge034",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17989,
+      "manc_type": "DNxn120"
+    },
+    "720575940627432680": {
+      "type": "DNa04",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 22875,
+      "manc_type": "DNg12"
+    },
+    "720575940627490459": {
+      "type": "DNge130",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22586,
+      "manc_type": "DNxl077"
+    },
+    "720575940627496829": {
+      "type": "DNp37",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 19045,
+      "manc_type": "DNxl091"
+    },
+    "720575940627500279": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940627542316": {
+      "type": "DNpe011",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26296,
+      "manc_type": "DNxl077"
+    },
+    "720575940627582724": {
+      "type": "DNp44",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21284,
+      "manc_type": "DNnt006"
+    },
+    "720575940627620593": {
+      "type": "DNpe019",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 22394,
+      "manc_type": "DNfl011"
+    },
+    "720575940627645514": {
+      "type": "DNp03",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17669,
+      "manc_type": "DNxn075"
+    },
+    "720575940627652358": {
+      "type": "DNp09",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20535,
+      "manc_type": "DNxn147"
+    },
+    "720575940627691458": {
+      "type": "DNg82",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18153,
+      "manc_type": "DNxn075"
+    },
+    "720575940627722234": {
+      "type": "DNge113",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23953,
+      "manc_type": "DNfl030"
+    },
+    "720575940627731176": {
+      "type": "DNg05_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940627731599": {
+      "type": "DNbe004",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 17358,
+      "manc_type": "DNxl094"
+    },
+    "720575940627732361": {
+      "type": "DNp26",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20825,
+      "manc_type": "DNxl078"
+    },
+    "720575940627732423": {
+      "type": "DNg45",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 190167,
+      "manc_type": "DNlt011"
+    },
+    "720575940627750216": {
+      "type": "DNpe031",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 16053,
+      "manc_type": "DNxl094"
+    },
+    "720575940627787609": {
+      "type": "DNa01",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 20194,
+      "manc_type": "DNnt006"
+    },
+    "720575940627799802": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21270,
+      "manc_type": "DNxl078"
+    },
+    "720575940627812168": {
+      "type": "DNg47",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16683,
+      "manc_type": "DNxl091"
+    },
+    "720575940627814522": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940627825923": {
+      "type": "DNg15",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 33339,
+      "manc_type": "DNxl063"
+    },
+    "720575940627826760": {
+      "type": "DNge037",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19189,
+      "manc_type": "DNxn153"
+    },
+    "720575940627827697": {
+      "type": "DNge067",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13734,
+      "manc_type": "DNxl045"
+    },
+    "720575940627828552": {
+      "type": "DNg87",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18279,
+      "manc_type": "DNxn075"
+    },
+    "720575940627845704": {
+      "type": "DNge148",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17630,
+      "manc_type": "DNxn075"
+    },
+    "720575940627847752": {
+      "type": "DNge080",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20649,
+      "manc_type": "DNxn127"
+    },
+    "720575940627924227": {
+      "type": "DNpe014",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20082,
+      "manc_type": "DNxl081"
+    },
+    "720575940627946261": {
+      "type": "DNa10",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 20978,
+      "manc_type": "DNxl077"
+    },
+    "720575940627949589": {
+      "type": "DNp18",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18092,
+      "manc_type": "DNxl033"
+    },
+    "720575940627997050": {
+      "type": "DNb03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 17537,
+      "manc_type": "DNnt019"
+    },
+    "720575940628125715": {
+      "type": "DNg87",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18353,
+      "manc_type": "DNut057"
+    },
+    "720575940628132745": {
+      "type": "DNp31",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24753,
+      "manc_type": "DNfl008"
+    },
+    "720575940628241628": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940628252751": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27936,
+      "manc_type": "DNfl023"
+    },
+    "720575940628257874": {
+      "type": "DN1pB",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940628264585": {
+      "type": "DNge129",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14935,
+      "manc_type": "DNxl045"
+    },
+    "720575940628345610": {
+      "type": "DNge002",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21380,
+      "manc_type": "DNxl082"
+    },
+    "720575940628352850": {
+      "type": "DNb05",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 20953,
+      "manc_type": "DNfl033"
+    },
+    "720575940628358931": {
+      "type": "DN1pB",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940628360723": {
+      "type": "DNge049",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23461,
+      "manc_type": "DNfl031"
+    },
+    "720575940628378440": {
+      "type": "DNge021",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12358,
+      "manc_type": "DNp04"
+    },
+    "720575940628397138": {
+      "type": "DNg92_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940628436282": {
+      "type": "DNge075",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27775,
+      "manc_type": "DNfl023"
+    },
+    "720575940628437291": {
+      "type": "DNp35",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 38977,
+      "manc_type": "DNxl066"
+    },
+    "720575940628441862": {
+      "type": "DNge026",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17963,
+      "manc_type": "DNb02"
+    },
+    "720575940628445169": {
+      "type": "DNge024",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 153153,
+      "manc_type": "DNxl033"
+    },
+    "720575940628498161": {
+      "type": "DNp08",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 16858,
+      "manc_type": "DNb02"
+    },
+    "720575940628577897": {
+      "type": "DNa04",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 23448,
+      "manc_type": "DNxn147"
+    },
+    "720575940628582607": {
+      "type": "DNg82",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21756,
+      "manc_type": "DNb03"
+    },
+    "720575940628627867": {
+      "type": "DNbe003",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 20847,
+      "manc_type": "DNxl081"
+    },
+    "720575940628659049": {
+      "type": "DNge137",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22072,
+      "manc_type": "DNfl031"
+    },
+    "720575940628669545": {
+      "type": "DNge082",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 15829,
+      "manc_type": "DNxn063"
+    },
+    "720575940628796780": {
+      "type": "DNpe014",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 16898,
+      "manc_type": "DNut058"
+    },
+    "720575940628825348": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 12482,
+      "manc_type": "DNp04"
+    },
+    "720575940628844712": {
+      "type": "DNg44",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18445,
+      "manc_type": "DNb02"
+    },
+    "720575940628858640": {
+      "type": "DNp66",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24060,
+      "manc_type": "DNxn079"
+    },
+    "720575940628869648": {
+      "type": "DNge077",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23663,
+      "manc_type": "DNxn079"
+    },
+    "720575940628881576": {
+      "type": "DNg52",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13299,
+      "manc_type": "DNxn152"
+    },
+    "720575940628883535": {
+      "type": "DNge099",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 18415,
+      "manc_type": "DNb02"
+    },
+    "720575940628884496": {
+      "type": "DNp03",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21124,
+      "manc_type": "DNxl075"
+    },
+    "720575940628885160": {
+      "type": "DNpe049",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21069,
+      "manc_type": "DNlt011"
+    },
+    "720575940628895787": {
+      "type": "DNp17",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20104,
+      "manc_type": "DNxn153"
+    },
+    "720575940628942586": {
+      "type": "DNg02_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940628971779": {
+      "type": "DNge076",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13139,
+      "manc_type": "DNxn152"
+    },
+    "720575940629041879": {
+      "type": "DNb06",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 154083,
+      "manc_type": "DNxn118"
+    },
+    "720575940629064186": {
+      "type": "DNde003",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27241,
+      "manc_type": "DNfl030"
+    },
+    "720575940629139968": {
+      "type": "DNge113",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22416,
+      "manc_type": "DNxl075"
+    },
+    "720575940629155227": {
+      "type": "DNpe021",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 163639,
+      "manc_type": "DNxl075"
+    },
+    "720575940629170250": {
+      "type": "DNp57",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 14948,
+      "manc_type": "DNp35"
+    },
+    "720575940629240263": {
+      "type": "DNge041",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 152849,
+      "manc_type": "DNfl008"
+    },
+    "720575940629304702": {
+      "type": "DNge073",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20030,
+      "manc_type": "DNut052"
+    },
+    "720575940629312300": {
+      "type": "DNp56",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21696,
+      "manc_type": "DNxl077"
+    },
+    "720575940629327659": {
+      "type": "DNa02",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 22194,
+      "manc_type": "DNxn171"
+    },
+    "720575940629369642": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17474,
+      "manc_type": "DNxl086"
+    },
+    "720575940629390123": {
+      "type": "DNp20",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18784,
+      "manc_type": "DNfl037"
+    },
+    "720575940629412170": {
+      "type": "DNd04",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17717,
+      "manc_type": "DNxn148"
+    },
+    "720575940629421159": {
+      "type": "DNp12",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21807,
+      "manc_type": "DNxn171"
+    },
+    "720575940629428215": {
+      "type": "DNpe002",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18614,
+      "manc_type": "DNxl032"
+    },
+    "720575940629461442": {
+      "type": "DNb05",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 20678,
+      "manc_type": "DNxl079"
+    },
+    "720575940629472298": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24892,
+      "manc_type": "DNfl004"
+    },
+    "720575940629477675": {
+      "type": "DNge079",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13268,
+      "manc_type": "DNxl037"
+    },
+    "720575940629486075": {
+      "type": "DNg107",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24087,
+      "manc_type": "DNfl037"
+    },
+    "720575940629502251": {
+      "type": "DNbe007",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 13801,
+      "manc_type": "DNxl037"
+    },
+    "720575940629521655": {
+      "type": "DNg51",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21638,
+      "manc_type": "DNxl075"
+    },
+    "720575940629543409": {
+      "type": "DNg68",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21358,
+      "manc_type": "DNut051"
+    },
+    "720575940629686339": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15511,
+      "manc_type": "DNp35"
+    },
+    "720575940629725545": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22004,
+      "manc_type": "DNxn118"
+    },
+    "720575940629736720": {
+      "type": "DNd05",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19821,
+      "manc_type": "DNxl032"
+    },
+    "720575940629742718": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16511,
+      "manc_type": "DNxn063"
+    },
+    "720575940629757036": {
+      "type": "DNp04",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21004,
+      "manc_type": "DNxl076"
+    },
+    "720575940629777018": {
+      "type": "DNp11",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 19120,
+      "manc_type": "DNg02"
+    },
+    "720575940629782072": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 23585,
+      "manc_type": "DNxl079"
+    },
+    "720575940629792060": {
+      "type": "DNge100",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14340,
+      "manc_type": "DNg04"
+    },
+    "720575940629805950": {
+      "type": "DNg35",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20253,
+      "manc_type": "DNxn069"
+    },
+    "720575940629806974": {
+      "type": "DNge078",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17777,
+      "manc_type": "DNxn136"
+    },
+    "720575940629812346": {
+      "type": "DNde002",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19182,
+      "manc_type": "DNg02"
+    },
+    "720575940629846722": {
+      "type": "DNp64",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18339,
+      "manc_type": "DNg04"
+    },
+    "720575940629866283": {
+      "type": "DNpe017",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 13262,
+      "manc_type": "DNxl104"
+    },
+    "720575940629956695": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19174,
+      "manc_type": "DNg01"
+    },
+    "720575940630054735": {
+      "type": "DNg23",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13161,
+      "manc_type": "DNxl104"
+    },
+    "720575940630078031": {
+      "type": "DNpe011",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 15451,
+      "manc_type": "DNg04"
+    },
+    "720575940630085583": {
+      "type": "DNa03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 22412,
+      "manc_type": "DNg02"
+    },
+    "720575940630106309": {
+      "type": "DNpe001",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21454,
+      "manc_type": "DNut050"
+    },
+    "720575940630135084": {
+      "type": "DNge053",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24316,
+      "manc_type": "DNfl004"
+    },
+    "720575940630221509": {
+      "type": "DNp67",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 18765,
+      "manc_type": "DNut030"
+    },
+    "720575940630221563": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20600,
+      "manc_type": "DNxl035"
+    },
+    "720575940630236988": {
+      "type": "DNp38",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 22372,
+      "manc_type": "DNxn069"
+    },
+    "720575940630291767": {
+      "type": "DNge046",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16418,
+      "manc_type": "DNxn085"
+    },
+    "720575940630297292": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22676,
+      "manc_type": "DNg02"
+    },
+    "720575940630346860": {
+      "type": "DNp54",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 17004,
+      "manc_type": "DNxn156"
+    },
+    "720575940630382075": {
+      "type": "DNge087",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16417,
+      "manc_type": "DNxn085"
+    },
+    "720575940630403031": {
+      "type": "DNge139",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 17948,
+      "manc_type": "DNxn136"
+    },
+    "720575940630425083": {
+      "type": "DNpe006",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 22002,
+      "manc_type": "DNxn100"
+    },
+    "720575940630480348": {
+      "type": "DNg102",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 15950,
+      "manc_type": "DNxn072"
+    },
+    "720575940630492714": {
+      "type": "DNg02_d",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940630607738": {
+      "type": "DNae007",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 21250,
+      "manc_type": "DNxl076"
+    },
+    "720575940630665210": {
+      "type": "DNg28",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 176812,
+      "manc_type": "DNxn066"
+    },
+    "720575940630689644": {
+      "type": "DNpe030",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 17862,
+      "manc_type": "DNxn083"
+    },
+    "720575940630695798": {
+      "type": "DNge060",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 17710,
+      "manc_type": "DNxl086"
+    },
+    "720575940630758418": {
+      "type": "DNb01",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 19952,
+      "manc_type": "DNxn148"
+    },
+    "720575940630808591": {
+      "type": "DNg52",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16803,
+      "manc_type": "DNxl090"
+    },
+    "720575940630808827": {
+      "type": "DNg68",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23962,
+      "manc_type": "DNxn127"
+    },
+    "720575940630810486": {
+      "type": "DNg98",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17621,
+      "manc_type": "DNxn057"
+    },
+    "720575940630839371": {
+      "type": "DNge146",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12843,
+      "manc_type": "DNg37"
+    },
+    "720575940630868281": {
+      "type": "DNae010",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 17898,
+      "manc_type": "DNxn083"
+    },
+    "720575940630992813": {
+      "type": "DNp36",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 23404,
+      "manc_type": "DNfl012"
+    },
+    "720575940631061900": {
+      "type": "DNge111",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27728,
+      "manc_type": "DNg12"
+    },
+    "720575940631091407": {
+      "type": "DNge099",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 24193,
+      "manc_type": "DNfl012"
+    },
+    "720575940631108559": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940631122191": {
+      "type": "DNp43",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24107,
+      "manc_type": "DNxl035"
+    },
+    "720575940631124076": {
+      "type": "DNge134",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 24959,
+      "manc_type": "DNxl072"
+    },
+    "720575940631168057": {
+      "type": "DNg60",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10912,
+      "manc_type": "DNxl131"
+    },
+    "720575940631225996": {
+      "type": "DNp22",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28033,
+      "manc_type": "DNxn145"
+    },
+    "720575940631242799": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940631283267": {
+      "type": "DNge018",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 152324,
+      "manc_type": "DNut052"
+    },
+    "720575940631299855": {
+      "type": "DNg49",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 20898,
+      "manc_type": "DNut052"
+    },
+    "720575940631333195": {
+      "type": "DNd05",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22430,
+      "manc_type": "DNxl073"
+    },
+    "720575940631342073": {
+      "type": "DNge122",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 18305,
+      "manc_type": "DNxl090"
+    },
+    "720575940631469452": {
+      "type": "DNge134",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 28048,
+      "manc_type": "DNxl072"
+    },
+    "720575940631483695": {
+      "type": "DNp101",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24267,
+      "manc_type": "DNxl047"
+    },
+    "720575940631498563": {
+      "type": "DNa08",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 19864,
+      "manc_type": "DNfl037"
+    },
+    "720575940631499832": {
+      "type": "DNpe050",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21071,
+      "manc_type": "DNfl037"
+    },
+    "720575940631508598": {
+      "type": "DNge032",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18852,
+      "manc_type": "DNg04"
+    },
+    "720575940631518582": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940631583519": {
+      "type": "DN1pD",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940631593753": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940631627551": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24125,
+      "manc_type": "DNxl047"
+    },
+    "720575940631629160": {
+      "type": "DNg47",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24306,
+      "manc_type": "DNut047"
+    },
+    "720575940631632012": {
+      "type": "DNge012",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18840,
+      "manc_type": "DNg01"
+    },
+    "720575940631643532": {
+      "type": "DNg77",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19046,
+      "manc_type": "DNut030"
+    },
+    "720575940631651810": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 23381,
+      "manc_type": "DNut049"
+    },
+    "720575940631662648": {
+      "type": "DNge106",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 16813,
+      "manc_type": "DNxn064"
+    },
+    "720575940631695841": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22758,
+      "manc_type": "DNut052"
+    },
+    "720575940631705130": {
+      "type": "DNg111",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 22625,
+      "manc_type": "DNut049"
+    },
+    "720575940631759663": {
+      "type": "DNa15",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 27026,
+      "manc_type": "DNfl026"
+    },
+    "720575940631829059": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23580,
+      "manc_type": "DNg07"
+    },
+    "720575940631863085": {
+      "type": "DN1pE",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940631889965": {
+      "type": "DNg106",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12029,
+      "manc_type": "DNxn066"
+    },
+    "720575940631959097": {
+      "type": "DNge042",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25694,
+      "manc_type": "DNg07"
+    },
+    "720575940631973207": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940631982952": {
+      "type": "DNge132",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 14979,
+      "manc_type": "DNut035"
+    },
+    "720575940631987364": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940632043320": {
+      "type": "DNge130",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26448,
+      "manc_type": "DNfl010"
+    },
+    "720575940632043576": {
+      "type": "DNg108",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16837,
+      "manc_type": "DNxn057"
+    },
+    "720575940632161311": {
+      "type": "DNge010",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 13979,
+      "manc_type": "DNut035"
+    },
+    "720575940632178892": {
+      "type": "DNge147",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26502,
+      "manc_type": "DNfl028"
+    },
+    "720575940632189900": {
+      "type": "DNp31",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 25479,
+      "manc_type": "DNut047"
+    },
+    "720575940632296519": {
+      "type": "DNge079",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26426,
+      "manc_type": "DNfl029"
+    },
+    "720575940632302151": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23573,
+      "manc_type": "DNg07"
+    },
+    "720575940632303441": {
+      "type": "DNge025",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26603,
+      "manc_type": "DNfl010"
+    },
+    "720575940632307025": {
+      "type": "DNg49",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11477,
+      "manc_type": "DNp32"
+    },
+    "720575940632339425": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940632355885": {
+      "type": "DNge020",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18815,
+      "manc_type": "DNnt005"
+    },
+    "720575940632407826": {
+      "type": "DNg70",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 154401,
+      "manc_type": "DNxn158"
+    },
+    "720575940632412333": {
+      "type": "DNge096",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 11561,
+      "manc_type": "DNp32"
+    },
+    "720575940632422219": {
+      "type": "DNp38",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26391,
+      "manc_type": "DNp16"
+    },
+    "720575940632458514": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940632472850": {
+      "type": "DNpe056",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 22475,
+      "manc_type": "DNg02"
+    },
+    "720575940632486969": {
+      "type": "DNge036",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27014,
+      "manc_type": "DNfl026"
+    },
+    "720575940632512156": {
+      "type": "DNpe038",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 23849,
+      "manc_type": "DNg07"
+    },
+    "720575940632524559": {
+      "type": "DNg70",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 18244,
+      "manc_type": "DNxn121"
+    },
+    "720575940632539788": {
+      "type": "DNbe001",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 167965,
+      "manc_type": "DNg01"
+    },
+    "720575940632574946": {
+      "type": "DNge113",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25171,
+      "manc_type": "DNg02"
+    },
+    "720575940632575584": {
+      "type": "DN1pC",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940632620991": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18207,
+      "manc_type": "DNxn064"
+    },
+    "720575940632626402": {
+      "type": "DNge111",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 28478,
+      "manc_type": "DNg12"
+    },
+    "720575940632634532": {
+      "type": "DNg57",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26039,
+      "manc_type": "DNg07"
+    },
+    "720575940632644639": {
+      "type": "DNx02",
+      "segment": "unknown",
+      "nt": "ACH",
+      "manc_id": 26725,
+      "manc_type": "DNg12"
+    },
+    "720575940632722771": {
+      "type": "DNg31",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 15186,
+      "manc_type": "DNxl060"
+    },
+    "720575940632742225": {
+      "type": "DN1-l",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940632836675": {
+      "type": "DNp41",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26307,
+      "manc_type": "DNfl028"
+    },
+    "720575940632868051": {
+      "type": "DNbe001",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 18893,
+      "manc_type": "DNg02"
+    },
+    "720575940632877869": {
+      "type": "DNg67",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25879,
+      "manc_type": "DNfl029"
+    },
+    "720575940632900665": {
+      "type": "DNpe022",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 23811,
+      "manc_type": "DNxn117"
+    },
+    "720575940632903737": {
+      "type": "DNp34",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27629,
+      "manc_type": "DNxn145"
+    },
+    "720575940632960813": {
+      "type": "DNge056",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24845,
+      "manc_type": "DNg02"
+    },
+    "720575940632962786": {
+      "type": "DNa16",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 23690,
+      "manc_type": "DNut051"
+    },
+    "720575940633011256": {
+      "type": "DNpe023",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 30008,
+      "manc_type": "DNfl022"
+    },
+    "720575940633095137": {
+      "type": "DNp71",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 21908,
+      "manc_type": "DNg02"
+    },
+    "720575940633170643": {
+      "type": "DNp08",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 21909,
+      "manc_type": "DNg40"
+    },
+    "720575940633178508": {
+      "type": "DNge006",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24705,
+      "manc_type": "DNg02"
+    },
+    "720575940633201400": {
+      "type": "DNge015",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26608,
+      "manc_type": "DNfl028"
+    },
+    "720575940633228172": {
+      "type": "DNg48",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19010,
+      "manc_type": "DNnt005"
+    },
+    "720575940633293025": {
+      "type": "DNge065",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17871,
+      "manc_type": "DNxn121"
+    },
+    "720575940633488153": {
+      "type": "DNpe003",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24131,
+      "manc_type": "DNxn100"
+    },
+    "720575940633529548": {
+      "type": "DNg74_a",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940633727339": {
+      "type": "DNa07",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 27279,
+      "manc_type": "DNp23"
+    },
+    "720575940633771745": {
+      "type": "DNg20",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 15047,
+      "manc_type": "DNnt003"
+    },
+    "720575940633781217": {
+      "type": "DNg107",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26713,
+      "manc_type": "DNxn143"
+    },
+    "720575940633853559": {
+      "type": "DNp17",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24337,
+      "manc_type": "DNxl073"
+    },
+    "720575940633953434": {
+      "type": "DNp41",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20843,
+      "manc_type": "DNg02"
+    },
+    "720575940633995181": {
+      "type": "DNg53",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25239,
+      "manc_type": "DNxn169"
+    },
+    "720575940633996883": {
+      "type": "DNge136",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 12863,
+      "manc_type": "DNg37"
+    },
+    "720575940634140883": {
+      "type": "DNa09",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 24758,
+      "manc_type": "DNut045"
+    },
+    "720575940634163682": {
+      "type": "DNb03",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 27516,
+      "manc_type": "DNxn143"
+    },
+    "720575940634198926": {
+      "type": "DNge019",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 18145,
+      "manc_type": "DNg02"
+    },
+    "720575940634207087": {
+      "type": "DNg09",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23646,
+      "manc_type": "DNxn170"
+    },
+    "720575940634229871": {
+      "type": "DNg21",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27217,
+      "manc_type": "DNfl024"
+    },
+    "720575940634253281": {
+      "type": "DNae003",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 25786,
+      "manc_type": "DNa07"
+    },
+    "720575940634428058": {
+      "type": "DNge043",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17494,
+      "manc_type": "DNfl039"
+    },
+    "720575940634458719": {
+      "type": "DNpe056",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28073,
+      "manc_type": "DNg02"
+    },
+    "720575940634459290": {
+      "type": "DNb08",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 25041,
+      "manc_type": "DNg02"
+    },
+    "720575940634525303": {
+      "type": "DNge071",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17995,
+      "manc_type": "DNfl039"
+    },
+    "720575940634526560": {
+      "type": "DNge092",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27622,
+      "manc_type": "DNxn100"
+    },
+    "720575940634560922": {
+      "type": "DNge073",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26850,
+      "manc_type": "DNg03"
+    },
+    "720575940634599615": {
+      "type": "DNg18_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940634617952": {
+      "type": "DNg57",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27125,
+      "manc_type": "DNp23"
+    },
+    "720575940634750871": {
+      "type": "DNpe031",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 25630,
+      "manc_type": "DNxl039"
+    },
+    "720575940634782359": {
+      "type": "DNge143",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13804,
+      "manc_type": "DNxl131"
+    },
+    "720575940634825879": {
+      "type": "DNge045",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25473,
+      "manc_type": "DNg02"
+    },
+    "720575940634862943": {
+      "type": "DNge076",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14575,
+      "manc_type": "DNxl060"
+    },
+    "720575940635166571": {
+      "type": "DNg60",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16333,
+      "manc_type": "DNxn158"
+    },
+    "720575940635175263": {
+      "type": "DNg12_c",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940635179871": {
+      "type": "DNg103",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14937,
+      "manc_type": "DNnt003"
+    },
+    "720575940635210603": {
+      "type": "DNpe052",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27389,
+      "manc_type": "DNfl028"
+    },
+    "720575940635212139": {
+      "type": "DNge121",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27098,
+      "manc_type": "DNp16"
+    },
+    "720575940635222640": {
+      "type": "DNg110",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25449,
+      "manc_type": "DNg02"
+    },
+    "720575940635254117": {
+      "type": "DNx01",
+      "segment": "unknown",
+      "nt": "ACH",
+      "manc_id": 25825,
+      "manc_type": "DNg02"
+    },
+    "720575940635355804": {
+      "type": "DNge135",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14677,
+      "manc_type": "DNc01"
+    },
+    "720575940635405719": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26332,
+      "manc_type": "DNfl028"
+    },
+    "720575940635464343": {
+      "type": "DNpe004",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27523,
+      "manc_type": "DNfl025"
+    },
+    "720575940635549620": {
+      "type": "DNp29",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27520,
+      "manc_type": "DNfl024"
+    },
+    "720575940635552948": {
+      "type": "DNpe037",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 25870,
+      "manc_type": "DNxn068"
+    },
+    "720575940635564896": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940635587064": {
+      "type": "DNg51",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24324,
+      "manc_type": "DNxn132"
+    },
+    "720575940635701655": {
+      "type": "DNg91",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26242,
+      "manc_type": "DNut043"
+    },
+    "720575940635838143": {
+      "type": "DNpe052",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27039,
+      "manc_type": "DNxn132"
+    },
+    "720575940635872101": {
+      "type": "DNp09",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27912,
+      "manc_type": "DNfl022"
+    },
+    "720575940636104767": {
+      "type": "DNge111",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25931,
+      "manc_type": "DNa07"
+    },
+    "720575940636186463": {
+      "type": "DNge092",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24989,
+      "manc_type": "DNxn170"
+    },
+    "720575940636308075": {
+      "type": "DNge078",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24755,
+      "manc_type": "DNxn138"
+    },
+    "720575940636329579": {
+      "type": "DNg41",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 25965,
+      "manc_type": "DNut056"
+    },
+    "720575940636333710": {
+      "type": "DNge064",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24453,
+      "manc_type": "DNxn117"
+    },
+    "720575940636454136": {
+      "type": "DNae009",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 29447,
+      "manc_type": "DNg02"
+    },
+    "720575940636479863": {
+      "type": "DNpe013",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24186,
+      "manc_type": "DNxn169"
+    },
+    "720575940636592302": {
+      "type": "DNpe019",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 25130,
+      "manc_type": "DNut044"
+    },
+    "720575940636606554": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21150,
+      "manc_type": "DNxn119"
+    },
+    "720575940636610671": {
+      "type": "DNp63",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27011,
+      "manc_type": "DNxn068"
+    },
+    "720575940636651376": {
+      "type": "DNp51",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27095,
+      "manc_type": "DNfl025"
+    },
+    "720575940636656632": {
+      "type": "DNg74_b",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 10336,
+      "manc_type": "DNxn096"
+    },
+    "720575940636671886": {
+      "type": "DNge156",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27990,
+      "manc_type": "DNxn138"
+    },
+    "720575940636761926": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940636879534": {
+      "type": "DNpe013",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28572,
+      "manc_type": "DNg07"
+    },
+    "720575940636898270": {
+      "type": "DNge145",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26377,
+      "manc_type": "DNxn117"
+    },
+    "720575940636933722": {
+      "type": "DNp41",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27174,
+      "manc_type": "DNut043"
+    },
+    "720575940637101413": {
+      "type": "DNa07",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 23615,
+      "manc_type": "DNut054"
+    },
+    "720575940637126007": {
+      "type": "DNp56",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 20647,
+      "manc_type": "DNxn119"
+    },
+    "720575940637308605": {
+      "type": "DNb06",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 29706,
+      "manc_type": "DNg12"
+    },
+    "720575940637341668": {
+      "type": "DNpe045",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27877,
+      "manc_type": "DNg02"
+    },
+    "720575940637501784": {
+      "type": "DNg12_d",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940637530084": {
+      "type": "DNge001",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26846,
+      "manc_type": "DNxn129"
+    },
+    "720575940637603038": {
+      "type": "DNge038",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 22290,
+      "manc_type": "DNut054"
+    },
+    "720575940637607646": {
+      "type": "DNa13",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 25734,
+      "manc_type": "DNut045"
+    },
+    "720575940637608560": {
+      "type": "DNa14",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 28396,
+      "manc_type": "DNxn112"
+    },
+    "720575940637612974": {
+      "type": "DNge105",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21714,
+      "manc_type": "DNg02"
+    },
+    "720575940637618142": {
+      "type": "DNpe043",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 24129,
+      "manc_type": "DNut054"
+    },
+    "720575940637648485": {
+      "type": "DNg20",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17522,
+      "manc_type": "DNfl038"
+    },
+    "720575940637659749": {
+      "type": "DNge052",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14904,
+      "manc_type": "DNxn056"
+    },
+    "720575940637667443": {
+      "type": "DNg08_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940637678653": {
+      "type": "DNg92_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940637870510": {
+      "type": "DNge121",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21158,
+      "manc_type": "DNxn119"
+    },
+    "720575940637896893": {
+      "type": "DNge090",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 70285,
+      "manc_type": "DNxl039"
+    },
+    "720575940638013274": {
+      "type": "DNpe006",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27951,
+      "manc_type": "DNfl029"
+    },
+    "720575940638019184": {
+      "type": "DNge145",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 31381,
+      "manc_type": "DNfl021"
+    },
+    "720575940638088511": {
+      "type": "DNge084",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 20313,
+      "manc_type": "DNnt016"
+    },
+    "720575940638109668": {
+      "type": "DNg89",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17865,
+      "manc_type": "DNfl038"
+    },
+    "720575940638159472": {
+      "type": "DNg92_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940638175558": {
+      "type": "DNge072",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24978,
+      "manc_type": "DNfl035"
+    },
+    "720575940638204132": {
+      "type": "DNge053",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24679,
+      "manc_type": "DNut033"
+    },
+    "720575940638637501": {
+      "type": "DNp102",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 169854,
+      "manc_type": "DNut054"
+    },
+    "720575940638664355": {
+      "type": "DNg46",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 23609,
+      "manc_type": "DNg40"
+    },
+    "720575940638810677": {
+      "type": "DNg12_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940638836285": {
+      "type": "DNx02",
+      "segment": "unknown",
+      "nt": "ACH",
+      "manc_id": 25925,
+      "manc_type": "DNg02"
+    },
+    "720575940638989894": {
+      "type": "DNge026",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 26251,
+      "manc_type": "DNut056"
+    },
+    "720575940639088216": {
+      "type": "DNge030",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25409,
+      "manc_type": "DNg01"
+    },
+    "720575940639118926": {
+      "type": "DNg24",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 13916,
+      "manc_type": "DNc01"
+    },
+    "720575940639152361": {
+      "type": "DNg84",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 31787,
+      "manc_type": "DNfl021"
+    },
+    "720575940639159029": {
+      "type": "DNg36_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940639159797": {
+      "type": "DNg51",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27359,
+      "manc_type": "DNxn129"
+    },
+    "720575940639170723": {
+      "type": "DNde002",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 31446,
+      "manc_type": "DNfl019"
+    },
+    "720575940639242303": {
+      "type": "DNpe053",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28263,
+      "manc_type": "DNxl067"
+    },
+    "720575940639314229": {
+      "type": "DNge141",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 19367,
+      "manc_type": "DNxn156"
+    },
+    "720575940639425112": {
+      "type": "DNge007",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23292,
+      "manc_type": "DNut054"
+    },
+    "720575940639428174": {
+      "type": "DNp23",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26288,
+      "manc_type": "DNut033"
+    },
+    "720575940639539840": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 29120,
+      "manc_type": "DNg12"
+    },
+    "720575940639553920": {
+      "type": "DNge101",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 15162,
+      "manc_type": "DNg24"
+    },
+    "720575940639634304": {
+      "type": "DNge022",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26003,
+      "manc_type": "DNut056"
+    },
+    "720575940639726141": {
+      "type": "DNge035",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25384,
+      "manc_type": "DNut033"
+    },
+    "720575940639789475": {
+      "type": "DNp64",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28224,
+      "manc_type": "DNg07"
+    },
+    "720575940639789731": {
+      "type": "DNpe012",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26587,
+      "manc_type": "DNp17"
+    },
+    "720575940639919824": {
+      "type": "DNpe010",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 26744,
+      "manc_type": "DNxl069"
+    },
+    "720575940640140733": {
+      "type": "DNge116",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 21386,
+      "manc_type": "DNxn119"
+    },
+    "720575940640194493": {
+      "type": "DNg08_b",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940640316238": {
+      "type": "DNg102",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 20252,
+      "manc_type": "DNxl050"
+    },
+    "720575940640325429": {
+      "type": "DNa06",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 25543,
+      "manc_type": "DNg03"
+    },
+    "720575940640486488": {
+      "type": "DNge127",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 15090,
+      "manc_type": "DNg24"
+    },
+    "720575940640589171": {
+      "type": "DNge031",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16553,
+      "manc_type": "DNxn072"
+    },
+    "720575940640630589": {
+      "type": "DNge094",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 28372,
+      "manc_type": "DNut050"
+    },
+    "720575940640723315": {
+      "type": "DNge104",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 19452,
+      "manc_type": "DNp24"
+    },
+    "720575940640747352": {
+      "type": "DNp14",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27252,
+      "manc_type": "DNxn117"
+    },
+    "720575940640978048": {
+      "type": "DNg100",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23813,
+      "manc_type": "DNut048"
+    },
+    "720575940641148149": {
+      "type": "DNp42",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27361,
+      "manc_type": "DNg02"
+    },
+    "720575940641173632": {
+      "type": "DNp69",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26362,
+      "manc_type": "DNg02"
+    },
+    "720575940641237632": {
+      "type": "DNp72",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28959,
+      "manc_type": "DNut054"
+    },
+    "720575940641276917": {
+      "type": "DNae004",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 32146,
+      "manc_type": "DNxn112"
+    },
+    "720575940641278965": {
+      "type": "DNp43",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 173123,
+      "manc_type": "DNfl019"
+    },
+    "720575940641305229": {
+      "type": "DNg02_d",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940641480949": {
+      "type": "DNg16",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26571,
+      "manc_type": "DNnt014"
+    },
+    "720575940641781133": {
+      "type": "DNg12_e",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940641832333": {
+      "type": "DNg52",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16942,
+      "manc_type": "DNxl093"
+    },
+    "720575940641833869": {
+      "type": "DNg73",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25110,
+      "manc_type": "DNxn055"
+    },
+    "720575940642198747": {
+      "type": "DNg92_b",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940642369736": {
+      "type": "DNge115",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 32667,
+      "manc_type": "DNg12"
+    },
+    "720575940642545883": {
+      "type": "DNg32",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26720,
+      "manc_type": "DNnt008"
+    },
+    "720575940642549467": {
+      "type": "DNb08",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 26189,
+      "manc_type": "DNg03"
+    },
+    "720575940642894628": {
+      "type": "DNp34",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 25454,
+      "manc_type": "DNut033"
+    },
+    "720575940642926702": {
+      "type": "DNg12_a",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 10339,
+      "manc_type": "DNxl058"
+    },
+    "720575940643074976": {
+      "type": "DN1pC",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940643347616": {
+      "type": "DNp55",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26939,
+      "manc_type": "DNxn100"
+    },
+    "720575940643487342": {
+      "type": "DNp19",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28350,
+      "manc_type": "DNg02"
+    },
+    "720575940643817888": {
+      "type": "DNg04",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 32461,
+      "manc_type": "DNxn112"
+    },
+    "720575940643837988": {
+      "type": "DNg19",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26626,
+      "manc_type": "DNxn117"
+    },
+    "720575940644022551": {
+      "type": "DNpe003",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26838,
+      "manc_type": "DNp17"
+    },
+    "720575940644166048": {
+      "type": "DNp20",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27899,
+      "manc_type": "DNp17"
+    },
+    "720575940644279319": {
+      "type": "DNpe028",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 167413,
+      "manc_type": "DNxn134"
+    },
+    "720575940644438551": {
+      "type": "DNa01",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 24368,
+      "manc_type": "DNut048"
+    },
+    "720575940644467360": {
+      "type": "DNge133",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25814,
+      "manc_type": "DNut033"
+    },
+    "720575940644473760": {
+      "type": "DNg84",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27448,
+      "manc_type": "DNp17"
+    },
+    "720575940644494752": {
+      "type": "DNbe007",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 19444,
+      "manc_type": "DNut054"
+    },
+    "720575940644659236": {
+      "type": "DNge028",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 23518,
+      "manc_type": "DNg08"
+    },
+    "720575940644666660": {
+      "type": "DNg27",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 26464,
+      "manc_type": "DNxl069"
+    },
+    "720575940644758308": {
+      "type": "DNge046",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14244,
+      "manc_type": "DNg22"
+    },
+    "720575940644801060": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25709,
+      "manc_type": "DNxn055"
+    },
+    "720575940645045527": {
+      "type": "DNge174",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25989,
+      "manc_type": "DNut054"
+    },
+    "720575940645047831": {
+      "type": "DNg16",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27396,
+      "manc_type": "DNnt008"
+    },
+    "720575940645258606": {
+      "type": "DNp59",
+      "segment": "prothoracic",
+      "nt": "GABA",
+      "manc_id": 20085,
+      "manc_type": "DNnt016"
+    },
+    "720575940645352814": {
+      "type": "DNge040",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10023,
+      "manc_type": "DNp20"
+    },
+    "720575940645537902": {
+      "type": "DNde001",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 31648,
+      "manc_type": "DNxn053"
+    },
+    "720575940645693476": {
+      "type": "DNpe032",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 23855,
+      "manc_type": "DNut054"
+    },
+    "720575940645975063": {
+      "type": "DN1pB",
+      "segment": "prothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940646443316": {
+      "type": "DNge086",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 16420,
+      "manc_type": "DNxl093"
+    },
+    "720575940646753412": {
+      "type": "DNb02",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 29081,
+      "manc_type": "DNxl135"
+    },
+    "720575940646814340": {
+      "type": "DNp57",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 28680,
+      "manc_type": "DNg02"
+    },
+    "720575940647029044": {
+      "type": "DNg105",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 31482,
+      "manc_type": "DNxn053"
+    },
+    "720575940647031860": {
+      "type": "DNge122",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17344,
+      "manc_type": "DNnt018"
+    },
+    "720575940647228468": {
+      "type": "DNg100",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25969,
+      "manc_type": "DNxn055"
+    },
+    "720575940647471395": {
+      "type": "DNpe036",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 27624,
+      "manc_type": "DNxn114"
+    },
+    "720575940647478148": {
+      "type": "DNg07",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 28053,
+      "manc_type": "DNfl029"
+    },
+    "720575940647560500": {
+      "type": "DNg61",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 24458,
+      "manc_type": "DNg08"
+    },
+    "720575940647586948": {
+      "type": "DNge050",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 29182,
+      "manc_type": "DNfl021"
+    },
+    "720575940648180868": {
+      "type": "DNge057",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 25683,
+      "manc_type": "DNa03"
+    },
+    "720575940648188548": {
+      "type": "DNg54",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 30271,
+      "manc_type": "DNg12"
+    },
+    "720575940648636292": {
+      "type": "DNb09",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 29261,
+      "manc_type": "DNfl044"
+    },
+    "720575940648654468": {
+      "type": "DNpe036",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 26767,
+      "manc_type": "DNxn134"
+    },
+    "720575940649809273": {
+      "type": "DNg56",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 19112,
+      "manc_type": "DNnt018"
+    },
+    "720575940649829241": {
+      "type": "DNge051",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 19414,
+      "manc_type": "DNp24"
+    },
+    "720575940649992569": {
+      "type": "DNge091",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27723,
+      "manc_type": "DNg03"
+    },
+    "720575940651341558": {
+      "type": "DNae010",
+      "segment": "metathoracic",
+      "nt": "ACH",
+      "manc_id": 28004,
+      "manc_type": "DNxn113"
+    },
+    "720575940651932150": {
+      "type": "DNge070",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 29312,
+      "manc_type": "DNxl067"
+    },
+    "720575940652104694": {
+      "type": "DNge128",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 21431,
+      "manc_type": "DNxn172"
+    },
+    "720575940653053601": {
+      "type": "DNg03",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 27097,
+      "manc_type": "DNg03"
+    },
+    "720575940653310198": {
+      "type": "DNbe004",
+      "segment": "metathoracic",
+      "nt": "GLUT",
+      "manc_id": 31885,
+      "manc_type": "DNxn073"
+    },
+    "720575940654094241": {
+      "type": "DNge096",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 14814,
+      "manc_type": "DNg22"
+    },
+    "720575940655587489": {
+      "type": "DNp73",
+      "segment": "prothoracic",
+      "nt": "ACH",
+      "manc_id": 31531,
+      "manc_type": "DNfl018"
+    },
+    "720575940656144289": {
+      "type": "DNg110",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 26662,
+      "manc_type": "DNnt014"
+    },
+    "720575940659703937": {
+      "type": "DNg18_a",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 10491,
+      "manc_type": "DNd03"
+    },
+    "720575940660220289": {
+      "type": "DNge143",
+      "segment": "mesothoracic",
+      "nt": "GABA",
+      "manc_id": 17376,
+      "manc_type": "DNad005"
+    },
+    "720575940660224385": {
+      "type": "DNg10",
+      "segment": "mesothoracic",
+      "nt": "ACH",
+      "manc_id": 19511,
+      "manc_type": "DNfl035"
+    },
+    "720575940660269185": {
+      "type": "DNg106",
+      "segment": "mesothoracic",
+      "nt": "GLUT",
+      "manc_id": 36495,
+      "manc_type": "DNit007"
+    }
+  }
+}

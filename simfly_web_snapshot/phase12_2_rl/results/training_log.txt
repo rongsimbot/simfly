@@ -1,0 +1,52 @@
+Device: cuda
+Environment: http://192.168.1.199:8080
+  Sweet spot: gain=0.001, tau=100ms
+  State dim: 43, Action dim: 36
+Policy: PPOPolicySmall, params: 35145
+
+============================================================
+Starting Training: 60 episodes
+  Buffer size: 8, Print freq: 5
+  Each episode: 5s stabilize + 2s sampling
+============================================================
+
+Ep   5/60 | R=+6.587 | CV=0.6477 (avg10=0.6606) | FD=1.005 | mu_scale=1.294 | 36s elapsed, ETA 405s
+Ep  10/60 | R=+4.535 | CV=0.4360 (avg10=0.6975) | FD=0.888 | mu_scale=1.281 | 73s elapsed, ETA 369s
+Ep  15/60 | R=+6.508 | CV=0.6503 (avg10=0.7115) | FD=0.848 | mu_scale=1.183 | 110s elapsed, ETA 331s
+Ep  20/60 | R=+4.249 | CV=0.4277 (avg10=0.7439) | FD=0.863 | mu_scale=1.284 | 147s elapsed, ETA 294s
+Ep  25/60 | R=+8.780 | CV=0.8705 (avg10=0.7644) | FD=0.827 | mu_scale=1.199 | 183s elapsed, ETA 257s
+Ep  30/60 | R=+11.008 | CV=1.0923 (avg10=0.7719) | FD=0.738 | mu_scale=1.145 | 220s elapsed, ETA 220s
+Ep  35/60 | R=+8.672 | CV=0.8577 (avg10=0.7697) | FD=0.673 | mu_scale=1.222 | 256s elapsed, ETA 183s
+Ep  40/60 | R=+7.368 | CV=0.7293 (avg10=0.8573) | FD=0.593 | mu_scale=1.225 | loss=13.5479 | 293s elapsed, ETA 146s
+Ep  45/60 | R=+5.368 | CV=0.5298 (avg10=0.8366) | FD=0.509 | mu_scale=1.306 | 330s elapsed, ETA 110s
+Ep  50/60 | R=+9.735 | CV=0.9640 (avg10=0.7556) | FD=0.416 | mu_scale=1.204 | 366s elapsed, ETA 73s
+Ep  55/60 | R=+5.278 | CV=0.5238 (avg10=0.7733) | FD=0.342 | mu_scale=1.212 | 403s elapsed, ETA 36s
+Ep  60/60 | R=+6.492 | CV=0.6492 (avg10=0.7740) | FD=0.304 | mu_scale=1.194 | 440s elapsed, ETA 0s
+
+Training complete in 440s (7.3 min)
+
+============================================================
+Training Summary
+============================================================
+  Episodes: 60
+  Best CV:  1.9966 (episode 38)
+  Mean CV:  0.7667 +/- 0.2330
+  Baseline (Phase 12.1 sweet spot): 0.4350
+  Engine ceiling (uniform scaling):  0.4746
+  Improvement over sweet spot:       +359.0%
+  *** BEAT THE 47.46%% CEILING! ***
+
+  Best Per-Joint Scales (top/bottom 5):
+  >> Highest gain joints:
+      tibia_T3_left                       = 1.6282
+      coxa_twist_T1_right                 = 1.5731
+      tibia_T1_right                      = 1.5710
+      femur_twist_T1_right                = 1.4643
+      tibia_T2_left                       = 1.4159
+  << Lowest gain joints:
+      coxa_abduct_T1_right                = 0.7633
+      coxa_twist_T2_right                 = 0.7517
+      femur_T1_right                      = 0.7420
+      femur_T3_right                      = 0.7359
+      coxa_T3_left                        = 0.6483
+============================================================

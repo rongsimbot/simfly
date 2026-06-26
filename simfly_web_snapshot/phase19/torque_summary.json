@@ -1,0 +1,182 @@
+{
+  "coxa_T1_left": {
+    "mean": -0.9765,
+    "std": 0.0005,
+    "max_abs": 0.9816
+  },
+  "coxa_T1_right": {
+    "mean": -0.8357,
+    "std": 0.0013,
+    "max_abs": 0.8472
+  },
+  "coxa_T2_left": {
+    "mean": -0.7355,
+    "std": 0.0011,
+    "max_abs": 0.7383
+  },
+  "coxa_T2_right": {
+    "mean": -0.6544,
+    "std": 0.0015,
+    "max_abs": 0.665
+  },
+  "coxa_T3_left": {
+    "mean": 0.7094,
+    "std": 0.0,
+    "max_abs": 0.7094
+  },
+  "coxa_T3_right": {
+    "mean": -0.2935,
+    "std": 0.0003,
+    "max_abs": 0.2939
+  },
+  "coxa_abduct_T1_left": {
+    "mean": 0.8263,
+    "std": 0.0,
+    "max_abs": 0.8263
+  },
+  "coxa_abduct_T1_right": {
+    "mean": -0.762,
+    "std": 0.0,
+    "max_abs": 0.762
+  },
+  "coxa_abduct_T2_left": {
+    "mean": 0.2585,
+    "std": 0.0019,
+    "max_abs": 0.2595
+  },
+  "coxa_abduct_T2_right": {
+    "mean": 0.5877,
+    "std": 0.0024,
+    "max_abs": 0.5923
+  },
+  "coxa_abduct_T3_left": {
+    "mean": -0.6931,
+    "std": 0.0,
+    "max_abs": 0.6931
+  },
+  "coxa_abduct_T3_right": {
+    "mean": 0.6597,
+    "std": 0.001,
+    "max_abs": 0.6617
+  },
+  "coxa_twist_T1_left": {
+    "mean": 0.0834,
+    "std": 0.0,
+    "max_abs": 0.0834
+  },
+  "coxa_twist_T1_right": {
+    "mean": -0.2706,
+    "std": 0.0,
+    "max_abs": 0.2706
+  },
+  "coxa_twist_T2_left": {
+    "mean": 0.1535,
+    "std": 0.0,
+    "max_abs": 0.1535
+  },
+  "coxa_twist_T2_right": {
+    "mean": -0.1245,
+    "std": 0.0,
+    "max_abs": 0.1245
+  },
+  "coxa_twist_T3_left": {
+    "mean": -0.9062,
+    "std": 0.0002,
+    "max_abs": 0.9064
+  },
+  "coxa_twist_T3_right": {
+    "mean": -0.9619,
+    "std": 0.0013,
+    "max_abs": 0.9637
+  },
+  "femur_T1_left": {
+    "mean": -0.7616,
+    "std": 0.0004,
+    "max_abs": 0.7622
+  },
+  "femur_T1_right": {
+    "mean": -0.351,
+    "std": 0.0,
+    "max_abs": 0.351
+  },
+  "femur_T2_left": {
+    "mean": -0.789,
+    "std": 0.0,
+    "max_abs": 0.789
+  },
+  "femur_T2_right": {
+    "mean": 0.469,
+    "std": 0.0,
+    "max_abs": 0.469
+  },
+  "femur_T3_left": {
+    "mean": -0.1133,
+    "std": 0.0137,
+    "max_abs": 0.1254
+  },
+  "femur_T3_right": {
+    "mean": 0.79,
+    "std": 0.0,
+    "max_abs": 0.79
+  },
+  "femur_twist_T1_left": {
+    "mean": -0.1264,
+    "std": 0.0,
+    "max_abs": 0.1265
+  },
+  "femur_twist_T1_right": {
+    "mean": -0.1157,
+    "std": 0.0,
+    "max_abs": 0.1157
+  },
+  "femur_twist_T2_left": {
+    "mean": -0.0607,
+    "std": 0.0,
+    "max_abs": 0.0607
+  },
+  "femur_twist_T2_right": {
+    "mean": 0.3416,
+    "std": 0.0001,
+    "max_abs": 0.3421
+  },
+  "femur_twist_T3_left": {
+    "mean": 0.048,
+    "std": 0.0,
+    "max_abs": 0.048
+  },
+  "femur_twist_T3_right": {
+    "mean": 0.7443,
+    "std": 0.0001,
+    "max_abs": 0.7443
+  },
+  "tibia_T1_left": {
+    "mean": 0.2913,
+    "std": 0.0,
+    "max_abs": 0.2913
+  },
+  "tibia_T1_right": {
+    "mean": -0.3712,
+    "std": 0.0002,
+    "max_abs": 0.3716
+  },
+  "tibia_T2_left": {
+    "mean": -0.4277,
+    "std": 0.0002,
+    "max_abs": 0.4279
+  },
+  "tibia_T2_right": {
+    "mean": -0.5811,
+    "std": 0.0002,
+    "max_abs": 0.5816
+  },
+  "tibia_T3_left": {
+    "mean": 0.647,
+    "std": 0.0002,
+    "max_abs": 0.6482
+  },
+  "tibia_T3_right": {
+    "mean": -0.1214,
+    "std": 0.0003,
+    "max_abs": 0.1224
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "phase": "C - Joint LIF + Torque Optimization",
+  "config": {
+    "n_joints": 36,
+    "bfs_hops": 1,
+    "syn_threshold": 5,
+    "brain_steps": 2,
+    "algorithm": "PPO (numpy, analytic gradients, GAE, 54-dim action space)",
+    "hidden": 128,
+    "lr": 0.0003,
+    "iterations": 50,
+    "rollout_steps": 1024,
+    "max_ep_steps": 400
+  },
+  "phase_a_only": {
+    "method": "phase_a_only",
+    "steps_run": 400,
+    "total_reward": 1081.4026833697947,
+    "mean_z_height": 0.07960520125273454,
+    "z_height_std": 0.011542684219780068,
+    "mean_upright": 1.3267533542122427,
+    "mean_torque_magnitude": 0.1182222585985724,
+    "torque_std": 0.31665980584171727,
+    "mean_fired_neurons": 31.585,
+    "mean_active_joints": 5.67,
+    "fell_at_step": -1,
+    "fell": false
+  },
+  "phase_b_only": {
+    "method": "phase_b_only",
+    "steps_run": 400,
+    "total_reward": 1025.4331960132845,
+    "mean_z_height": 0.07540748970099641,
+    "z_height_std": 0.010165915059485896,
+    "mean_upright": 1.2567914950166068,
+    "mean_torque_magnitude": 0.05958826518546791,
+    "torque_std": 0.22694299184501077,
+    "mean_fired_neurons": 32.1275,
+    "mean_active_joints": 2.97,
+    "fell_at_step": -1,
+    "fell": false
+  },
+  "phase_c_joint": {
+    "method": "phase_c_joint",
+    "steps_run": 400,
+    "total_reward": 1063.4358940454233,
+    "mean_z_height": 0.07825769205340673,
+    "z_height_std": 0.011629548859144972,
+    "mean_upright": 1.304294867556779,
+    "mean_torque_magnitude": 0.10135573611290759,
+    "torque_std": 0.29488007877541417,
+    "mean_fired_neurons": 31.9425,
+    "mean_active_joints": 4.77,
+    "fell_at_step": -1,
+    "fell": false
+  },
+  "improvement": {
+    "total_reward": {
+      "phase_a": 1081.4026833697947,
+      "phase_b": 1025.4331960132845,
+      "phase_c": 1063.4358940454233,
+      "delta_a_to_c": -17.966789324371348,
+      "delta_b_to_c": 38.002698032138824,
+      "pct_a_to_c": -1.6614337656550195,
+      "pct_b_to_c": 3.7060140221241578
+    },
+    "mean_z_height": {
+      "phase_a": 0.07960520125273454,
+      "phase_b": 0.07540748970099641,
+      "phase_c": 0.07825769205340673,
+      "delta_a_to_c": -0.0013475091993278149,
+      "delta_b_to_c": 0.0028502023524103193,
+      "pct_a_to_c": -1.6927399326278731,
+      "pct_b_to_c": 3.779733267528903
+    },
+    "z_height_std": {
+      "phase_a": 0.011542684219780068,
+      "phase_b": 0.010165915059485896,
+      "phase_c": 0.011629548859144972,
+      "delta_a_to_c": 8.686463936490377e-05,
+      "delta_b_to_c": 0.0014636337996590757,
+      "pct_a_to_c": 0.752550814488776,
+      "pct_b_to_c": 14.397448250844114
+    },
+    "mean_upright": {
+      "phase_a": 1.3267533542122427,
+      "phase_b": 1.2567914950166068,
+      "phase_c": 1.304294867556779,
+      "delta_a_to_c": -0.022458486655463794,
+      "delta_b_to_c": 0.04750337254017212,
+      "pct_a_to_c": -1.6927401325112508,
+      "pct_b_to_c": 3.7797337386955383
+    },
+    "mean_torque_magnitude": {
+      "phase_a": 0.1182222585985724,
+      "phase_b": 0.05958826518546791,
+      "phase_c": 0.10135573611290759,
+      "delta_a_to_c": -0.01686652248566481,
+      "delta_b_to_c": 0.041767470927439675,
+      "pct_a_to_c": -14.266789739025937,
+      "pct_b_to_c": 70.09343834410181
+    },
+    "mean_fired_neurons": {
+      "phase_a": 31.585,
+      "phase_b": 32.1275,
+      "phase_c": 31.9425,
+      "delta_a_to_c": 0.35749999999999815,
+      "delta_b_to_c": -0.18499999999999872,
+      "pct_a_to_c": 1.1318663919164524,
+      "pct_b_to_c": -0.5758306744764319
+    },
+    "mean_active_joints": {
+      "phase_a": 5.67,
+      "phase_b": 2.97,
+      "phase_c": 4.77,
+      "delta_a_to_c": -0.9000000000000004,
+      "delta_b_to_c": 1.7999999999999994,
+      "pct_a_to_c": -15.873015845021143,
+      "pct_b_to_c": 60.60606040199977
+    }
+  },
+  "training_duration_s": 372.496208483004,
+  "training_iterations": 50,
+  "timestamp": "2026-06-14T17:26:53.944806"
+}

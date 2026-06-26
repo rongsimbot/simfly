@@ -1,0 +1,19 @@
+Device: cuda
+Environment: http://192.168.1.199:8080
+  Sweet spot: gain=0.001, tau=100ms
+  State dim: 43, Action dim: 36
+Policy: PPOPolicySmall, params: 35145
+
+============================================================
+Starting Training: 120 episodes
+  Buffer size: 8, Print freq: 5
+  Each episode: 5s stabilize + 2s sampling
+============================================================
+
+Ep   5/120 | R=+0.030 | CV=0.0030 (avg10=0.0021) | FD=1.140 | mu_scale=1.296 | 36s elapsed, ETA 846s
+Ep  10/120 | R=+0.005 | CV=0.0000 (avg10=0.0015) | FD=1.139 | mu_scale=1.313 | 73s elapsed, ETA 810s
+Ep  15/120 | R=+0.033 | CV=0.0033 (avg10=0.0015) | FD=1.139 | mu_scale=1.274 | 110s elapsed, ETA 771s
+Ep  20/120 | R=-0.106 | CV=0.0033 (avg10=0.0023) | FD=1.139 | mu_scale=1.293 | 146s elapsed, ETA 733s
+Ep  25/120 | R=-0.092 | CV=0.0042 (avg10=0.0021) | FD=1.139 | mu_scale=1.291 | 183s elapsed, ETA 696s
+Ep  30/120 | R=+0.041 | CV=0.0041 (avg10=0.0021) | FD=1.139 | mu_scale=1.308 | 219s elapsed, ETA 659s
+Ep  35/120 | R=+0.009 | CV=0.0009 (avg10=0.0027) | FD=1.139 | mu_scale=1.281 | 256s elapsed, ETA 622s

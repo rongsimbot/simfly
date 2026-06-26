@@ -1,0 +1,113 @@
+{
+  "phase": 14,
+  "title": "Per-Segment Body Control & Gait Architecture",
+  "timestamp": "2026-06-23T21:30:00Z",
+  "status": "COMPLETE",
+
+  "step1_dn_segment_map": {
+    "status": "COMPLETE",
+    "output": "/tmp/simfly_web/dn_segment_map.json",
+    "total_matched_dns": 953,
+    "by_segment": {
+      "mesothoracic": 594,
+      "prothoracic": 267,
+      "metathoracic": 86,
+      "unknown": 6
+    },
+    "nt_breakdown": {
+      "mesothoracic": {"ACH": 388, "GABA": 112, "GLUT": 94},
+      "prothoracic": {"ACH": 218, "GABA": 11, "GLUT": 38},
+      "metathoracic": {"ACH": 72, "GLUT": 14}
+    },
+    "key_finding": "0 DNs map to proboscis, head, or wing — all 953 matched DNs are thoracic (leg)"
+  },
+
+  "step2_dn_t1_pathways": {
+    "status": "COMPLETE",
+    "output": "/tmp/simfly_web/dn_t1_left_map.json",
+    "total_t1_left_mns": 99,
+    "dns_targeting_t1": 953,
+    "key_finding": "ALL 953 DNs converge on ALL 99 T1 left MNs through interneuron cascades. Segmentation cannot happen at DN level — must be at MN type level.",
+    "per_joint_dns": {
+      "coxa_T1_left": 953,
+      "coxa_abduct_T1_left": 953,
+      "coxa_twist_T1_left": 953,
+      "femur_T1_left": 953,
+      "tibia_T1_left": 953
+    },
+    "mn_fn_types_differ": "MN function type distributions DO differ between DNs (e.g., DNae004: 2161 flexor vs 451 extensor pathways)"
+  },
+
+  "step3_single_leg_control": {
+    "status": "NOT_ISOLATABLE",
+    "reason": "All 953 DNs reach all leg MNs through interneuron cascades. Cannot isolate single-leg DN stimulation — need MN-type-level differentiation instead.",
+    "alternative": "Per-joint biomechanical scaling + MN type sign differentiation implemented in Step 4 instead"
+  },
+
+  "step4_decoder_fix": {
+    "status": "COMPLETE",
+    "files_changed": [
+      "vnc_bridge/vnc_motor_decoder.py (replaced with Phase 14 version)",
+      "phase8_integration/dn_mn_bridge.py (accumulate → accumulate_weighted)",
+      "server_cpp.py (accumulate → accumulate_weighted)"
+    ],
+    "backups": [
+      "vnc_motor_decoder.py.bak_pre_phase14_final",
+      "dn_mn_bridge.py.bak_phase14",
+      "server_cpp.py.bak_phase14_*"
+    ],
+    "key_changes": [
+      "accumulate_weighted(): Uses MN activation STRENGTHS (not binary fired/not-fired)",
+      "MN_TYPE_SIGN: flexor_MN→+1, extensor_MN→-1, abductor_MN→-1, adductor_MN→+1",
+      "JOINT_BIOMECHANICAL_SCALE: femur=1.2 > tibia=1.0 > coxa=0.9 > abduct=0.6 > twist=0.4",
+      "Per-joint MN pool normalization: larger pools → more diffuse signal",
+      "Longest-key-first biomech matching to avoid coxa/coxa_abduct ambiguity"
+    ],
+    "results": {
+      "unique_torque_values": "34/36",
+      "biomech_scaling": "femur > tibia > coxa > femur_twist > coxa_abduct > coxa_twist",
+      "left_right_asymmetry": "16/18 joint pairs show asymmetry",
+      "torque_range": "-0.055 to -0.002",
+      "majority_sign": "all negative (extensor-dominant resting state)"
+    }
+  },
+
+  "step5_proboscis_assessment": {
+    "status": "NOT_CURRENTLY_FEASIBLE",
+    "physical_model": {
+      "joints_in_xml": ["head_twist", "rostrum", "haustellum", "haustellum_abduct", "labrum_left", "labrum_right"],
+      "all_modeled": true
+    },
+    "actuator_map": {
+      "agonists": 0,
+      "antagonists": 0,
+      "all_zero": true
+    },
+    "connectome_data": {
+      "proboscis_efferent_neurons": 3700,
+      "proboscis_dns": 0,
+      "matched_dns": 0,
+      "pathways_to_mns": 0
+    },
+    "reason": "MANC VNC catalog covers thoracic MNs only. Proboscis motor control goes through SEZ (subesophageal zone), not VNC. Need SEZ connectome data + proboscis MN→actuator mapping.",
+    "top_cell_types_in_prob_efferents": ["BM_InOm (481)", "JO-B (299)", "JO-E (196)", "JO-F (111)", "JO-A (93)", "LB3 (70)", "BM_Taste (66)"],
+    "nt_types": {"ACH": 2595, "GABA": 162, "GLUT": 64, "SER": 58, "DA": 2, "OCT": 3, "unknown": 816}
+  },
+
+  "files_generated": [
+    "/tmp/simfly_web/dn_segment_map.json",
+    "/tmp/simfly_web/dn_t1_left_map.json",
+    "vnc_bridge/vnc_motor_decoder.py (Phase 14)",
+    "vnc_bridge/vnc_motor_decoder_phase14.py"
+  ],
+
+  "server_status": {
+    "running": true,
+    "port": 8080,
+    "neurons": 139136,
+    "synapses": 19773733,
+    "dns_matched": "76-92",
+    "mns_activated": 737,
+    "torque_differentiated": true
+  }
+}

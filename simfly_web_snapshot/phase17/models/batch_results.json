@@ -1,0 +1,214 @@
+{
+  "phase": "phase17_batch_training",
+  "timestamp": "2026-06-24T08:42:37.363224",
+  "duration_seconds": 30676.620863199234,
+  "total": 34,
+  "successful": 0,
+  "failed": 34,
+  "results": [
+    {
+      "joint": "coxa_abduct_T1_left",
+      "returncode": -1,
+      "elapsed": 900.2302386760712,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T1_left",
+      "returncode": -1,
+      "elapsed": 900.2591512203217,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T1_left",
+      "returncode": -1,
+      "elapsed": 900.2613303661346,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T1_left",
+      "returncode": -1,
+      "elapsed": 900.2837858200073,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T1_left",
+      "returncode": -1,
+      "elapsed": 900.2205414772034,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_abduct_T1_right",
+      "returncode": -1,
+      "elapsed": 900.2700011730194,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T1_right",
+      "returncode": -1,
+      "elapsed": 900.242205619812,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T1_right",
+      "returncode": -1,
+      "elapsed": 900.2341046333313,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T1_right",
+      "returncode": -1,
+      "elapsed": 900.2518148422241,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T1_right",
+      "returncode": -1,
+      "elapsed": 900.2347402572632,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_T2_left",
+      "returncode": -1,
+      "elapsed": 900.2447867393494,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_abduct_T2_left",
+      "returncode": -1,
+      "elapsed": 900.2412858009338,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T2_left",
+      "returncode": -1,
+      "elapsed": 900.2544541358948,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T2_left",
+      "returncode": -1,
+      "elapsed": 900.2374141216278,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T2_left",
+      "returncode": -1,
+      "elapsed": 900.235169172287,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T2_left",
+      "returncode": -1,
+      "elapsed": 900.2343168258667,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_T2_right",
+      "returncode": -1,
+      "elapsed": 900.2399070262909,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_abduct_T2_right",
+      "returncode": -1,
+      "elapsed": 900.2274899482727,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T2_right",
+      "returncode": -1,
+      "elapsed": 900.2413332462311,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T2_right",
+      "returncode": -1,
+      "elapsed": 900.2495138645172,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T2_right",
+      "returncode": -1,
+      "elapsed": 900.2361199855804,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T2_right",
+      "returncode": -1,
+      "elapsed": 900.228673696518,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_T3_left",
+      "returncode": -1,
+      "elapsed": 900.3062963485718,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_abduct_T3_left",
+      "returncode": -1,
+      "elapsed": 900.2380907535553,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T3_left",
+      "returncode": -1,
+      "elapsed": 900.2581219673157,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T3_left",
+      "returncode": -1,
+      "elapsed": 900.2239181995392,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T3_left",
+      "returncode": -1,
+      "elapsed": 900.2439112663269,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T3_left",
+      "returncode": -1,
+      "elapsed": 900.2570159435272,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_T3_right",
+      "returncode": -1,
+      "elapsed": 900.2731001377106,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_abduct_T3_right",
+      "returncode": -1,
+      "elapsed": 900.2453875541687,
+      "model_saved": false
+    },
+    {
+      "joint": "coxa_twist_T3_right",
+      "returncode": -1,
+      "elapsed": 900.2287628650665,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_T3_right",
+      "returncode": -1,
+      "elapsed": 900.254834651947,
+      "model_saved": false
+    },
+    {
+      "joint": "femur_twist_T3_right",
+      "returncode": -1,
+      "elapsed": 900.2638864517212,
+      "model_saved": false
+    },
+    {
+      "joint": "tibia_T3_right",
+      "returncode": -1,
+      "elapsed": 900.2553036212921,
+      "model_saved": false
+    }
+  ]
+}

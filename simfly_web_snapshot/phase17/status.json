@@ -1,0 +1,241 @@
+{
+  "phase": "phase17_batch",
+  "timestamp": "2026-06-24T00:13:10.851257",
+  "status": "IN_PROGRESS",
+  "batch_script_running": true,
+  "summary": {
+    "total_actuators": 36,
+    "trained_models": 2,
+    "remaining": 34,
+    "pathways_generated": 36
+  },
+  "how_to_check": {
+    "batch_log": "/tmp/simfly_web/phase17/logs/batch_train_full.log",
+    "models_dir": "/tmp/simfly_web/phase17/models",
+    "server": "http://192.168.1.199:8080"
+  },
+  "actuators": [
+    {
+      "name": "coxa_T1_left",
+      "model_exists": true,
+      "metrics_exists": true,
+      "pathway_exists": true,
+      "model_size": 75337,
+      "best_reward": 10.203423392772708,
+      "final_avg10": 2.101039426088353
+    },
+    {
+      "name": "coxa_abduct_T1_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T1_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T1_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T1_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T1_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_T1_right",
+      "model_exists": true,
+      "metrics_exists": true,
+      "pathway_exists": true,
+      "model_size": 75379,
+      "best_reward": 11.313511967659029,
+      "final_avg10": 3.455825029613475
+    },
+    {
+      "name": "coxa_abduct_T1_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T1_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T1_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T1_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T1_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_abduct_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T2_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_abduct_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T2_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_abduct_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T3_left",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_abduct_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "coxa_twist_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "femur_twist_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    },
+    {
+      "name": "tibia_T3_right",
+      "model_exists": false,
+      "metrics_exists": false,
+      "pathway_exists": true
+    }
+  ]
+}

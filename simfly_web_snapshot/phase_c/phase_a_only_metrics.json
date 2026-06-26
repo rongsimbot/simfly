@@ -1,0 +1,14 @@
+{
+  "method": "phase_a_only",
+  "steps_run": 400,
+  "total_reward": 1081.4026833697947,
+  "mean_z_height": 0.07960520125273454,
+  "z_height_std": 0.011542684219780068,
+  "mean_upright": 1.3267533542122427,
+  "mean_torque_magnitude": 0.1182222585985724,
+  "torque_std": 0.31665980584171727,
+  "mean_fired_neurons": 31.585,
+  "mean_active_joints": 5.67,
+  "fell_at_step": -1,
+  "fell": false
+}

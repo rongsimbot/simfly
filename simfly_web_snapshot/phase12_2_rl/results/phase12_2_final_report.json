@@ -1,0 +1,223 @@
+{
+  "phase": "12.2",
+  "title": "RL Per-Joint Optimization on Full-Connectome Brain2",
+  "timestamp": "2026-06-23T14:21:50Z",
+  "engine": "C++ (libneuronengine.so)",
+  "brain2_state": {
+    "neurons": 139136,
+    "synapses": 19773733,
+    "step": 12217,
+    "running": true,
+    "fired_neurons": 1998,
+    "mns_activated": 716,
+    "active_joints": 36,
+    "torque_applied": true
+  },
+  "current_params": {
+    "global_gain": 0.001,
+    "per_joint_scales": {
+      "coxa_T1_left": 1.1715658439189678,
+      "coxa_T1_right": 0.9017557945097853,
+      "coxa_T2_left": 1.0013995791607266,
+      "coxa_T2_right": 1.3851003655355683,
+      "coxa_T3_left": 0.6482665832740159,
+      "coxa_T3_right": 1.0908396330933814,
+      "coxa_abduct_T1_left": 1.1660285345655956,
+      "coxa_abduct_T1_right": 0.7633405733320924,
+      "coxa_abduct_T2_left": 0.7875770588617463,
+      "coxa_abduct_T2_right": 1.0642257535234045
+    },
+    "per_joint_scales_active": 36,
+    "per_joint_scales_truncated": true,
+    "tau_decay": 100.0
+  },
+  "phase12_1_summary": {
+    "best_cv_combo": {
+      "global_gain": 0.001,
+      "tau_decay": 100,
+      "cv_pct": 43.52
+    },
+    "best_fd_combo": {
+      "global_gain": 0.0005,
+      "tau_decay": 200,
+      "fd_delta": 0.018000000000000016
+    }
+  },
+  "rl_optimization": {
+    "method": "PPO (PyTorch GPU, CUDA)",
+    "policy": "PPOPolicySmall (128 hidden, Tanh)",
+    "action_space": "36 per-joint multipliers in [0.5, 2.0]",
+    "state_space": "43 dims (36 torques + 7 scalar metrics)",
+    "best_scales_source": "June 22 training, episode 38",
+    "best_scales_cv": 1.996582368906166,
+    "note": "June 22 training used temporal CV reward (std/mean per-joint across time). Current Brain2 torques are temporally stable (CV~0.004), making this reward function ineffective for fresh training. Best policy from June 22 was evaluated instead."
+  },
+  "evaluation_results": {
+    "baseline_uniform_scales": {
+      "inter_joint_cv": 0.3559804028233948,
+      "temporal_cv": 0.003403991161173452,
+      "mean_torque": 0.43112735185185186,
+      "max_torque": 0.903502,
+      "food_distance": 1.139,
+      "fired_neurons": 1828,
+      "mns_activated": 713,
+      "dn_matches": 2,
+      "active_joints": 36,
+      "step": 8750,
+      "z_height": 0.14950836534453749
+    },
+    "best_rl_scales_sweet_spot": {
+      "inter_joint_cv": 0.4031646778622179,
+      "temporal_cv": 0.001169689003448168,
+      "mean_torque": 0.4502913240740741,
+      "max_torque": 1.0,
+      "food_distance": 1.139,
+      "fired_neurons": 2076,
+      "mns_activated": 713,
+      "dn_matches": 2,
+      "active_joints": 36,
+      "step": 8860,
+      "z_height": 0.14947038814773944
+    },
+    "best_rl_scales_current_params": {
+      "inter_joint_cv": 0.30069958521878587,
+      "temporal_cv": 0.0033677358093420623,
+      "mean_torque": 0.7082091037037037,
+      "max_torque": 1.0,
+      "food_distance": 1.139,
+      "fired_neurons": 2021,
+      "mns_activated": 713,
+      "dn_matches": 2,
+      "active_joints": 36,
+      "step": 8968,
+      "z_height": 0.14948988709327246
+    },
+    "inter_joint_cv_improvement": {
+      "baseline": 0.3559804028233948,
+      "with_rl_scales": 0.4031646778622179,
+      "pct_improvement": 13.3
+    },
+    "food_distance_tracking": {
+      "duration_s": 60,
+      "initial": 1.139,
+      "final": 1.139,
+      "delta": 0.0,
+      "note": "Food distance static \u2014 has_food_visual is False on the Brain2 REST API. The server was started without food visual input. No locomotion observed."
+    }
+  },
+  "success_criteria": {
+    "torque_cv_gt_20pct": {
+      "met": true,
+      "baseline_cv": 35.6,
+      "rl_cv": 40.3,
+      "note": "Inter-joint CV exceeds 30% at baseline, 40% with RL scales"
+    },
+    "food_distance_decreasing": {
+      "met": false,
+      "note": "Brain2 has has_food_visual=False. Fly doesn't seek food. Need to restart server with food visual enabled."
+    },
+    "multiple_joints_distinct": {
+      "met": true,
+      "active_joints": 36,
+      "note": "All 36 leg joints active with differentiated torque patterns"
+    }
+  },
+  "optimized_parameters": {
+    "global_gain": 0.001,
+    "tau_decay": 100.0,
+    "per_joint_scales": {
+      "coxa_T1_left": 1.1715658439189678,
+      "coxa_T1_right": 0.9017557945097853,
+      "coxa_T2_left": 1.0013995791607266,
+      "coxa_T2_right": 1.3851003655355683,
+      "coxa_T3_left": 0.6482665832740159,
+      "coxa_T3_right": 1.0908396330933814,
+      "coxa_abduct_T1_left": 1.1660285345655956,
+      "coxa_abduct_T1_right": 0.7633405733320924,
+      "coxa_abduct_T2_left": 0.7875770588617463,
+      "coxa_abduct_T2_right": 1.0642257535234045,
+      "coxa_abduct_T3_left": 0.8271063575117025,
+      "coxa_abduct_T3_right": 0.7673784069028677,
+      "coxa_twist_T1_left": 1.0310902700129225,
+      "coxa_twist_T1_right": 1.5730757951602146,
+      "coxa_twist_T2_left": 0.9927789041500703,
+      "coxa_twist_T2_right": 0.7517288421214188,
+      "coxa_twist_T3_left": 1.3260744157212963,
+      "coxa_twist_T3_right": 1.193796363268879,
+      "femur_T1_left": 1.379192695654924,
+      "femur_T1_right": 0.742042659598786,
+      "femur_T2_left": 1.181090218596506,
+      "femur_T2_right": 1.137819133432874,
+      "femur_T3_left": 1.1910117822899984,
+      "femur_T3_right": 0.7359492702718289,
+      "femur_twist_T1_left": 1.1672206783750902,
+      "femur_twist_T1_right": 1.4642502051679713,
+      "femur_twist_T2_left": 0.8504309779063626,
+      "femur_twist_T2_right": 1.3999511359431795,
+      "femur_twist_T3_left": 0.7805586704955023,
+      "femur_twist_T3_right": 1.2967437979565082,
+      "tibia_T1_left": 1.361985373674926,
+      "tibia_T1_right": 1.570954456444341,
+      "tibia_T2_left": 1.4159392579444043,
+      "tibia_T2_right": 1.0335804980405185,
+      "tibia_T3_left": 1.6282492735613627,
+      "tibia_T3_right": 1.2078041806891453
+    },
+    "top_5_highest_scale": [
+      [
+        "tibia_T3_left",
+        1.6282492735613627
+      ],
+      [
+        "coxa_twist_T1_right",
+        1.5730757951602146
+      ],
+      [
+        "tibia_T1_right",
+        1.570954456444341
+      ],
+      [
+        "femur_twist_T1_right",
+        1.4642502051679713
+      ],
+      [
+        "tibia_T2_left",
+        1.4159392579444043
+      ]
+    ],
+    "bottom_5_lowest_scale": [
+      [
+        "coxa_T3_left",
+        0.6482665832740159
+      ],
+      [
+        "femur_T3_right",
+        0.7359492702718289
+      ],
+      [
+        "femur_T1_right",
+        0.742042659598786
+      ],
+      [
+        "coxa_twist_T2_right",
+        0.7517288421214188
+      ],
+      [
+        "coxa_abduct_T1_right",
+        0.7633405733320924
+      ]
+    ]
+  },
+  "current_training_status": {
+    "attempted": true,
+    "episodes_run": 25,
+    "status": "Failed to converge \u2014 temporal CV reward function incompatible with current Brain2 torque stability",
+    "fix_suggested": "Use inter-joint CV (cross-joint differentiation) as reward instead of temporal CV"
+  },
+  "saved_artifacts": [
+    "results/best_scales.json",
+    "results/evaluation_report.json",
+    "results/food_tracking.json",
+    "results/phase12_2_final_report.json"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "description": "Phase 19B: Decoder gain sweep results",
+  "results": [
+    {
+      "gain": 0.005,
+      "mean_abs_torque": 0.0198,
+      "max_abs_torque": 0.055,
+      "joints_active_gt_001": 16,
+      "joints_big_gt_01": 0,
+      "mean_z_height": 0.052,
+      "std_z_height": 0.0,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3214.3,
+      "mean_dn_matches": 89.5,
+      "mean_active_joints": 36.0
+    },
+    {
+      "gain": 0.01,
+      "mean_abs_torque": 0.0396,
+      "max_abs_torque": 0.11,
+      "joints_active_gt_001": 28,
+      "joints_big_gt_01": 2,
+      "mean_z_height": 0.052,
+      "std_z_height": 0.0,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3246.4,
+      "mean_dn_matches": 87.9,
+      "mean_active_joints": 36.0
+    },
+    {
+      "gain": 0.02,
+      "mean_abs_torque": 0.0791,
+      "max_abs_torque": 0.2201,
+      "joints_active_gt_001": 34,
+      "joints_big_gt_01": 12,
+      "mean_z_height": 0.053,
+      "std_z_height": 0.0006,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3131.5,
+      "mean_dn_matches": 84.6,
+      "mean_active_joints": 36.0
+    },
+    {
+      "gain": 0.05,
+      "mean_abs_torque": 0.1978,
+      "max_abs_torque": 0.55,
+      "joints_active_gt_001": 36,
+      "joints_big_gt_01": 16,
+      "mean_z_height": 0.0563,
+      "std_z_height": 0.0003,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3151.3,
+      "mean_dn_matches": 83.6,
+      "mean_active_joints": 36.0
+    },
+    {
+      "gain": 0.1,
+      "mean_abs_torque": 0.3902,
+      "max_abs_torque": 1.0,
+      "joints_active_gt_001": 36,
+      "joints_big_gt_01": 28,
+      "mean_z_height": 0.0528,
+      "std_z_height": 0.0004,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3178.3,
+      "mean_dn_matches": 83.2,
+      "mean_active_joints": 36.0
+    },
+    {
+      "gain": 0.15,
+      "mean_abs_torque": 0.4788,
+      "max_abs_torque": 1.0,
+      "joints_active_gt_001": 36,
+      "joints_big_gt_01": 32,
+      "mean_z_height": 0.0529,
+      "std_z_height": 0.0007,
+      "ground_pct": 100.0,
+      "mean_fired_neurons": 3105.0,
+      "mean_dn_matches": 86.3,
+      "mean_active_joints": 36.0
+    }
+  ],
+  "recommended_gain": 0.15
+}

@@ -1,0 +1,14 @@
+{
+  "method": "phase_c_joint",
+  "steps_run": 400,
+  "total_reward": 1063.4358940454233,
+  "mean_z_height": 0.07825769205340673,
+  "z_height_std": 0.011629548859144972,
+  "mean_upright": 1.304294867556779,
+  "mean_torque_magnitude": 0.10135573611290759,
+  "torque_std": 0.29488007877541417,
+  "mean_fired_neurons": 31.9425,
+  "mean_active_joints": 4.77,
+  "fell_at_step": -1,
+  "fell": false
+}

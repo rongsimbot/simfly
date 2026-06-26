@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase J — Real Connectome Sensory Routing</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#080818; color:#ccc; font-family:monospace; padding:10px; font-size:13px; }
+  h1 { color:#4af; font-size:18px; margin-bottom:2px; }
+  .subtitle { font-size:10px; color:#555; margin-bottom:8px; }
+  .layout { display:flex; gap:10px; flex-wrap:wrap; }
+  .panel { background:#0d0d28; border:1px solid #1a1a3e; border-radius:6px; padding:8px; }
+  .row-full { width:100%; }
+  .col-left { flex:1 1 480px; min-width:320px; }
+  .col-right { flex:0 0 380px; }
+  video, img { max-width:100%; height:auto; object-fit:contain; border-radius:4px; display:block; }
+  .metric { display:flex; justify-content:space-between; padding:3px 4px; border-bottom:1px solid #1a1a2e; font-size:12px; }
+  .metric .l { color:#888; } .metric .v { color:#4af; font-weight:bold; font-size:13px; }
+  .v.on { color:#4f8; } .v.off { color:#f44; } .v.warn { color:#fa4; }
+  .controls { display:flex; gap:5px; margin:6px 0; flex-wrap:wrap; }
+  button { background:#1a1a3e; color:#4af; border:1px solid #334; border-radius:4px; padding:5px 14px; cursor:pointer; font-family:inherit; font-size:12px; }
+  button:hover { background:#223; }
+  button.active { background:#4af; color:#080818; }
+  button.danger { color:#f44; border-color:#622; }
+  .tag { display:inline-block; padding:2px 5px; border-radius:3px; font-size:10px; margin:1px; }
+  .tag.dn { background:#a40; color:#fff; }
+  .tag.sens { background:#4a0; color:#fff; }
+  .tag.connectome { background:#44a; color:#fff; }
+  .big-num { font-size:26px; font-weight:bold; color:#4af; }
+  .big-label { font-size:10px; color:#666; text-transform:uppercase; }
+  .stat-block { text-align:center; padding:6px 4px; }
+  .fire-indicator { display:inline-block; width:12px; height:12px; border-radius:50%; background:#0f0; animation: glow 1s infinite; margin-right:4px; vertical-align:middle; }
+  @keyframes glow { 0%,100% { box-shadow: 0 0 4px #0f0; } 50% { box-shadow: 0 0 8px #0f0, 0 0 12px #0f0; } }
+  .progress-bar { height:3px; background:#1a1a3e; border-radius:2px; margin:4px 0; overflow:hidden; }
+  .progress-fill { height:100%; background:linear-gradient(90deg, #4af, #4f8); transition: width 0.3s; }
+  input[type=range] { width:100%; accent-color:#4af; }
+  .food-control { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .food-control label { color:#888; font-size:11px; min-width:20px; }
+  .food-control input { flex:1; min-width:60px; }
+  .food-control .val { color:#4af; font-size:10px; min-width:40px; }
+  .sensory-chain { font-size:11px; color:#666; margin-top:4px; padding:4px; background:#0a0a1e; border-radius:3px; text-align:center; }
+  .sensory-chain span { color:#4af; }
+</style>
+</head>
+<body>
+<h1>🧠 Phase J — Real Connectome Sensory Routing</h1>
+<div class="subtitle">
+  138,639 neurons | 15.1M synapses | <span class="tag sens">18,702 sensory</span> → <span class="tag connectome">38,506 interneurons</span> → <span class="tag dn">953 DNs</span> → 108 actuators | 
+  <span id="rtIndicator" style="color:#4af">RT: --</span>
+</div>
+
+<!-- Status bar -->
+<div class="panel row-full" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:space-around;margin-bottom:4px;padding:6px 8px;">
+  <div class="stat-block">
+    <div class="big-label">🧠 Spikes</div>
+    <div class="big-num" id="statSpikes">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🔌 Active DNs</div>
+    <div class="big-num" id="statDNs" style="color:#fa4">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">📡 Sensory Total</div>
+    <div class="big-num" id="statSens" style="color:#4f8">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🏃 Distance</div>
+    <div class="big-num" id="statDist">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🎯 Food Dist</div>
+    <div class="big-num" id="statFood" style="color:#fa4">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">⚡ Speed</div>
+    <div class="big-num" id="statSpeed">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">⏱️ Step / Time</div>
+    <div class="big-num" id="statStep" style="font-size:18px">--</div>
+  </div>
+</div>
+
+<!-- Main layout -->
+<div class="layout">
+  <!-- Left: Video -->
+  <div class="col-left">
+    <div class="panel" style="margin-bottom:6px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+        <span style="color:#888;font-size:11px;">🎥 Live MJPEG — Connectome-Driven Movement</span>
+        <span id="frameAge" style="color:#666;font-size:10px;"></span>
+      </div>
+      <img id="mjpeg" src="/video_feed" style="width:100%;border:2px solid #1a1a3e;" alt="Live video feed">
+    </div>
+    <div class="sensory-chain">
+      🔬 <span>Sensory Encoding</span> → Body state (touch, vision, chemo, proprioception) encoded as firing rates 
+      → injected into <span>18,702 sensory neurons</span> → <span>15.1M synapses</span> → <span>953 descending neurons</span> 
+      → <span>108 actuator torques</span> → MuJoCo physics → 🪰 Fly moves!
+    </div>
+  </div>
+
+  <!-- Right: Controls + Metrics -->
+  <div class="col-right">
+    <!-- Controls -->
+    <div class="panel" style="margin-bottom:8px;">
+      <div style="color:#888;font-size:11px;margin-bottom:6px;">🎮 Controls</div>
+      <div class="controls">
+        <button id="btnPause" onclick="togglePause()">⏯️ Pause</button>
+        <button id="btnReset" class="danger" onclick="resetSim()">🔄 Reset</button>
+      </div>
+    </div>
+
+    <!-- Food Control -->
+    <div class="panel" style="margin-bottom:8px;">
+      <div style="color:#888;font-size:11px;margin-bottom:6px;">🍬 Food Position (Chemotaxis)</div>
+      <div class="food-control" style="margin-bottom:4px;">
+        <label>X:</label>
+        <input type="range" id="foodX" min="-5" max="5" value="0.05" step="0.01" oninput="updateFood()">
+        <span class="val" id="foodXVal">0.05</span>
+      </div>
+      <div class="food-control" style="margin-bottom:4px;">
+        <label>Y:</label>
+        <input type="range" id="foodY" min="-5" max="5" value="0" step="0.01" oninput="updateFood()">
+        <span class="val" id="foodYVal">0.00</span>
+      </div>
+      <div class="food-control">
+        <label>Z:</label>
+        <input type="range" id="foodZ" min="0" max="2" value="0.03" step="0.01" oninput="updateFood()">
+        <span class="val" id="foodZVal">0.03</span>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="panel">
+      <div style="color:#888;font-size:11px;margin-bottom:6px;">📊 Real-Time Metrics</div>
+      <div class="metric"><span class="l">Position X</span><span class="v" id="mX">--</span></div>
+      <div class="metric"><span class="l">Position Y</span><span class="v" id="mY">--</span></div>
+      <div class="metric"><span class="l">Position Z</span><span class="v" id="mZ">--</span></div>
+      <div class="metric"><span class="l">Per-Step Spikes</span><span class="v" id="mSpikes">--</span></div>
+      <div class="metric"><span class="l">Active DNs (this step)</span><span class="v" id="mActiveDNs">--</span></div>
+      <div class="metric"><span class="l">Total DN Spikes</span><span class="v" id="mTotalDNs">--</span></div>
+      <div class="metric"><span class="l">Total Sensory Spikes</span><span class="v" id="mTotalSens">--</span></div>
+      <div class="metric"><span class="l">Status</span><span class="v" id="mStatus">--</span></div>
+      <div id="jointsContainer" style="margin-top:6px;max-height:200px;overflow-y:auto;font-size:10px;color:#555;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let lastFoodUpdate = 0;
+const FOOD_DEBOUNCE = 200;
+
+function updateFood() {
+  const now = Date.now();
+  if (now - lastFoodUpdate < FOOD_DEBOUNCE) return;
+  lastFoodUpdate = now;
+
+  const x = parseFloat(document.getElementById('foodX').value);
+  const y = parseFloat(document.getElementById('foodY').value);
+  const z = parseFloat(document.getElementById('foodZ').value);
+
+  document.getElementById('foodXVal').textContent = x.toFixed(2);
+  document.getElementById('foodYVal').textContent = y.toFixed(2);
+  document.getElementById('foodZVal').textContent = z.toFixed(2);
+
+  fetch('/api/food', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({x, y, z})
+  }).catch(e => console.error('Food update error:', e));
+}
+
+function togglePause() {
+  fetch('/api/pause', {method: 'POST'})
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('btnPause').classList.toggle('active', d.paused);
+      document.getElementById('btnPause').textContent = d.paused ? '▶️ Resume' : '⏯️ Pause';
+    });
+}
+
+function resetSim() {
+  if (confirm('Restart simulation?')) {
+    fetch('/api/reset', {method: 'POST'}).catch(e => {});
+    document.getElementById('btnPause').classList.remove('active');
+    document.getElementById('btnPause').textContent = '⏯️ Pause';
+  }
+}
+
+function formatNum(n, dec) {
+  if (n === undefined || n === null) return '--';
+  if (typeof n === 'number') {
+    if (dec !== undefined) return n.toFixed(dec);
+    if (Math.abs(n) >= 1000000) return (n/1000000).toFixed(2) + 'M';
+    if (Math.abs(n) >= 1000) return (n/1000).toFixed(1) + 'K';
+    return n.toFixed(Math.abs(n) < 0.01 ? 4 : 2);
+  }
+  return n;
+}
+
+function pollStatus() {
+  fetch('/api/status')
+    .then(r => r.json())
+    .then(d => {
+      document.getElementById('statSpikes').textContent = formatNum(d.n_spikes, 0);
+      document.getElementById('statDNs').textContent = formatNum(d.active_dns, 0);
+      document.getElementById('statSens').textContent = formatNum(d.total_sens, 0);
+      document.getElementById('statDist').textContent = (d.dist * 1000).toFixed(1) + ' mm';
+      document.getElementById('statFood').textContent = (d.food_dist * 1000).toFixed(1) + ' mm';
+      document.getElementById('statSpeed').textContent = (d.speed * 1000).toFixed(1) + ' mm/s';
+      document.getElementById('statStep').textContent = '#' + d.step + ' / ' + d.t.toFixed(2) + 's';
+
+      document.getElementById('mX').textContent = (d.x * 1000).toFixed(2) + ' mm';
+      document.getElementById('mY').textContent = (d.y * 1000).toFixed(2) + ' mm';
+      document.getElementById('mZ').textContent = (d.z * 1000).toFixed(2) + ' mm';
+      document.getElementById('mSpikes').textContent = formatNum(d.n_spikes, 0);
+      document.getElementById('mActiveDNs').textContent = formatNum(d.active_dns, 0);
+      document.getElementById('mTotalDNs').textContent = formatNum(d.total_dns, 0);
+      document.getElementById('mTotalSens').textContent = formatNum(d.total_sens, 0);
+
+      if (d.paused) {
+        document.getElementById('mStatus').textContent = '⏸️ PAUSED';
+        document.getElementById('mStatus').className = 'v warn';
+        document.getElementById('btnPause').classList.add('active');
+        document.getElementById('btnPause').textContent = '▶️ Resume';
+      } else if (d.running === false && !d.paused) {
+        document.getElementById('mStatus').textContent = '⏹️ STOPPED';
+        document.getElementById('mStatus').className = 'v off';
+      } else {
+        document.getElementById('mStatus').innerHTML = '<span class="fire-indicator"></span> RUNNING';
+        document.getElementById('mStatus').className = 'v on';
+      }
+
+      // Joint angles summary
+      if (d.joints && d.joints.length > 0) {
+        let html = '<div style="color:#666;font-size:10px;">Joint angles (first 12):</div>';
+        let vals = d.joints.slice(0, 12).map(v => (v * 57.3).toFixed(1) + '°');
+        document.getElementById('jointsContainer').innerHTML = html + vals.join(' | ');
+      }
+
+      // RT indicator (rough estimate based on step rate)
+      let rt = d.t > 0 ? d.t / Math.max(0.1, d.step * 0.005) : 0;
+      document.getElementById('rtIndicator').textContent = 'RT: ' + (rt * 100).toFixed(1) + '%';
+      document.getElementById('rtIndicator').style.color = rt > 0.02 ? '#4f8' : rt > 0.01 ? '#fa4' : '#f44';
+      document.getElementById('frameAge').textContent = '🟢 Live';
+    })
+    .catch(e => {
+      document.getElementById('mStatus').textContent = '⚠️ CONNECTION LOST';
+      document.getElementById('mStatus').className = 'v off';
+    });
+}
+
+// Start polling
+setInterval(pollStatus, 500);
+pollStatus();
+</script>
+</body>
+</html>

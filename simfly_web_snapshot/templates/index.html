@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimFly Connectome Dashboard</title>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#080818; color:#ccc; font-family:monospace; padding:10px; font-size:13px; }
+  h1 { color:#4af; font-size:18px; margin-bottom:2px; }
+  .subtitle { font-size:10px; color:#555; margin-bottom:8px; }
+  .layout { display:flex; gap:10px; flex-wrap:wrap; }
+  .panel { background:#0d0d28; border:1px solid #1a1a3e; border-radius:6px; padding:8px; }
+  .row-full { width:100%; }
+  video, img { max-width:100%; height:auto; object-fit:contain; border-radius:4px; display:block; }
+  canvas { width:100% !important; }
+  .metric { display:flex; justify-content:space-between; padding:3px 4px; border-bottom:1px solid #1a1a2e; font-size:12px; }
+  .metric .l { color:#888; } .metric .v { color:#4af; font-weight:bold; font-size:13px; }
+  .v.on { color:#4f8; } .v.off { color:#f44; } .v.warn { color:#fa4; }
+  .controls { display:flex; gap:5px; margin:6px 0; }
+  button { background:#1a1a3e; color:#4af; border:1px solid #334; border-radius:4px; padding:5px 14px; cursor:pointer; font-family:inherit; font-size:12px; }
+  button:hover { background:#223; }
+  button.active { background:#4af; color:#080818; }
+  .tag { display:inline-block; padding:2px 5px; border-radius:3px; font-size:10px; margin:1px; }
+  .tag.dn { background:#a40; color:#fff; }
+  .tag.mn { background:#4a0; color:#fff; }
+  .tag.fired { background:#04a; color:#fff; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
+  .big-num { font-size:28px; font-weight:bold; color:#4af; }
+  .big-label { font-size:10px; color:#666; text-transform:uppercase; }
+  .stat-block { text-align:center; padding:8px 4px; }
+  .fire-indicator { display:inline-block; width:12px; height:12px; border-radius:50%; background:#0f0; animation: glow 1s infinite; margin-right:4px; vertical-align:middle; }
+  @keyframes glow { 0%,100% { box-shadow: 0 0 4px #0f0; } 50% { box-shadow: 0 0 8px #0f0, 0 0 12px #0f0; } }
+</style>
+</head>
+<body>
+<h1>🤖 SimFly — Connectome Body Control</h1>
+<div class="subtitle">139K neurons | 3.4M synapses | 953 DNs → 737 MNs → 36 joints | SynScale 0.005 | <span id="chain" style="color:#4af">Sensory→Connectome→DN→MN→Torque</span></div>
+
+<!-- Key stats bar -->
+<div class="panel row-full" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:space-around;margin-bottom:4px;padding:6px 8px;">
+  <div class="stat-block">
+    <div class="big-label">🧠 Firing</div>
+    <div class="big-num" id="statFired">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🔌 DNs</div>
+    <div class="big-num" id="statDNs" style="color:#fa4">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">💪 MNs</div>
+    <div class="big-num" id="statMNs" style="color:#4f8">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🔧 Joints</div>
+    <div class="big-num" id="statJoints" style="color:#f4a">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">🍯 Food</div>
+    <div class="big-num" id="statFood" style="color:#fa4;font-size:22px;">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label">⏱️ Step</div>
+    <div class="big-num" id="statStep" style="color:#888;font-size:20px;">--</div>
+  </div>
+  <div class="stat-block">
+    <div class="big-label" id="updateDot" style="color:#0f0">⬤ LIVE</div>
+    <div class="big-num" id="statUpdate" style="color:#0f0;font-size:12px;">--</div>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- Video feeds -->
+  <div class="panel" style="flex:1;min-width:400px;">
+    <div style="color:#4af;font-size:13px;margin-bottom:4px">📹 Body (MuJoCo)</div>
+    <img id="video" src="/video_feed" style="max-height:380px;">
+  </div>
+  <div class="panel" style="flex:1;min-width:400px;">
+    <div style="color:#fa4;font-size:13px;margin-bottom:4px">👁️ FlyVision (What the Fly Sees)</div>
+    <img id="vision" src="/vision_feed" style="max-height:220px;">
+  </div>
+
+  <!-- Firing Raster -->
+  <div class="panel row-full">
+    <div style="color:#4af;font-size:13px;margin-bottom:4px">⚡ Neuron Firing Activity <span id="firingLabel" style="color:#888;font-size:11px">--</span></div>
+    <canvas id="rasterCanvas" style="height:160px"></canvas>
+    <div id="firingTags" style="margin-top:6px;max-height:70px;overflow:hidden;line-height:1.8"></div>
+  </div>
+
+  <!-- Torque -->
+  <div class="panel" style="flex:1;min-width:280px;">
+    <div style="color:#4af;font-size:13px;margin-bottom:4px">🔧 Joint Torque <span id="torqueLabel" style="color:#888;font-size:10px"></span></div>
+    <canvas id="torqueCanvas" style="height:200px"></canvas>
+  </div>
+
+  <!-- Live Stats -->
+  <div class="panel" style="flex:0.5;min-width:240px;">
+    <div style="color:#4af;font-size:13px;margin-bottom:4px">📊 Live Stats <span id="statusDot" style="color:#0f0">●</span></div>
+    <div class="controls">
+      <button onclick="fetch('/api/start',{method:'POST'})">▶ Start</button>
+      <button onclick="fetch('/api/pause',{method:'POST'})">⏸ Pause</button>
+    </div>
+    <div id="metrics"></div>
+    <div style="margin-top:10px">
+      <div style="font-size:11px;color:#888;margin-bottom:4px">📡 Signal Chain:</div>
+      <div id="signalChain" style="font-size:11px;color:#666;line-height:1.8"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let socketConnected = false;
+let lastChartStep = 0;
+let lastTorqueStep = 0;
+let pollCount = 0;
+
+// Init charts
+let rasterCtx = document.getElementById('rasterCanvas').getContext('2d');
+let torqueCtx = document.getElementById('torqueCanvas').getContext('2d');
+
+let rasterChart = new Chart(rasterCtx, {
+  type: 'line',
+  data: { labels: [], datasets: [{
+    label: 'Fired Neurons', data: [], borderColor: '#4af', tension:0.1, pointRadius:0, borderWidth:1.5,
+    fill: true, backgroundColor: 'rgba(68,170,255,0.05)'
+  }]},
+  options: {
+    responsive:true, animation:false,
+    scales: {
+      x: { display:false },
+      y: { grid:{color:'#1a1a2e'}, ticks:{color:'#888',font:{size:10}}, title:{display:true,text:'Neurons Fired per Step',color:'#666',font:{size:10}} }
+    },
+    plugins: { legend:{display:false} }
+  }
+});
+
+let torqueChart = new Chart(torqueCtx, {
+  type: 'bar',
+  data: { labels: [], datasets: [{
+    label: 'Torque', data: [], backgroundColor: []
+  }]},
+  options: {
+    responsive:true, animation:false, indexAxis:'y',
+    scales: {
+      x: { grid:{color:'#1a1a2e'}, ticks:{color:'#888',font:{size:8}}, min:-0.15, max:0.15 },
+      y: { ticks:{color:'#888',font:{size:8}} }
+    },
+    plugins: { legend:{display:false} }
+  }
+});
+
+// Socket.IO — supplementary, NOT primary
+const socket = io();
+socket.on('connect', function() {
+  socketConnected = true;
+  document.getElementById('statusDot').style.color = '#0f0';
+});
+socket.on('disconnect', function() {
+  socketConnected = false;
+  document.getElementById('statusDot').style.color = '#f44';
+});
+socket.on('firing', function(f) {
+  // Socket data is supplementary — API poll is primary
+  // But if we get it, use it for immediate update
+  updateChartsFromFiring(f);
+});
+socket.on('metrics', function(m) {
+  updateMetricsDisplay(m);
+});
+
+function updateChartsFromFiring(f) {
+  if (!f || !f.step) return;
+  if (f.step === lastChartStep) return;
+  lastChartStep = f.step;
+
+  document.getElementById('firingLabel').textContent =
+    `Step ${f.step} | Fired: ${f.fired_count} | DNs: ${f.dn_count} | MNs: ${f.mn_count}`;
+  document.getElementById('statFired').textContent = f.fired_count;
+  document.getElementById('statDNs').textContent = f.dn_count;
+  document.getElementById('statMNs').textContent = f.mn_count;
+  document.getElementById('statStep').textContent = f.step;
+
+  rasterChart.data.labels.push(f.step);
+  rasterChart.data.datasets[0].data.push(f.fired_count);
+  if (rasterChart.data.labels.length > 50) {
+    rasterChart.data.labels.shift();
+    rasterChart.data.datasets[0].data.shift();
+  }
+  rasterChart.update('none');
+}
+
+function updateMetricsDisplay(m) {
+  let html = '';
+  for (let [k, v] of [
+    ['Step', m.step],
+    ['Z-Height', (m.z||0).toFixed(3) + 'm'],
+    ['DNs Active', m.dns || 0],
+    ['MNs Active', m.mns || 0],
+    ['Torque', m.torque ? '<span class="v on">✅ APPLIED</span>' : '<span class="v off">❌ NONE</span>'],
+    ['On Ground', m.on_ground ? '<span class="v on">✅ YES</span>' : '<span class="v off">❌ NO</span>'],
+    ['Sugar', (m.sugar_conc||0).toFixed(3)],
+    ['Food Visual', m.food_visual ? '<span class="v on">🍯 DETECTED</span>' : '<span class="v on">---</span>'],
+    ['Wall Dist', (m.wall_distance||0).toFixed(1) + 'm'],
+    ['LC4 Rate', (m.lc4_rate||0).toFixed(2) + ' Hz']
+  ]) {
+    html += `<div class="metric"><span class="l">${k}</span><span class="v">${v}</span></div>`;
+  }
+  document.getElementById('metrics').innerHTML = html;
+
+  if (m.fired !== undefined) document.getElementById('statFired').textContent = m.fired;
+  if (m.dns !== undefined) document.getElementById('statDNs').textContent = m.dns;
+  if (m.mns !== undefined) document.getElementById('statMNs').textContent = m.mns;
+  if (m.step) document.getElementById('statStep').textContent = m.step;
+}
+
+// ===== PRIMARY DATA SOURCE: API polling =====
+function pollAPI() {
+  pollCount++;
+  let now = new Date().toLocaleTimeString();
+  document.getElementById('statUpdate').textContent = now;
+
+  // Poll firing history (primary chart data source)
+  fetch('/api/firing').then(r=>r.json()).then(d => {
+    let hist = d.history || [];
+    if (hist.length > 0) {
+      let last = hist[hist.length - 1];
+      if (last.step !== lastChartStep) {
+        lastChartStep = last.step;
+        document.getElementById('firingLabel').textContent =
+          `Step ${last.step} | Fired: ${last.fired_count || last.fired.length} | DNs: ${last.dns.length} | MNs: ${last.mns.length}`;
+        document.getElementById('statFired').textContent = last.fired_count || last.fired.length;
+        document.getElementById('statDNs').textContent = last.dns.length;
+        document.getElementById('statMNs').textContent = last.mns.length;
+        document.getElementById('statStep').textContent = last.step;
+        // Update raster
+        rasterChart.data.labels.push(last.step);
+        rasterChart.data.datasets[0].data.push(last.fired_count || last.fired.length);
+        if (rasterChart.data.labels.length > 50) {
+          rasterChart.data.labels.shift();
+          rasterChart.data.datasets[0].data.shift();
+        }
+        rasterChart.update('none');
+
+        // Update firing tags
+        let tags = '';
+        for (let id of (last.fired || []).slice(0, 40)) {
+          let cls = (last.dns || []).includes(id) ? 'dn' : (last.mns || []).includes(id) ? 'mn' : 'fired';
+          tags += `<span class="tag ${cls}">N${id}</span>`;
+        }
+        document.getElementById('firingTags').innerHTML = tags || '<span style="color:#444">no neurons firing</span>';
+
+        // Signal chain
+        document.getElementById('signalChain').innerHTML =
+          `👁️ Sensory → <b style="color:#4af">${last.fired_count || last.fired.length}</b> neurons → ` +
+          `<b style="color:#fa4">${last.dns.length}</b> DNs → ` +
+          `<b style="color:#4f8">${last.mns.length}</b> MNs → 🔧 Torque`;
+      }
+    }
+  }).catch(err => {
+    document.getElementById('firingLabel').textContent = '(waiting for data...)';
+  });
+
+  // Poll torque (every other cycle)
+  if (lastChartStep !== lastTorqueStep) {
+    lastTorqueStep = lastChartStep;
+    fetch('/api/torque').then(r=>r.json()).then(d => {
+      if (!d.joints || Object.keys(d.joints).length === 0) return;
+      document.getElementById('torqueLabel').textContent = 'Step ' + d.step;
+      let labels = [], data = [], colors = [];
+      for (let [name, val] of Object.entries(d.joints).slice(0, 36)) {
+        labels.push(name);
+        data.push(val);
+        colors.push(val > 0.02 ? 'rgba(0,220,100,0.8)' : val < -0.02 ? 'rgba(220,50,50,0.8)' : 'rgba(100,100,100,0.3)');
+      }
+      torqueChart.data.labels = labels;
+      torqueChart.data.datasets[0].data = data;
+      torqueChart.data.datasets[0].backgroundColor = colors;
+      torqueChart.update('none');
+    }).catch(()=>{});
+  }
+
+  // Poll status for metrics
+  fetch('/api/status').then(r=>r.json()).then(d => {
+    let lm = d.metrics || {};
+    updateMetricsDisplay({
+      step: lm.step || d.step,
+      dns: lm.dn_matches || 0,
+      mns: lm.mns_activated || 0,
+      fired: lm.fired_neurons || 0,
+      torque: lm.torque_applied,
+      on_ground: lm.on_ground,
+      z: lm.z_height || 0,
+      sugar_conc: lm.sugar_conc || 0,
+      food_visual: lm.has_food_visual,
+      wall_distance: lm.wall_distance || 0,
+      lc4_rate: lm.lc4_rate || 0
+    });
+    // Big stats from status
+    if (lm.fired_neurons !== undefined) document.getElementById('statFired').textContent = lm.fired_neurons;
+    if (lm.dn_matches !== undefined) document.getElementById('statDNs').textContent = lm.dn_matches;
+    if (lm.mns_activated !== undefined) document.getElementById('statMNs').textContent = lm.mns_activated;
+    if (lm.step) document.getElementById('statStep').textContent = lm.step;
+    if (lm.food_distance !== undefined) document.getElementById('statFood').textContent = lm.food_distance.toFixed(2) + 'm';
+    if (lm.active_joints !== undefined) document.getElementById('statJoints').textContent = lm.active_joints + '/36';
+  }).catch(()=>{});
+
+  // Blink the LIVE indicator
+  document.getElementById('updateDot').style.color = pollCount % 2 === 0 ? '#0f0' : '#0a0';
+}
+
+// Poll every 500ms — PRIMARY data pipeline
+setInterval(pollAPI, 500);
+pollAPI();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/tmp/simfly_web/phase17/quick_train.py", line 90, in <module>
+    main()
+  File "/tmp/simfly_web/phase17/quick_train.py", line 46, in main
+    from per_actuator_rl import PerActuatorRL, DEVICE
+  File "/tmp/simfly_web/phase16/per_actuator_rl.py", line 17
+    from __future__ import annotations
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: from __future__ imports must occur at the beginning of the file

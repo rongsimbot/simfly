@@ -1,0 +1,40 @@
+{
+  "method": "hand_tuned",
+  "steps_run": 400,
+  "total_reward": 1011.7786255635193,
+  "mean_z_height": 0.07438339691726399,
+  "z_height_std": 0.009775099332301765,
+  "mean_upright": 1.2397232819544,
+  "mean_torque_magnitude": 0.028042595476284893,
+  "torque_std": 0.09343296678110342,
+  "mean_fired_neurons": 32.615,
+  "mean_active_joints": 3.69,
+  "fell_at_step": -1,
+  "fell": false,
+  "params": {
+    "leak_rate": {
+      "ACH": 0.12,
+      "GABA": 0.2,
+      "GLUT": 0.15,
+      "DA": 0.1,
+      "OCT": 0.1,
+      "SER": 0.18
+    },
+    "refractory": {
+      "ACH": 0,
+      "GABA": 0,
+      "GLUT": 0,
+      "DA": 0,
+      "OCT": 0,
+      "SER": 0
+    },
+    "weight_scale": {
+      "ACH": 1.5,
+      "GABA": -0.5,
+      "GLUT": -0.25,
+      "DA": 0.75,
+      "OCT": 0.75,
+      "SER": -0.15
+    }
+  }
+}

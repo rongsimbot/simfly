@@ -1,0 +1,74 @@
+[
+  {
+    "t": 0.0,
+    "step": 1963,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 10.0,
+    "step": 2077,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 20.0,
+    "step": 2191,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 30.0,
+    "step": 2306,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 40.0,
+    "step": 2420,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 50.1,
+    "step": 2536,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 60.1,
+    "step": 2651,
+    "coxa_t1_left_torque": -0.350848,
+    "active_joints": 1
+  },
+  {
+    "t": 70.1,
+    "step": 2765,
+    "coxa_t1_left_torque": -0.35059,
+    "active_joints": 1
+  },
+  {
+    "t": 80.1,
+    "step": 2878,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 90.1,
+    "step": 2992,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 100.1,
+    "step": 3105,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  },
+  {
+    "t": 110.1,
+    "step": 3218,
+    "coxa_t1_left_torque": -0.350584,
+    "active_joints": 1
+  }
+]
